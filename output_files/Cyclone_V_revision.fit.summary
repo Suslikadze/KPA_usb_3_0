@@ -1,0 +1,20 @@
+Fitter Status : Successful - Mon Nov 30 19:43:56 2020
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : Cyclone_V_revision
+Top-level Entity Name : BION_TOP
+Family : Cyclone V
+Device : 5CEBA9F23C8
+Timing Models : Final
+Logic utilization (in ALMs) : 1,434 / 113,560 ( 1 % )
+Total registers : 3247
+Total pins : 58 / 224 ( 26 % )
+Total virtual pins : 0
+Total block memory bits : 503,808 / 12,492,800 ( 4 % )
+Total RAM Blocks : 56 / 1,220 ( 5 % )
+Total DSP Blocks : 0 / 342 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1 / 8 ( 13 % )
+Total DLLs : 0 / 4 ( 0 % )

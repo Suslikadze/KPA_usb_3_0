@@ -1,0 +1,855 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Dima/Desktop/USB_3_0_KPA/simulation/modelsim
+Ealigner
+Z1 w1605191053
+Z2 DPx4 work 16 my_component_pkg 0 22 nicfChSkMQ1hW78HQVbN20
+Z3 DPx4 work 15 video_constants 0 22 n`58E3RNEDj_md??c@Ce`0
+Z4 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z5 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z6 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z9 8D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/Aligner.vhd
+Z10 FD:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/Aligner.vhd
+l0
+L10
+V@C1_N1nR8VzF7aJRY1DfT1
+!s100 ;o8YakWaneZmhh@O5H6580
+Z11 OV;C;10.5b;63
+33
+Z12 !s110 1605865822
+!i10b 1
+Z13 !s108 1605865821.000000
+Z14 !s90 -reportprogress|300|-2008|-work|work|D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/Aligner.vhd|
+Z15 !s107 D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/Aligner.vhd|
+!i113 1
+Z16 o-2008 -work work
+Z17 tExplicit 1 CvgOpt 0
+Aaligner_arch
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 7 aligner 0 22 @C1_N1nR8VzF7aJRY1DfT1
+l74
+L26
+V]7OPnTA<_Va@g:EUa3ETo1
+!s100 45cmifGch=bz6S?RW6S?51
+R11
+33
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Ebion_top
+Z18 w1605707684
+R3
+R4
+R5
+R6
+R7
+R8
+R0
+Z19 8D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/BION_TOP.vhd
+Z20 FD:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/BION_TOP.vhd
+l0
+L9
+VQ2Eo2I39z5HClFFVzeUTI1
+!s100 ?U]KA56ifQ^_3D5797kP71
+R11
+33
+Z21 !s110 1605865820
+!i10b 1
+Z22 !s108 1605865820.000000
+Z23 !s90 -reportprogress|300|-2008|-work|work|D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/BION_TOP.vhd|
+Z24 !s107 D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/BION_TOP.vhd|
+!i113 1
+R16
+R17
+Abion_top_arch
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 8 bion_top 0 22 Q2Eo2I39z5HClFFVzeUTI1
+l164
+L36
+V8mJYOe8Gi_hCEl;SX2afD2
+!s100 z35J:>Q_bGK;Ad``>cg=W1
+R11
+33
+R21
+!i10b 1
+R22
+R23
+R24
+!i113 1
+R16
+R17
+Ebion_top_vhd_tst
+Z25 w1605708390
+R4
+R5
+R3
+R7
+R8
+R0
+Z26 8D:/Dima/Desktop/USB_3_0_KPA/simulation/modelsim/BION_TOP_tst.vht
+Z27 FD:/Dima/Desktop/USB_3_0_KPA/simulation/modelsim/BION_TOP_tst.vht
+l0
+L32
+VMBEW:UYV?ncMjE4Ql;WhB1
+!s100 f9_dU0B@GPZK4R@oT?EgN1
+R11
+33
+R12
+!i10b 1
+Z28 !s108 1605865822.000000
+Z29 !s90 -reportprogress|300|-2008|-work|work|D:/Dima/Desktop/USB_3_0_KPA/simulation/modelsim/BION_TOP_tst.vht|
+Z30 !s107 D:/Dima/Desktop/USB_3_0_KPA/simulation/modelsim/BION_TOP_tst.vht|
+!i113 1
+R16
+R17
+Abion_top_arch
+R4
+R5
+R3
+R7
+R8
+DEx4 work 16 bion_top_vhd_tst 0 22 MBEW:UYV?ncMjE4Ql;WhB1
+l101
+L34
+VajYR2k:0QKakDDW?b?fER3
+!s100 `6jQo7k_oZz=8D6em@oR40
+R11
+33
+R12
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R16
+R17
+Econst
+Z31 w1602243136
+R7
+R8
+R0
+Z32 8D:/Dima/Desktop/USB_3_0_KPA/Megafunctions/const.vhd
+Z33 FD:/Dima/Desktop/USB_3_0_KPA/Megafunctions/const.vhd
+l0
+L43
+V>VFdFbI[FhbHJmM`81Uoi1
+!s100 fh94Y?EeBlC;f?Ki2F5eS1
+R11
+33
+R21
+!i10b 1
+R22
+Z34 !s90 -reportprogress|300|-2008|-work|work|D:/Dima/Desktop/USB_3_0_KPA/Megafunctions/const.vhd|
+Z35 !s107 D:/Dima/Desktop/USB_3_0_KPA/Megafunctions/const.vhd|
+!i113 1
+R16
+R17
+Asyn
+R7
+R8
+DEx4 work 5 const 0 22 >VFdFbI[FhbHJmM`81Uoi1
+l69
+L51
+VZ5Me64E<SfSH_43D>jM=A2
+!s100 T0iT[K93B2Ll8JYSPJP2?0
+R11
+33
+R21
+!i10b 1
+R22
+R34
+R35
+!i113 1
+R16
+R17
+Ecount_n_modul
+Z36 w1599571228
+R6
+R7
+R8
+R0
+Z37 8D:/Dima/Desktop/USB_3_0_KPA/count_n_modul.vhd
+Z38 FD:/Dima/Desktop/USB_3_0_KPA/count_n_modul.vhd
+l0
+L5
+VdH@;cP6YdZJB;h:>^`BhC0
+!s100 Kd70KQoiI7S9YJeV10>Fo0
+R11
+33
+Z39 !s110 1605865819
+!i10b 1
+Z40 !s108 1605865819.000000
+Z41 !s90 -reportprogress|300|-2008|-work|work|D:/Dima/Desktop/USB_3_0_KPA/count_n_modul.vhd|
+Z42 !s107 D:/Dima/Desktop/USB_3_0_KPA/count_n_modul.vhd|
+!i113 1
+R16
+R17
+Abeh
+R6
+R7
+R8
+DEx4 work 13 count_n_modul 0 22 dH@;cP6YdZJB;h:>^`BhC0
+l19
+L17
+Vd=ZT3EF0@2kbO:EnVk7b92
+!s100 3XKQU2g7`iknHR6db3C[m2
+R11
+33
+R39
+!i10b 1
+R40
+R41
+R42
+!i113 1
+R16
+R17
+Edata_generation
+Z43 w1605711807
+R3
+R4
+R5
+R6
+R7
+R8
+R0
+Z44 8D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/data_generation.vhd
+Z45 FD:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/data_generation.vhd
+l0
+L12
+VIOVcc:[84EP]iY]8NZ^m=1
+!s100 ^Z`R0nR9@FOaElAdE5UF81
+R11
+33
+Z46 !s110 1605865821
+!i10b 1
+R13
+Z47 !s90 -reportprogress|300|-2008|-work|work|D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/data_generation.vhd|
+Z48 !s107 D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/data_generation.vhd|
+!i113 1
+R16
+R17
+Adata_generation_arch
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 15 data_generation 0 22 IOVcc:[84EP]iY]8NZ^m=1
+l94
+L30
+VcNcdEiL?o:7ka_O@_QI8d1
+!s100 K:P3Y=LPOnlG:Y6RCUL3G2
+R11
+33
+R46
+!i10b 1
+R13
+R47
+R48
+!i113 1
+R16
+R17
+Efifo
+Z49 w1602341234
+R7
+R8
+R0
+Z50 8D:/Dima/Desktop/USB_3_0_KPA/Megafunctions/FIFO.vhd
+Z51 FD:/Dima/Desktop/USB_3_0_KPA/Megafunctions/FIFO.vhd
+l0
+L43
+V93f@7=i6[MiUIeDMM:hHi0
+!s100 0<JfcG_0V4HVz`R3@AY7:1
+R11
+33
+R21
+!i10b 1
+R22
+Z52 !s90 -reportprogress|300|-2008|-work|work|D:/Dima/Desktop/USB_3_0_KPA/Megafunctions/FIFO.vhd|
+Z53 !s107 D:/Dima/Desktop/USB_3_0_KPA/Megafunctions/FIFO.vhd|
+!i113 1
+R16
+R17
+Asyn
+R7
+R8
+DEx4 work 4 fifo 0 22 93f@7=i6[MiUIeDMM:hHi0
+l104
+L62
+V>QK1EWVg75df_R;6kTe591
+!s100 `2FGSoN9f?`L_lnkYMRag3
+R11
+33
+R21
+!i10b 1
+R22
+R52
+R53
+!i113 1
+R16
+R17
+Einput_serial_channel
+Z54 w1604589300
+R2
+R4
+R5
+R3
+R6
+R7
+R8
+R0
+Z55 8D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/input_serial_channel.vhd
+Z56 FD:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/input_serial_channel.vhd
+l0
+L13
+VlQ<:7PUjVYK<>RX^l^RQQ1
+!s100 I;6Oc;8o2VTV3U=`FIz_R0
+R11
+33
+R46
+!i10b 1
+R13
+Z57 !s90 -reportprogress|300|-2008|-work|work|D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/input_serial_channel.vhd|
+Z58 !s107 D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/input_serial_channel.vhd|
+!i113 1
+R16
+R17
+Ainput_serial_channel_arch
+R2
+R4
+R5
+R3
+R6
+R7
+R8
+DEx4 work 20 input_serial_channel 0 22 lQ<:7PUjVYK<>RX^l^RQQ1
+l54
+L26
+VXHAZ@J]QN<WoP6h>]4F9L1
+!s100 c:dia8[fj[7f0=VSPkkXQ2
+R11
+33
+R46
+!i10b 1
+R13
+R57
+R58
+!i113 1
+R16
+R17
+Ejtag_debug_const
+Z59 w1605704488
+R4
+R5
+R3
+R6
+R7
+R8
+R0
+Z60 8D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/JTAG_DEBUG_CONST.vhd
+Z61 FD:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/JTAG_DEBUG_CONST.vhd
+l0
+L9
+Vikf8O?ek9YSW6L87j6I@c2
+!s100 Xj57fRlH4;MO2<3H5P_jF0
+R11
+33
+R46
+!i10b 1
+R13
+Z62 !s90 -reportprogress|300|-2008|-work|work|D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/JTAG_DEBUG_CONST.vhd|
+Z63 !s107 D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/JTAG_DEBUG_CONST.vhd|
+!i113 1
+R16
+R17
+Abeh
+R4
+R5
+R3
+R6
+R7
+R8
+DEx4 work 16 jtag_debug_const 0 22 ikf8O?ek9YSW6L87j6I@c2
+l33
+L25
+VaaOmfFm@`^_iS008PbMO?1
+!s100 l8GS3A<Y4KC9M:m6_mELc2
+R11
+33
+R46
+!i10b 1
+R13
+R62
+R63
+!i113 1
+R16
+R17
+Emux_2_ch
+Z64 w1604657412
+R2
+R4
+R5
+R3
+R6
+R7
+R8
+R0
+Z65 8D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/mux_2_ch.vhd
+Z66 FD:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/mux_2_ch.vhd
+l0
+L8
+VjIB2oFche0Dfj<ME7Heem0
+!s100 m2;aGj]T3HT>Dn@eYOk1`0
+R11
+33
+R46
+!i10b 1
+R13
+Z67 !s90 -reportprogress|300|-2008|-work|work|D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/mux_2_ch.vhd|
+Z68 !s107 D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/mux_2_ch.vhd|
+!i113 1
+R16
+R17
+Amux_2_ch_arch
+R2
+R4
+R5
+R3
+R6
+R7
+R8
+DEx4 work 8 mux_2_ch 0 22 jIB2oFche0Dfj<ME7Heem0
+l43
+L22
+V8MJXRmK2KQkF5KKWQHFE`2
+!s100 1o7e=bTk>UAL=MkMH?`U33
+R11
+33
+R46
+!i10b 1
+R13
+R67
+R68
+!i113 1
+R16
+R17
+Pmy_component_pkg
+R4
+R5
+R3
+R6
+R7
+R8
+w1605017750
+R0
+8D:/Dima/Desktop/USB_3_0_KPA/my_component_pkg.vhd
+FD:/Dima/Desktop/USB_3_0_KPA/my_component_pkg.vhd
+l0
+L6
+VnicfChSkMQ1hW78HQVbN20
+!s100 SDheQ=3ed^QcNLNn?KeH90
+R11
+33
+R21
+!i10b 1
+R22
+!s90 -reportprogress|300|-2008|-work|work|D:/Dima/Desktop/USB_3_0_KPA/my_component_pkg.vhd|
+!s107 D:/Dima/Desktop/USB_3_0_KPA/my_component_pkg.vhd|
+!i113 1
+R16
+R17
+Enoise_gen
+Z69 w1602597698
+R7
+R8
+R0
+Z70 8D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/noise_gen.vhd
+Z71 FD:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/noise_gen.vhd
+l0
+L19
+V<[n:Qmag6PlkKNND:mL?_3
+!s100 ifXOTWh`YiSUCBgi_GdZI0
+R11
+33
+R39
+!i10b 1
+R40
+Z72 !s90 -reportprogress|300|-2008|-work|work|D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/noise_gen.vhd|
+Z73 !s107 D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/noise_gen.vhd|
+!i113 1
+R16
+R17
+Abeh
+R7
+R8
+DEx4 work 9 noise_gen 0 22 <[n:Qmag6PlkKNND:mL?_3
+l28
+L25
+V5]@9l[<mzB^fJ=zCC=4Ym2
+!s100 l;>@c4h9czTQQ59U5FSH[0
+R11
+33
+R39
+!i10b 1
+R40
+R72
+R73
+!i113 1
+R16
+R17
+Eoutput_data_interface
+Z74 w1605192759
+R3
+R4
+R5
+R6
+R7
+R8
+R0
+Z75 8D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/output_data_interface.vhd
+Z76 FD:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/output_data_interface.vhd
+l0
+L9
+VCBbKZf_Mkz>8:zV9I5h3;2
+!s100 ]jRzBlGe_QjH2jNb4BOfB3
+R11
+33
+R46
+!i10b 1
+R13
+Z77 !s90 -reportprogress|300|-2008|-work|work|D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/output_data_interface.vhd|
+Z78 !s107 D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/output_data_interface.vhd|
+!i113 1
+R16
+R17
+Aoutput_data_interface_arch
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 21 output_data_interface 0 22 CBbKZf_Mkz>8:zV9I5h3;2
+l30
+L21
+V9B6ViMViWFBezm7DnWmlB0
+!s100 [4VldcnFIV7_[=c^bI]Li2
+R11
+33
+R46
+!i10b 1
+R13
+R77
+R78
+!i113 1
+R16
+R17
+Epathern_generator
+Z79 w1605176900
+R2
+R4
+R5
+R3
+R6
+R7
+R8
+R0
+Z80 8D:/Dima/Desktop/USB_3_0_KPA/pathern_generator.vhd
+Z81 FD:/Dima/Desktop/USB_3_0_KPA/pathern_generator.vhd
+l0
+L22
+V=d6dTz19QVI4b2cYGKFzI2
+!s100 T3STOUa<<c5kR0;KfIcoY1
+R11
+33
+R12
+!i10b 1
+R28
+Z82 !s90 -reportprogress|300|-2008|-work|work|D:/Dima/Desktop/USB_3_0_KPA/pathern_generator.vhd|
+Z83 !s107 D:/Dima/Desktop/USB_3_0_KPA/pathern_generator.vhd|
+!i113 1
+R16
+R17
+Abeh
+R2
+R4
+R5
+R3
+R6
+R7
+R8
+DEx4 work 17 pathern_generator 0 22 =d6dTz19QVI4b2cYGKFzI2
+l58
+L35
+V0P7GREHikmEMnnhU39<KI0
+!s100 >6;8;XF[O8b[OYol69EOF2
+R11
+33
+R12
+!i10b 1
+R28
+R82
+R83
+!i113 1
+R16
+R17
+Epll
+Z84 w1605203255
+R7
+R8
+R0
+Z85 8D:/Dima/Desktop/USB_3_0_KPA/Megafunctions/PLL.vhd
+Z86 FD:/Dima/Desktop/USB_3_0_KPA/Megafunctions/PLL.vhd
+l0
+L43
+V5?[hTCM<;eQKnBgW@O6<Y2
+!s100 ?R0ecE4Z@ZJB>fFmNI]]b0
+R11
+33
+R39
+!i10b 1
+R40
+Z87 !s90 -reportprogress|300|-2008|-work|work|D:/Dima/Desktop/USB_3_0_KPA/Megafunctions/PLL.vhd|
+Z88 !s107 D:/Dima/Desktop/USB_3_0_KPA/Megafunctions/PLL.vhd|
+!i113 1
+R16
+R17
+Asyn
+R7
+R8
+DEx4 work 3 pll 0 22 5?[hTCM<;eQKnBgW@O6<Y2
+l136
+L54
+VH7jhf3?8_Q?2UbE6B][gD3
+!s100 92VWie`@jcIVhQgP<HL[h0
+R11
+33
+R39
+!i10b 1
+R40
+R87
+R88
+!i113 1
+R16
+R17
+vPLL_altpll5
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1605865818
+!i10b 1
+!s100 e_0OUG`^Pl1X0WH3JbC>F2
+IkOfkV@ez9YG7Pink93]7g3
+VDg1SIo80bB@j0V0VzS_@n1
+!s105 pll_altpll5_v_unit
+S1
+R0
+w1605711992
+8D:/Dima/Desktop/USB_3_0_KPA/db/pll_altpll5.v
+FD:/Dima/Desktop/USB_3_0_KPA/db/pll_altpll5.v
+L0 30
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1605865818.000000
+!s107 D:/Dima/Desktop/USB_3_0_KPA/db/pll_altpll5.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Dima/Desktop/USB_3_0_KPA/db|D:/Dima/Desktop/USB_3_0_KPA/db/pll_altpll5.v|
+!i113 1
+o-sv -work work
+!s92 -sv -work work +incdir+D:/Dima/Desktop/USB_3_0_KPA/db
+tCvgOpt 0
+n@p@l@l_altpll5
+Esynth_gen
+Z89 w1604405472
+R3
+R4
+R5
+R6
+R7
+R8
+R0
+Z90 8D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/Synth_gen.vhd
+Z91 FD:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/Synth_gen.vhd
+l0
+L12
+VRaB;h03gHei@Go3kJEdk70
+!s100 z?=Yl]2B82XF:fQBZ_8:40
+R11
+33
+R21
+!i10b 1
+R22
+Z92 !s90 -reportprogress|300|-2008|-work|work|D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/Synth_gen.vhd|
+Z93 !s107 D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/Synth_gen.vhd|
+!i113 1
+R16
+R17
+Asynth_gen_arch
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 9 synth_gen 0 22 RaB;h03gHei@Go3kJEdk70
+l53
+L28
+V0UMzPiZcABmRE4CL^YeKP0
+!s100 81Dg4JPNc1E5QXNEa5YoE1
+R11
+33
+R21
+!i10b 1
+R22
+R92
+R93
+!i113 1
+R16
+R17
+Etrs_gen
+Z94 w1603110424
+R2
+R4
+R5
+R3
+R6
+R7
+R8
+R0
+Z95 8D:/Dima/Desktop/USB_3_0_KPA/Camera_simulation/TRS_gen.vhd
+Z96 FD:/Dima/Desktop/USB_3_0_KPA/Camera_simulation/TRS_gen.vhd
+l0
+L10
+V<II4_GmFULG8nRVdTbgFO2
+!s100 OVDARR:T51d=QQ8N9hkGV1
+R11
+33
+R12
+!i10b 1
+R28
+Z97 !s90 -reportprogress|300|-2008|-work|work|D:/Dima/Desktop/USB_3_0_KPA/Camera_simulation/TRS_gen.vhd|
+Z98 !s107 D:/Dima/Desktop/USB_3_0_KPA/Camera_simulation/TRS_gen.vhd|
+!i113 1
+R16
+R17
+Abeh
+R2
+R4
+R5
+R3
+R6
+R7
+R8
+DEx4 work 7 trs_gen 0 22 <II4_GmFULG8nRVdTbgFO2
+l33
+L31
+VH7R@XNZZ6NeNcE[o^UVVV2
+!s100 ASS:5<W8:7LDk<2_BU[mI0
+R11
+33
+R12
+!i10b 1
+R28
+R97
+R98
+!i113 1
+R16
+R17
+Etwo_ch_to_one_top
+Z99 w1605191959
+R2
+R4
+R5
+R3
+R6
+R7
+R8
+R0
+Z100 8D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/two_ch_to_one_top.vhd
+Z101 FD:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/two_ch_to_one_top.vhd
+l0
+L8
+Vz]8BOZN8DKfWizJ`mln9z1
+!s100 D<;Lz<Jj^@Z6hHgND^o@;2
+R11
+33
+R46
+!i10b 1
+R13
+Z102 !s90 -reportprogress|300|-2008|-work|work|D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/two_ch_to_one_top.vhd|
+Z103 !s107 D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/two_ch_to_one_top.vhd|
+!i113 1
+R16
+R17
+Atwo_ch_to_one_top_arch
+R2
+R4
+R5
+R3
+R6
+R7
+R8
+DEx4 work 17 two_ch_to_one_top 0 22 z]8BOZN8DKfWizJ`mln9z1
+l76
+L25
+V8o9Z^cVYNh^eA]:X?n;`Y2
+!s100 nZU:lZ3A;eT<9[z3N2f3N3
+R11
+33
+R46
+!i10b 1
+R13
+R102
+R103
+!i113 1
+R16
+R17
+Pvideo_constants
+R4
+R5
+R7
+R8
+w1605707842
+R0
+8D:/Dima/Desktop/USB_3_0_KPA/VIDEO_CONSTANTS.vhd
+FD:/Dima/Desktop/USB_3_0_KPA/VIDEO_CONSTANTS.vhd
+l0
+L5
+Vn`58E3RNEDj_md??c@Ce`0
+!s100 N5`dU1MbGKU3e98?5VjV?2
+R11
+33
+R39
+!i10b 1
+R40
+!s90 -reportprogress|300|-2008|-work|work|D:/Dima/Desktop/USB_3_0_KPA/VIDEO_CONSTANTS.vhd|
+!s107 D:/Dima/Desktop/USB_3_0_KPA/VIDEO_CONSTANTS.vhd|
+!i113 1
+R16
+R17

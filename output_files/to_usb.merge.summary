@@ -1,0 +1,14 @@
+Partition Merge Status : Successful - Wed Nov 18 18:30:14 2020
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : to_usb
+Top-level Entity Name : BION_TOP
+Family : Cyclone IV E
+Total logic elements : 3,519
+    Total combinational functions : 2,049
+    Dedicated logic registers : 2,500
+Total registers : 2500
+Total pins : 53
+Total virtual pins : 0
+Total memory bits : 425,984
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

@@ -1,0 +1,457 @@
+# Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do to_usb_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+D:/Dima/Desktop/USB_3_0_KPA/db {D:/Dima/Desktop/USB_3_0_KPA/db/pll_altpll5.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:18 on Nov 20,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Dima/Desktop/USB_3_0_KPA/db" D:/Dima/Desktop/USB_3_0_KPA/db/pll_altpll5.v 
+# -- Compiling module PLL_altpll5
+# 
+# Top level modules:
+# 	PLL_altpll5
+# End time: 12:50:18 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/Dima/Desktop/USB_3_0_KPA/VIDEO_CONSTANTS.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:19 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work D:/Dima/Desktop/USB_3_0_KPA/VIDEO_CONSTANTS.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package VIDEO_CONSTANTS
+# End time: 12:50:19 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/Dima/Desktop/USB_3_0_KPA/count_n_modul.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:19 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work D:/Dima/Desktop/USB_3_0_KPA/count_n_modul.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity count_n_modul
+# -- Compiling architecture beh of count_n_modul
+# End time: 12:50:19 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/noise_gen.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:19 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/noise_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity noise_gen
+# -- Compiling architecture beh of noise_gen
+# End time: 12:50:19 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/Dima/Desktop/USB_3_0_KPA/Megafunctions/PLL.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:19 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work D:/Dima/Desktop/USB_3_0_KPA/Megafunctions/PLL.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PLL
+# -- Compiling architecture SYN of pll
+# End time: 12:50:19 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/Dima/Desktop/USB_3_0_KPA/Megafunctions/FIFO.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:20 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work D:/Dima/Desktop/USB_3_0_KPA/Megafunctions/FIFO.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FIFO
+# -- Compiling architecture SYN of fifo
+# End time: 12:50:20 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/Dima/Desktop/USB_3_0_KPA/Megafunctions/const.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:20 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work D:/Dima/Desktop/USB_3_0_KPA/Megafunctions/const.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity const
+# -- Compiling architecture SYN of const
+# End time: 12:50:20 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/BION_TOP.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:20 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/BION_TOP.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package VIDEO_CONSTANTS
+# -- Compiling entity BION_TOP
+# -- Compiling architecture BION_TOP_arch of BION_TOP
+# End time: 12:50:20 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/Dima/Desktop/USB_3_0_KPA/my_component_pkg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:20 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work D:/Dima/Desktop/USB_3_0_KPA/my_component_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package VIDEO_CONSTANTS
+# -- Compiling package My_component_pkg
+# End time: 12:50:20 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/Synth_gen.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:20 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/Synth_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package VIDEO_CONSTANTS
+# -- Compiling entity Synth_gen
+# -- Compiling architecture Synth_gen_arch of Synth_gen
+# End time: 12:50:20 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/output_data_interface.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:21 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/output_data_interface.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package VIDEO_CONSTANTS
+# -- Compiling entity output_data_interface
+# -- Compiling architecture output_data_interface_arch of output_data_interface
+# End time: 12:50:21 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/JTAG_DEBUG_CONST.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:21 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/JTAG_DEBUG_CONST.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package VIDEO_CONSTANTS
+# -- Compiling entity JTAG_DEBUG_CONST
+# -- Compiling architecture beh of JTAG_DEBUG_CONST
+# End time: 12:50:21 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/data_generation.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:21 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/data_generation.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package VIDEO_CONSTANTS
+# -- Compiling entity data_generation
+# -- Compiling architecture data_generation_arch of data_generation
+# End time: 12:50:21 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/two_ch_to_one_top.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:21 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/two_ch_to_one_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package VIDEO_CONSTANTS
+# -- Loading package My_component_pkg
+# -- Compiling entity two_ch_to_one_top
+# -- Compiling architecture two_ch_to_one_top_arch of two_ch_to_one_top
+# End time: 12:50:21 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/mux_2_ch.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:21 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/mux_2_ch.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package VIDEO_CONSTANTS
+# -- Loading package My_component_pkg
+# -- Compiling entity mux_2_ch
+# -- Compiling architecture mux_2_ch_arch of mux_2_ch
+# End time: 12:50:21 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/input_serial_channel.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:21 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/input_serial_channel.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package VIDEO_CONSTANTS
+# -- Loading package My_component_pkg
+# -- Compiling entity input_serial_channel
+# -- Compiling architecture input_serial_channel_arch of input_serial_channel
+# End time: 12:50:21 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/Aligner.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:21 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/2_ch_to_1/Aligner.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package VIDEO_CONSTANTS
+# -- Loading package My_component_pkg
+# -- Compiling entity Aligner
+# -- Compiling architecture Aligner_arch of Aligner
+# End time: 12:50:22 on Nov 20,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/Dima/Desktop/USB_3_0_KPA/Camera_simulation/TRS_gen.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:22 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work D:/Dima/Desktop/USB_3_0_KPA/Camera_simulation/TRS_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package VIDEO_CONSTANTS
+# -- Loading package My_component_pkg
+# -- Compiling entity TRS_gen
+# -- Compiling architecture beh of TRS_gen
+# End time: 12:50:22 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/Dima/Desktop/USB_3_0_KPA/pathern_generator.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:22 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work D:/Dima/Desktop/USB_3_0_KPA/pathern_generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package VIDEO_CONSTANTS
+# -- Loading package My_component_pkg
+# -- Compiling entity PATHERN_GENERATOR
+# -- Compiling architecture beh of PATHERN_GENERATOR
+# End time: 12:50:22 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -2008 -work work {D:/Dima/Desktop/USB_3_0_KPA/simulation/modelsim/BION_TOP_tst.vht}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:50:22 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work D:/Dima/Desktop/USB_3_0_KPA/simulation/modelsim/BION_TOP_tst.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package VIDEO_CONSTANTS
+# -- Compiling entity BION_TOP_vhd_tst
+# -- Compiling architecture BION_TOP_arch of BION_TOP_vhd_tst
+# End time: 12:50:22 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  BION_TOP_vhd_tst
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" BION_TOP_vhd_tst 
+# Start time: 12:50:23 on Nov 20,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.video_constants
+# Loading work.bion_top_vhd_tst(bion_top_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.bion_top(bion_top_arch)
+# Loading work.pll(syn)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.mf_pllpack(body)
+# Loading altera_mf.altpll(behavior)
+# Loading altera_mf.mf_cycloneiii_pll(vital_pll)
+# Loading altera_mf.mf_cda_mn_cntr(behave)
+# Loading altera_mf.mf_cda_scale_cntr(behave)
+# Loading work.my_component_pkg
+# Loading work.two_ch_to_one_top(two_ch_to_one_top_arch)
+# Loading work.input_serial_channel(input_serial_channel_arch)
+# Loading work.count_n_modul(beh)
+# Loading work.aligner(aligner_arch)
+# Loading work.trs_gen(beh)
+# Loading work.mux_2_ch(mux_2_ch_arch)
+# Loading work.synth_gen(synth_gen_arch)
+# Loading work.data_generation(data_generation_arch)
+# Loading work.pathern_generator(beh)
+# Loading work.noise_gen(beh)
+# Loading work.fifo(syn)
+# Loading altera_mf.altera_mf_hint_evaluation(body)
+# Loading altera_mf.dcfifo(behavior)
+# Loading altera_mf.dcfifo_mixed_widths(behavior)
+# Loading altera_mf.dcfifo_async(behavior)
+# Loading altera_mf.dcfifo_dffpipe(behavior)
+# Loading altera_mf.dcfifo_fefifo(behavior)
+# Loading altera_mf.dcfifo_sync(behavior)
+# Loading altera_mf.dcfifo_low_latency(behavior)
+# Loading work.output_data_interface(output_data_interface_arch)
+# Loading work.jtag_debug_const(beh)
+# Loading work.const(syn)
+# Loading lpm.lpm_components
+# Loading lpm.lpm_constant(lpm_syn)
+# ** Warning: Design size of 18264 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Warning: (vsim-8683) Uninitialized out port /bion_top_vhd_tst/i1/two_ch_to_one_comp/Aligner_comp/reset_each_line has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bion_top_vhd_tst/i1/reset_FX has no driver.
+# This port will contribute value (U) to the signal network.
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Dima  Hostname: DIMKA  ProcessID: 12976
+#           Attempting to use alternate WLF file "./wlftk8hsyc".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftk8hsyc
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Note: Cyclone IV E PLL locked to incoming clock
+#    Time: 55 ns  Iteration: 3  Instance: /bion_top_vhd_tst/i1/PLL_input/altpll_component/CYCLONEIII_ALTPLL/M5
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 9  Instance: /bion_top_vhd_tst/i1/Synth_gen_top
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 9  Instance: /bion_top_vhd_tst/i1/Synth_gen_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 9  Instance: /bion_top_vhd_tst/i1/data_generation_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 9  Instance: /bion_top_vhd_tst/i1/data_generation_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 9  Instance: /bion_top_vhd_tst/i1/data_generation_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 9  Instance: /bion_top_vhd_tst/i1/data_generation_top
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 9  Instance: /bion_top_vhd_tst/i1/output_data_interface_arch
+restart
+# ** Warning: (vsim-8683) Uninitialized out port /bion_top_vhd_tst/i1/two_ch_to_one_comp/Aligner_comp/reset_each_line has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bion_top_vhd_tst/i1/reset_FX has no driver.
+# This port will contribute value (U) to the signal network.
+add wave -position end  sim:/bion_top_vhd_tst/i1/data_generation_top/enable_for_write_buffer
+add wave -position end  sim:/bion_top_vhd_tst/i1/data_generation_top/enable_for_read_buffer
+add wave -position end  sim:/bion_top_vhd_tst/i1/data_generation_top/data_in_sync_header
+add wave -position end  sim:/bion_top_vhd_tst/i1/data_generation_top/debug_1
+add wave -position end  sim:/bion_top_vhd_tst/i1/data_generation_top/debug_2
+add wave -position end  sim:/bion_top_vhd_tst/i1/data_generation_top/data_in_sync_header
+force -freeze sim:/bion_top_vhd_tst/i1/data_generation_top/debug_1 00000001 0
+# ** Warning: (vsim-8780) Forcing /bion_top_vhd_tst/i1/debug_1 as root of /bion_top_vhd_tst/i1/data_generation_top/debug_1 specified in the force.
+force -freeze sim:/bion_top_vhd_tst/i1/data_generation_top/debug_2 00000001 0
+# ** Warning: (vsim-8780) Forcing /bion_top_vhd_tst/i1/debug_2 as root of /bion_top_vhd_tst/i1/data_generation_top/debug_2 specified in the force.
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/data_generation_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Note: Cyclone IV E PLL locked to incoming clock
+#    Time: 55 ns  Iteration: 3  Instance: /bion_top_vhd_tst/i1/PLL_input/altpll_component/CYCLONEIII_ALTPLL/M5
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 9  Instance: /bion_top_vhd_tst/i1/Synth_gen_top
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 9  Instance: /bion_top_vhd_tst/i1/Synth_gen_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 9  Instance: /bion_top_vhd_tst/i1/data_generation_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 9  Instance: /bion_top_vhd_tst/i1/data_generation_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 9  Instance: /bion_top_vhd_tst/i1/data_generation_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 9  Instance: /bion_top_vhd_tst/i1/data_generation_top
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 9  Instance: /bion_top_vhd_tst/i1/output_data_interface_arch
+add wave -position end  sim:/bion_top_vhd_tst/i1/data_generation_top/str_active
+add wave -position end  sim:/bion_top_vhd_tst/i1/data_generation_top/pix_active
+add wave -position 9  sim:/bion_top_vhd_tst/i1/data_generation_top/Pix_per_line
+add wave -position 10  sim:/bion_top_vhd_tst/i1/data_generation_top/Line_per_frame
+run -all
+add wave -position 8  sim:/bion_top_vhd_tst/i1/data_generation_top/clk_in
+run -all
+run -all

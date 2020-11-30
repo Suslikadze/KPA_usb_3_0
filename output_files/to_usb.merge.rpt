@@ -1,0 +1,1090 @@
+Partition Merge report for to_usb
+Wed Nov 18 18:30:14 2020
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Partition Merge Summary
+  3. Partition Merge Netlist Types Used
+  4. Connections to In-System Debugging Instance "auto_signaltap_0"
+  5. Partition Merge Partition Statistics
+  6. Partition Merge Partition Pin Processing
+  7. Partition Merge Resource Usage Summary
+  8. Partition Merge RAM Summary
+  9. Partition Merge Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Partition Merge Summary                                                          ;
++------------------------------------+---------------------------------------------+
+; Partition Merge Status             ; Successful - Wed Nov 18 18:30:14 2020       ;
+; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name                      ; to_usb                                      ;
+; Top-level Entity Name              ; BION_TOP                                    ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 3,519                                       ;
+;     Total combinational functions  ; 2,049                                       ;
+;     Dedicated logic registers      ; 2,500                                       ;
+; Total registers                    ; 2500                                        ;
+; Total pins                         ; 53                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 425,984                                     ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 1                                           ;
++------------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Netlist Types Used                                                                                            ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Partition Name                 ; Partition Type ; Netlist Type Used ; Netlist Type Requested ; Partition Contents             ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Top                            ; User-created   ; Source File       ; Source File            ;                                ;
+; sld_hub:auto_hub               ; Auto-generated ; Post-Synthesis    ; Post-Synthesis         ; sld_hub:auto_hub               ;
+; sld_signaltap:auto_signaltap_0 ; Auto-generated ; Post-Synthesis    ; Post-Synthesis         ; sld_signaltap:auto_signaltap_0 ;
+; hard_block:auto_generated_inst ; Auto-generated ; Source File       ; Source File            ; hard_block:auto_generated_inst ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                                                                                                                                                                                               ;
++-------------------------------------------------------------------------+--------------+-----------+--------------------------------+-------------------+-------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+; Name                                                                    ; Type         ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                                                       ; Details                                                                                  ;
++-------------------------------------------------------------------------+--------------+-----------+--------------------------------+-------------------+-------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+; PCLK                                                                    ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|clk_for_PCLK_in                                 ; N/A                                                                                      ;
+; PCLK                                                                    ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|clk_for_PCLK_in                                 ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[0]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[0]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[0]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[0]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[10]         ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[10]         ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[10]         ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[10]         ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[1]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[1]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[1]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[1]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[2]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[2]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[2]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[2]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[3]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[3]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[3]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[3]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[4]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[4]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[4]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[4]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[5]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[5]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[5]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[5]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[6]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[6]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[6]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[6]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[7]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[7]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[7]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[7]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[8]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[8]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[8]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[8]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[9]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[9]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[9]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_line|qint[9]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[0]           ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[0]           ; post-fitting ; missing   ; Top                            ; post-synthesis    ; GND                                                                     ; The post-fitting netlist is not being used.  Set the partition's netlist type to source. ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[10]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[10]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[10]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[10]          ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[1]           ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[1]           ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[1]           ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[1]           ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[2]           ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[2]           ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[2]           ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[2]           ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[3]           ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[3]           ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[3]           ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[3]           ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[4]           ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[4]           ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[4]           ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[4]           ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[5]           ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[5]           ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[5]           ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[5]           ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[6]           ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[6]           ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[6]           ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[6]           ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[7]           ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[7]           ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[7]           ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[7]           ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[8]           ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[8]           ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[8]           ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[8]           ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[9]           ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[9]           ; N/A                                                                                      ;
+; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[9]           ; post-fitting ; connected ; Top                            ; post-synthesis    ; Synth_gen:Synth_gen_top|count_n_modul:counter_for_pix|qint[9]           ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                     ; N/A                                                                                      ;
+; auto_signaltap_0|gnd                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; auto_signaltap_0|vcc                                                    ; post-fitting ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                     ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_generator_blanc[0]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_generator_blanc[0]             ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_generator_blanc[0]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_generator_blanc[0]             ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_generator_blanc[1]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_generator_blanc[1]             ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_generator_blanc[1]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_generator_blanc[1]             ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_generator_blanc[2]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_generator_blanc[2]             ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_generator_blanc[2]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_generator_blanc[2]             ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_generator_blanc[3]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_generator_blanc[3]             ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_generator_blanc[3]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_generator_blanc[3]             ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_generator_blanc[4]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_generator_blanc[4]             ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_generator_blanc[4]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_generator_blanc[4]             ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_generator_blanc[5]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_generator_blanc[5]             ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_generator_blanc[5]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_generator_blanc[5]             ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_generator_blanc[6]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_generator_blanc[6]             ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_generator_blanc[6]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_generator_blanc[6]             ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_generator_blanc[7]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_generator_blanc[7]             ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_generator_blanc[7]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_generator_blanc[7]             ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_in_sync_header[0]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_in_sync_header[0]              ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_in_sync_header[0]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_in_sync_header[0]              ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_in_sync_header[1]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_in_sync_header[1]              ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_in_sync_header[1]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_in_sync_header[1]              ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_in_sync_header[2]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_in_sync_header[2]              ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_in_sync_header[2]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_in_sync_header[2]              ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_in_sync_header[3]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_in_sync_header[3]              ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_in_sync_header[3]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_in_sync_header[3]              ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_in_sync_header[4]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_in_sync_header[4]              ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_in_sync_header[4]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_in_sync_header[4]              ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_in_sync_header[5]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_in_sync_header[5]              ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_in_sync_header[5]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_in_sync_header[5]              ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_in_sync_header[6]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_in_sync_header[6]              ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_in_sync_header[6]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_in_sync_header[6]              ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_in_sync_header[7]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_in_sync_header[7]              ; N/A                                                                                      ;
+; data_generation:data_generation_top|data_in_sync_header[7]              ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|data_in_sync_header[7]              ; N/A                                                                                      ;
+; out1                                                                    ; post-fitting ; connected ; Top                            ; post-synthesis    ; Mux1~4                                                                  ; N/A                                                                                      ;
+; out2                                                                    ; post-fitting ; connected ; Top                            ; post-synthesis    ; Mux0~8                                                                  ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[0]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[0]             ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[0]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[0]             ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[10]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[10]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[10]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[10]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[11]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[11]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[11]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[11]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[12]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[12]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[12]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[12]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[13]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[13]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[13]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[13]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[14]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[14]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[14]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[14]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[15]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[15]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[15]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[15]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[16]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[16]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[16]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[16]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[17]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[17]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[17]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[17]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[18]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[18]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[18]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[18]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[19]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[19]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[19]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[19]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[1]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[1]             ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[1]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[1]             ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[20]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[20]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[20]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[20]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[21]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[21]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[21]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[21]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[22]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[22]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[22]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[22]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[23]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[23]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[23]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[23]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[24]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[24]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[24]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[24]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[25]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[25]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[25]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[25]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[26]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[26]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[26]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[26]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[27]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[27]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[27]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[27]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[28]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[28]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[28]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[28]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[29]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[29]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[29]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[29]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[2]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[2]             ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[2]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[2]             ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[30]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[30]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[30]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[30]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[31]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[31]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[31]            ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[31]            ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[3]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[3]             ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[3]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[3]             ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[4]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[4]             ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[4]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[4]             ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[5]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[5]             ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[5]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[5]             ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[6]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[6]             ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[6]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[6]             ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[7]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[7]             ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[7]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[7]             ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[8]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[8]             ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[8]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[8]             ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[9]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[9]             ; N/A                                                                                      ;
+; output_data_interface:output_data_interface_arch|databus[9]             ; post-fitting ; connected ; Top                            ; post-synthesis    ; output_data_interface:output_data_interface_arch|databus[9]             ; N/A                                                                                      ;
+; slwr                                                                    ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|enable_for_read_buffer~_wirecell    ; N/A                                                                                      ;
+; slwr                                                                    ; post-fitting ; connected ; Top                            ; post-synthesis    ; data_generation:data_generation_top|enable_for_read_buffer~_wirecell    ; N/A                                                                                      ;
+; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[0] ; post-fitting ; connected ; Top                            ; post-synthesis    ; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[0] ; N/A                                                                                      ;
+; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[0] ; post-fitting ; connected ; Top                            ; post-synthesis    ; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[0] ; N/A                                                                                      ;
+; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[1] ; post-fitting ; connected ; Top                            ; post-synthesis    ; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[1] ; N/A                                                                                      ;
+; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[1] ; post-fitting ; connected ; Top                            ; post-synthesis    ; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[1] ; N/A                                                                                      ;
+; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[2] ; post-fitting ; connected ; Top                            ; post-synthesis    ; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[2] ; N/A                                                                                      ;
+; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[2] ; post-fitting ; connected ; Top                            ; post-synthesis    ; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[2] ; N/A                                                                                      ;
+; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[3] ; post-fitting ; connected ; Top                            ; post-synthesis    ; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[3] ; N/A                                                                                      ;
+; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[3] ; post-fitting ; connected ; Top                            ; post-synthesis    ; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[3] ; N/A                                                                                      ;
+; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[4] ; post-fitting ; connected ; Top                            ; post-synthesis    ; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[4] ; N/A                                                                                      ;
+; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[4] ; post-fitting ; connected ; Top                            ; post-synthesis    ; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[4] ; N/A                                                                                      ;
+; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[5] ; post-fitting ; connected ; Top                            ; post-synthesis    ; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[5] ; N/A                                                                                      ;
+; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[5] ; post-fitting ; connected ; Top                            ; post-synthesis    ; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[5] ; N/A                                                                                      ;
+; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[6] ; post-fitting ; connected ; Top                            ; post-synthesis    ; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[6] ; N/A                                                                                      ;
+; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[6] ; post-fitting ; connected ; Top                            ; post-synthesis    ; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[6] ; N/A                                                                                      ;
+; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[7] ; post-fitting ; connected ; Top                            ; post-synthesis    ; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[7] ; N/A                                                                                      ;
+; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[7] ; post-fitting ; connected ; Top                            ; post-synthesis    ; two_ch_to_one_top:two_ch_to_one_comp|mux_2_ch:mux_2_ch_comp|data_out[7] ; N/A                                                                                      ;
++-------------------------------------------------------------------------+--------------+-----------+--------------------------------+-------------------+-------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Statistics                                                                                                      ;
++---------------------------------------------+--------+------------------+--------------------------------+--------------------------------+
+; Statistic                                   ; Top    ; sld_hub:auto_hub ; sld_signaltap:auto_signaltap_0 ; hard_block:auto_generated_inst ;
++---------------------------------------------+--------+------------------+--------------------------------+--------------------------------+
+; Estimated Total logic elements              ; 1118   ; 425              ; 1979                           ; 0                              ;
+;                                             ;        ;                  ;                                ;                                ;
+; Total combinational functions               ; 832    ; 405              ; 812                            ; 0                              ;
+; Logic element usage by number of LUT inputs ;        ;                  ;                                ;                                ;
+;     -- 4 input functions                    ; 522    ; 178              ; 492                            ; 0                              ;
+;     -- 3 input functions                    ; 126    ; 182              ; 191                            ; 0                              ;
+;     -- <=2 input functions                  ; 184    ; 45               ; 129                            ; 0                              ;
+;                                             ;        ;                  ;                                ;                                ;
+; Logic elements by mode                      ;        ;                  ;                                ;                                ;
+;     -- normal mode                          ; 737    ; 395              ; 727                            ; 0                              ;
+;     -- arithmetic mode                      ; 95     ; 10               ; 85                             ; 0                              ;
+;                                             ;        ;                  ;                                ;                                ;
+; Total registers                             ; 622    ; 241              ; 1637                           ; 0                              ;
+;     -- Dedicated logic registers            ; 622    ; 241              ; 1637                           ; 0                              ;
+;     -- I/O registers                        ; 0      ; 0                ; 0                              ; 0                              ;
+;                                             ;        ;                  ;                                ;                                ;
+; Virtual pins                                ; 0      ; 0                ; 0                              ; 0                              ;
+; I/O pins                                    ; 53     ; 0                ; 0                              ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0      ; 0                ; 0                              ; 0                              ;
+; Total memory bits                           ; 262144 ; 0                ; 163840                         ; 0                              ;
+; Total RAM block bits                        ; 0      ; 0                ; 0                              ; 0                              ;
+; JTAG                                        ; 1      ; 0                ; 0                              ; 0                              ;
+; PLL                                         ; 0      ; 0                ; 0                              ; 1                              ;
+;                                             ;        ;                  ;                                ;                                ;
+; Connections                                 ;        ;                  ;                                ;                                ;
+;     -- Input Connections                    ; 1097   ; 371              ; 2210                           ; 1                              ;
+;     -- Registered Input Connections         ; 702    ; 252              ; 1830                           ; 0                              ;
+;     -- Output Connections                   ; 2564   ; 608              ; 34                             ; 473                            ;
+;     -- Registered Output Connections        ; 172    ; 608              ; 0                              ; 0                              ;
+;                                             ;        ;                  ;                                ;                                ;
+; Internal Connections                        ;        ;                  ;                                ;                                ;
+;     -- Total Connections                    ; 7904   ; 2853             ; 9878                           ; 475                            ;
+;     -- Registered Connections               ; 3340   ; 1966             ; 7424                           ; 0                              ;
+;                                             ;        ;                  ;                                ;                                ;
+; External Connections                        ;        ;                  ;                                ;                                ;
+;     -- Top                                  ; 480    ; 743              ; 1964                           ; 474                            ;
+;     -- sld_hub:auto_hub                     ; 743    ; 20               ; 216                            ; 0                              ;
+;     -- sld_signaltap:auto_signaltap_0       ; 1964   ; 216              ; 64                             ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 474    ; 0                ; 0                              ; 0                              ;
+;                                             ;        ;                  ;                                ;                                ;
+; Partition Interface                         ;        ;                  ;                                ;                                ;
+;     -- Input Ports                          ; 155    ; 309              ; 309                            ; 1                              ;
+;     -- Output Ports                         ; 118    ; 326              ; 175                            ; 2                              ;
+;     -- Bidir Ports                          ; 0      ; 0                ; 0                              ; 0                              ;
+;                                             ;        ;                  ;                                ;                                ;
+; Registered Ports                            ;        ;                  ;                                ;                                ;
+;     -- Registered Input Ports               ; 0      ; 3                ; 167                            ; 0                              ;
+;     -- Registered Output Ports              ; 0      ; 237              ; 161                            ; 0                              ;
+;                                             ;        ;                  ;                                ;                                ;
+; Port Connectivity                           ;        ;                  ;                                ;                                ;
+;     -- Input Ports driven by GND            ; 0      ; 56               ; 11                             ; 0                              ;
+;     -- Output Ports driven by GND           ; 0      ; 44               ; 2                              ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0      ; 0                ; 23                             ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0      ; 0                ; 1                              ; 0                              ;
+;     -- Input Ports with no Source           ; 0      ; 209              ; 83                             ; 0                              ;
+;     -- Output Ports with no Source          ; 0      ; 0                ; 0                              ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0      ; 214              ; 97                             ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0      ; 189              ; 163                            ; 0                              ;
++---------------------------------------------+--------+------------------+--------------------------------+--------------------------------+
+Note: Resource usage numbers presented for Partitions containing post-synthesis logic are estimates.  For Partitions containing post-fit logic, resource usage numbers are accurate based on previous placement information.  Actual Fitter results may vary depending on current Fitter Preservation Level assignments.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Pin Processing                                                                                                            ;
++------------------------------------------------------------------------------------------------+-----------+---------------+----------+-------------+
+; Name                                                                                           ; Partition ; Type          ; Location ; Status      ;
++------------------------------------------------------------------------------------------------+-----------+---------------+----------+-------------+
+; A[0]                                                                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- A[0]                                                                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- A[0]~output                                                                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; A[1]                                                                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- A[1]                                                                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- A[1]~output                                                                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; FLAGA                                                                                          ; Top       ; Input Port    ; n/a      ;             ;
+;     -- FLAGA                                                                                   ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- FLAGA~input                                                                             ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; FLAGB                                                                                          ; Top       ; Input Port    ; n/a      ;             ;
+;     -- FLAGB                                                                                   ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- FLAGB~input                                                                             ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; FLAGC                                                                                          ; Top       ; Input Port    ; n/a      ;             ;
+;     -- FLAGC                                                                                   ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- FLAGC~input                                                                             ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; FLAGD                                                                                          ; Top       ; Input Port    ; n/a      ;             ;
+;     -- FLAGD                                                                                   ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- FLAGD~input                                                                             ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; PCLK                                                                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- PCLK                                                                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- PCLK~output                                                                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; altera_reserved_tck                                                                            ; Top       ; Input Port    ; n/a      ;             ;
+;     -- altera_reserved_tck                                                                     ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- altera_reserved_tck~input                                                               ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; altera_reserved_tdi                                                                            ; Top       ; Input Port    ; n/a      ;             ;
+;     -- altera_reserved_tdi                                                                     ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- altera_reserved_tdi~input                                                               ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; altera_reserved_tdo                                                                            ; Top       ; Output Port   ; n/a      ;             ;
+;     -- altera_reserved_tdo                                                                     ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- altera_reserved_tdo~output                                                              ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; altera_reserved_tms                                                                            ; Top       ; Input Port    ; n/a      ;             ;
+;     -- altera_reserved_tms                                                                     ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- altera_reserved_tms~input                                                               ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; clk_in                                                                                         ; Top       ; Input Port    ; n/a      ;             ;
+;     -- clk_in                                                                                  ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- clk_in~input                                                                            ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; data_in_1                                                                                      ; Top       ; Input Port    ; n/a      ;             ;
+;     -- data_in_1                                                                               ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- data_in_1~input                                                                         ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; data_in_2                                                                                      ; Top       ; Input Port    ; n/a      ;             ;
+;     -- data_in_2                                                                               ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- data_in_2~input                                                                         ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[0]                                                                                     ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[0]                                                                              ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[0]~output                                                                       ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[10]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[10]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[10]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[11]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[11]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[11]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[12]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[12]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[12]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[13]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[13]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[13]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[14]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[14]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[14]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[15]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[15]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[15]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[16]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[16]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[16]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[17]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[17]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[17]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[18]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[18]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[18]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[19]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[19]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[19]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[1]                                                                                     ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[1]                                                                              ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[1]~output                                                                       ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[20]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[20]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[20]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[21]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[21]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[21]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[22]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[22]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[22]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[23]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[23]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[23]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[24]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[24]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[24]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[25]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[25]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[25]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[26]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[26]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[26]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[27]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[27]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[27]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[28]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[28]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[28]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[29]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[29]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[29]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[2]                                                                                     ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[2]                                                                              ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[2]~output                                                                       ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[30]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[30]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[30]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[31]                                                                                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[31]                                                                             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[31]~output                                                                      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[3]                                                                                     ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[3]                                                                              ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[3]~output                                                                       ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[4]                                                                                     ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[4]                                                                              ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[4]~output                                                                       ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[5]                                                                                     ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[5]                                                                              ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[5]~output                                                                       ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[6]                                                                                     ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[6]                                                                              ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[6]~output                                                                       ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[7]                                                                                     ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[7]                                                                              ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[7]~output                                                                       ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[8]                                                                                     ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[8]                                                                              ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[8]~output                                                                       ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; databus[9]                                                                                     ; Top       ; Output Port   ; n/a      ;             ;
+;     -- databus[9]                                                                              ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- databus[9]~output                                                                       ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_clr             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_ena             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_0_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_1_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_2_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_3_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_4_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_5_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_6_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_7_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_0_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_1_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_2_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_3_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_4_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_5_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_6_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_7_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_cdr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_e1dr ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_sdr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_udr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_uir  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_raw_tck         ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_tdi             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_tdo             ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_0_LPM_CONSTANT_component_ag_mgl_prim1_usr1            ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_clr             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_ena             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_0_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_1_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_2_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_3_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_4_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_5_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_6_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_7_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_0_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_1_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_2_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_3_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_4_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_5_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_6_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_7_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_cdr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_e1dr ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_sdr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_udr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_uir  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_raw_tck         ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_tdi             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_tdo             ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_1_LPM_CONSTANT_component_ag_mgl_prim1_usr1            ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_clr             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_ena             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_0_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_1_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_2_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_3_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_4_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_5_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_6_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_7_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_0_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_1_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_2_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_3_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_4_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_5_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_6_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_7_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_cdr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_e1dr ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_sdr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_udr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_uir  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_raw_tck         ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_tdi             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_tdo             ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_2_LPM_CONSTANT_component_ag_mgl_prim1_usr1            ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_clr             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_ena             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_0_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_1_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_2_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_3_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_4_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_5_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_6_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_7_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_0_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_1_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_2_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_3_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_4_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_5_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_6_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_7_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_cdr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_e1dr ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_sdr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_udr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_uir  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_raw_tck         ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_tdi             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_tdo             ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_3_LPM_CONSTANT_component_ag_mgl_prim1_usr1            ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_clr             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_ena             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_0_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_1_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_2_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_3_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_4_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_5_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_6_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_7_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_0_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_1_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_2_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_3_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_4_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_5_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_6_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_7_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_cdr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_e1dr ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_sdr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_udr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_uir  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_raw_tck         ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_tdi             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_tdo             ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_4_LPM_CONSTANT_component_ag_mgl_prim1_usr1            ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_clr             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_ena             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_0_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_1_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_2_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_3_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_4_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_5_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_6_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_7_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_0_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_1_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_2_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_3_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_4_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_5_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_6_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_7_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_cdr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_e1dr ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_sdr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_udr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_uir  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_raw_tck         ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_tdi             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_tdo             ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_5_LPM_CONSTANT_component_ag_mgl_prim1_usr1            ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_clr             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_ena             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_0_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_1_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_2_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_3_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_4_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_5_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_6_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_7_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_0_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_1_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_2_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_3_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_4_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_5_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_6_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_7_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_cdr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_e1dr ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_sdr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_udr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_uir  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_raw_tck         ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_tdi             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_tdo             ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_6_LPM_CONSTANT_component_ag_mgl_prim1_usr1            ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_clr             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_ena             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_0_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_1_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_2_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_3_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_4_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_5_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_6_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_ir_in_7_        ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_0_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_1_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_2_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_3_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_4_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_5_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_6_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_ir_out_7_       ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_cdr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_e1dr ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_sdr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_udr  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_jtag_state_uir  ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_raw_tck         ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_tdi             ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_tdo             ; Top       ; Output Port   ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; jtag.bp.JTAG_DEBUG_CONST_arch_const_8bit_7_LPM_CONSTANT_component_ag_mgl_prim1_usr1            ; Top       ; Input Port    ; n/a      ;             ;
+;                                                                                                ;           ;               ;          ;             ;
+; out1                                                                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- out1                                                                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- out1~output                                                                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; out2                                                                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- out2                                                                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- out2~output                                                                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; out3                                                                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- out3                                                                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- out3~output                                                                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; out4                                                                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- out4                                                                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- out4~output                                                                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; pktend                                                                                         ; Top       ; Output Port   ; n/a      ;             ;
+;     -- pktend                                                                                  ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- pktend~output                                                                           ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; reset                                                                                          ; Top       ; Input Port    ; n/a      ;             ;
+;     -- reset                                                                                   ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- reset~input                                                                             ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; reset_FX                                                                                       ; Top       ; Output Port   ; n/a      ;             ;
+;     -- reset_FX                                                                                ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- reset_FX~output                                                                         ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; slcs                                                                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- slcs                                                                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- slcs~output                                                                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; sloe                                                                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- sloe                                                                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- sloe~output                                                                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; slrd                                                                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- slrd                                                                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- slrd~output                                                                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
+; slwr                                                                                           ; Top       ; Output Port   ; n/a      ;             ;
+;     -- slwr                                                                                    ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- slwr~output                                                                             ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                                                                                                ;           ;               ;          ;             ;
++------------------------------------------------------------------------------------------------+-----------+---------------+----------+-------------+
+
+
++------------------------------------------------------------------------+
+; Partition Merge Resource Usage Summary                                 ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Estimated Total logic elements              ; 3,519                    ;
+;                                             ;                          ;
+; Total combinational functions               ; 2049                     ;
+; Logic element usage by number of LUT inputs ;                          ;
+;     -- 4 input functions                    ; 1192                     ;
+;     -- 3 input functions                    ; 499                      ;
+;     -- <=2 input functions                  ; 358                      ;
+;                                             ;                          ;
+; Logic elements by mode                      ;                          ;
+;     -- normal mode                          ; 1859                     ;
+;     -- arithmetic mode                      ; 190                      ;
+;                                             ;                          ;
+; Total registers                             ; 2500                     ;
+;     -- Dedicated logic registers            ; 2500                     ;
+;     -- I/O registers                        ; 0                        ;
+;                                             ;                          ;
+; I/O pins                                    ; 53                       ;
+; Total memory bits                           ; 425984                   ;
+;                                             ;                          ;
+; Embedded Multiplier 9-bit elements          ; 0                        ;
+;                                             ;                          ;
+; Total PLLs                                  ; 1                        ;
+;     -- PLLs                                 ; 1                        ;
+;                                             ;                          ;
+; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
+; Maximum fan-out                             ; 1359                     ;
+; Total fan-out                               ; 17497                    ;
+; Average fan-out                             ; 3.66                     ;
++---------------------------------------------+--------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge RAM Summary                                                                                                                                                                                                                                                                                 ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF  ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+; data_generation:data_generation_top|FIFO:Buffer_data|dcfifo:dcfifo_component|dcfifo_9ti1:auto_generated|altsyncram_0c41:fifo_ram|ALTSYNCRAM                                                           ; AUTO ; Simple Dual Port ; 32768        ; 8            ; 32768        ; 8            ; 262144 ; None ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_7b24:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 2048         ; 80           ; 2048         ; 80           ; 163840 ; None ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+
+
++--------------------------+
+; Partition Merge Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Partition Merge
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Wed Nov 18 18:30:12 2020
+Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off to_usb -c to_usb --merge=on
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (35007): Using synthesis netlist for partition "Top"
+Info (35007): Using synthesis netlist for partition "sld_hub:auto_hub"
+Info (35007): Using synthesis netlist for partition "sld_signaltap:auto_signaltap_0"
+Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 192 of its 194 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 2 missing sources or connections.
+Info (35002): Resolved and merged 3 partition(s)
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+Critical Warning (138067): Current license file does not support incremental compilation. The Quartus Prime software removes all the user-specified design partitions in the design automatically.
+Warning (15751): Ignored Virtual Pin assignment to "FIFO_write_volume_0".
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "FLAGC" File: D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/BION_TOP.vhd Line: 14
+    Warning (15610): No output dependent on input pin "FLAGD" File: D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/BION_TOP.vhd Line: 15
+    Warning (15610): No output dependent on input pin "reset" File: D:/Dima/Desktop/USB_3_0_KPA/BION_to_usb/BION_TOP.vhd Line: 16
+Info (21057): Implemented 3719 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 46 output pins
+    Info (21061): Implemented 3548 logic cells
+    Info (21064): Implemented 112 RAM segments
+    Info (21065): Implemented 1 PLLs
+Info: Quartus Prime Partition Merge was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4714 megabytes
+    Info: Processing ended: Wed Nov 18 18:30:14 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

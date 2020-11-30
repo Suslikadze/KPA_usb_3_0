@@ -1,0 +1,21 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+D:/Dima/Desktop/USB_3_0/db {D:/Dima/Desktop/USB_3_0/db/pll_altpll.v}
+vcom -2008 -work work {D:/Dima/Desktop/USB_3_0/count_n_modul.vhd}
+vcom -2008 -work work {D:/Dima/Desktop/USB_3_0/VIDEO_CONSTANTS.vhd}
+vcom -2008 -work work {D:/Dima/Desktop/USB_3_0/PLL.vhd}
+vcom -2008 -work work {D:/Dima/Desktop/USB_3_0/generate_signal.vhd}
+
+vcom -2008 -work work {D:/Dima/Desktop/USB_3_0/simulation/modelsim/generate_signal.vht}
+
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  generate_signal_vhd_tst
+
+add wave *
+view structure
+view signals
+run -all

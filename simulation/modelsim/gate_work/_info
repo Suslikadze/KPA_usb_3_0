@@ -1,0 +1,100 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Dima/Desktop/USB_3_0/simulation/modelsim
+Egenerate_signal
+Z1 w1601644160
+Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 JX^YokbeM8:bL?Pj@;1Jd1
+Z3 DPx10 cycloneive 21 cycloneive_components 0 22 Lf2433zWNi5^RHNT=BHD60
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 dbC[kT^o8P[ggjb1if:RT1
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z9 DPx6 altera 28 altera_primitives_components 0 22 PoC3B_7fao?IDTS[NR5Q62
+R0
+Z10 8to_usb.vho
+Z11 Fto_usb.vho
+l0
+L37
+V8zeKbIN`0<0Q?izEiI;EU3
+!s100 g8A5D5`^5joE`2I><@_KK2
+Z12 OV;C;10.5b;63
+31
+Z13 !s110 1601892637
+!i10b 1
+Z14 !s108 1601892637.000000
+Z15 !s90 -reportprogress|300|-93|-work|work|to_usb.vho|
+Z16 !s107 to_usb.vho|
+!i113 1
+Z17 o-93 -work work
+Z18 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 15 generate_signal 0 22 8zeKbIN`0<0Q?izEiI;EU3
+l728
+L120
+VYL3?n?WVI:mZW8P3Ua:Sg3
+!s100 FIWi2GMRogXV=80iB1fI10
+R12
+31
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Egenerate_signal_vhd_tst
+Z19 w1601390322
+R7
+R8
+R0
+Z20 8D:/Dima/Desktop/USB_3_0/simulation/modelsim/generate_signal.vht
+Z21 FD:/Dima/Desktop/USB_3_0/simulation/modelsim/generate_signal.vht
+l0
+L31
+VjQ5zMglB]CCUJQYUkVcMa2
+!s100 8JVV:PlNeVb2kcDNYle5J0
+R12
+31
+Z22 !s110 1601892638
+!i10b 1
+Z23 !s108 1601892638.000000
+Z24 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/USB_3_0/simulation/modelsim/generate_signal.vht|
+Z25 !s107 D:/Dima/Desktop/USB_3_0/simulation/modelsim/generate_signal.vht|
+!i113 1
+R17
+R18
+Agenerate_signal_arch
+R7
+R8
+DEx4 work 23 generate_signal_vhd_tst 0 22 jQ5zMglB]CCUJQYUkVcMa2
+l86
+L33
+Vn[_DTl@ZI4;7HHCn6V16j3
+!s100 _XT5Bi?<9^bJ59A3E07SO0
+R12
+31
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 1
+R17
+R18
