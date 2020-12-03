@@ -11,24 +11,22 @@ use work.VIDEO_CONSTANTS.all;
 
 entity data_generation is
 Port(
-   clk_in            : in    STD_LOGIC;
-   reset             : in    STD_LOGIC;
-   data_in           : in    STD_LOGIC_VECTOR(bit_data - 1 downto 0);
-   debug_1           : in    STD_LOGIC_VECTOR(7 downto 0);
-   debug_2           : in    STD_LOGIC_VECTOR(7 downto 0);
-   debug_3           : in    STD_LOGIC_VECTOR(7 downto 0);
-   debug_4           : in    STD_LOGIC_VECTOR(7 downto 0);
-   treshhold_FIFO    : in    STD_LOGIC_VECTOR(7 downto 0);
-   button_left,
-   button_right,
-   mode_switcher     : in    STD_LOGIC;
-   Pix_per_line      : in    STD_LOGIC_VECTOR(bit_pix - 1 downto 0);
-   Line_per_frame    : in    STD_LOGIC_VECTOR(bit_strok - 1 downto 0);
-   frame_in          : in    STD_LOGIC;
-   FLAGA             : in    STD_LOGIC;
-   FLAGB             : in    STD_LOGIC;
-   slwr_in_arch      : out   STD_LOGIC;
-   data_8_bit        : out   STD_LOGIC_VECTOR(7 downto 0)
+   clk_in            : in     STD_LOGIC;
+   reset             : in     STD_LOGIC;
+   data_in           : in     STD_LOGIC_VECTOR(bit_data - 1 downto 0);
+   -- Type_of_data_ch_1 : in     STD_LOGIC_VECTOR(7 downto 0);
+   -- Type_of_data_ch_2 : in     STD_LOGIC_VECTOR(7 downto 0);
+   -- Type_of_data_ch_3 : in     STD_LOGIC_VECTOR(7 downto 0);
+   -- Type_of_data_ch_4 : in     STD_LOGIC_VECTOR(7 downto 0);
+   data_ch_1         : in     STD_LOGIC_VECTOR(bit_data - 1 downto 0);
+   data_ch_2         : in     STD_LOGIC_VECTOR(bit_data - 1 downto 0);
+   data_ch_3         : in     STD_LOGIC_VECTOR(bit_data - 1 downto 0);
+   data_ch_4         : in     STD_LOGIC_VECTOR(bit_data - 1 downto 0);
+   Pix_per_line      : in     STD_LOGIC_VECTOR(bit_pix - 1 downto 0);
+   Line_per_frame    : in     STD_LOGIC_VECTOR(bit_strok - 1 downto 0);
+   frame_in          : in     STD_LOGIC;
+   slwr_in_arch      : out    STD_LOGIC;
+   data_8_bit        : out    STD_LOGIC_VECTOR(7 downto 0)
 );
 end data_generation;
 ---------------------------------------------------------
@@ -152,162 +150,6 @@ BEGIN
         end if;
     end if;
 end Process;
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
---Управление сдвигом строки с синхрословом, позиции синхрослова в строке, а также типо выходных изображений с помощью тактовых кнопок на плате
-debounced_switcher: entity work.debounce 
-Port map(
-   clk            => clk_in,
-   reset_n        => reset,
-   button         => mode_switcher,
-   push_out       => debounced_mode_switcher
-);
-debounced_left: entity work.debounce
-Port map(
-   clk            => clk_in,
-   reset_n        => reset,
-   button         => button_left,
-   push_out       => debounced_button_left 
-);
-debounced_right: entity work.debounce
-Port map(
-   clk            => clk_in,
-   reset_n        => reset,
-   button         => button_right,
-   push_out       => debounced_button_right
-);
-
-Process(clk_in)
-Begin
----------------
-   if rising_edge(clk_in) then
-      if (debounced_mode_switcher = '1') then
-         if (type_of_button_control <= 2) then
-            type_of_button_control <= type_of_button_control + 1;
-         else
-            type_of_button_control <= (others => '0');
-         end if;
-      end if;
-   end if;   
-end process;
----------------
-Process(clk_in)
-begin
-if rising_edge(clk_in) then  
----------------
-   case (type_of_button_control) is
-      when "00" => 
-         if (debounced_button_left = '1') then
-            if (position /= x"0") then
-               position <= position - 1;
-            end if;
-         elsif (debounced_button_right = '1') then
-            if (to_integer(unsigned(position)) /= 256) then
-               position <= position + 1;
-            end if;
-         end if;
-         debug_1_signal <= position;
-      when "01" => 
-         if (debounced_button_left = '1') then
-            if (position /= x"0") then
-               position <= position - 1;
-            end if;
-         elsif (debounced_button_right = '1') then
-            if (position /= x"9") then
-               position <= position + 1;
-            end if;
-         end if;
-         debug_2_signal <= position;
-      when "10" => 
-         if (debounced_button_left = '1') then
-            if (position /= x"0") then
-               position <= position - 1;
-            end if;
-         elsif (debounced_button_right = '1') then
-            if (to_integer(unsigned(position)) /= 256) then
-               position <= position + 1;
-            end if;
-         end if;
-         debug_3_signal <= position;
-      when others => 
-         if (debounced_button_left = '1') then
-            if (position /= x"0") then
-               position <= position - 1;
-            end if;
-         elsif (debounced_button_right = '1') then
-            if (position /= x"9") then
-               position <= position + 1;
-            end if;
-         end if;
-         debug_1_signal <= position;
-   end case;
-end if;
-end process;
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-
-
-
----------------------------------------------------------
----------------------------------------------------------
---Описание компонент
----------------------------------------------------------
---ФИФО
-
-
---Выделение активной части кадра
-Process(clk_in)
-BEGIN
-if rising_edge(clk_in) then
-  -- if to_integer(unsigned(Line_per_frame)) =to_integer(unsigned(debug_1))*4 then 
-   if to_integer(unsigned(Line_per_frame)) =to_integer(unsigned(debug_1_signal))*4 then 
-        if    to_integer(unsigned(Pix_per_line)) = to_integer(unsigned(debug_3_signal))      then   data_in_sync_header  <=x"ff";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 1) then   data_in_sync_header  <=x"00";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 2) then   data_in_sync_header  <=x"00";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 3) then   data_in_sync_header  <=x"80";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 4) then   data_in_sync_header  <=x"ff";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 5) then   data_in_sync_header  <=x"00";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 6) then   data_in_sync_header  <=x"00";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 7) then   data_in_sync_header  <=x"ab";
-
-      elsif   to_integer(unsigned(Pix_per_line)) = to_integer(unsigned(debug_3_signal))     + 256 then   data_in_sync_header   <=x"ab";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 1 + 256) then   data_in_sync_header  <=x"00";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 2 + 256) then   data_in_sync_header  <=x"00";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 3 + 256) then   data_in_sync_header  <=x"ff";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 4 + 256) then   data_in_sync_header  <=x"80";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 5 + 256) then   data_in_sync_header  <=x"00";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 6 + 256) then   data_in_sync_header  <=x"00";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 7 + 256) then   data_in_sync_header  <=x"ff";
-      else                                                      data_in_sync_header  <=data_generator_blanc;
-      end if;
-   else
-      data_in_sync_header  <=data_generator_blanc;
-   end if;   
-end if;
-end Process;
-
-
-
-
-
-
-Buffer_data                 : FIFO
-Port map(
----------in-----------
-   data           => data_in_sync_header,
-   rdclk          => clk_in,
-   rdreq          => enable_for_read_buffer,
-   wrclk          => clk_in,
-   wrreq          => enable_for_write_buffer,
----------out----------
-   q              => data_from_buffer
-);
 ---------------------------------------------------------
 ---------------------------------------------------------
 --Запись в ФИФО
@@ -343,87 +185,37 @@ end Process;
 Process(clk_in)
 begin
 if rising_edge(clk_in) then
-   case (debug_4(2 downto 0)) is
-      when "000" =>
-         resolution_x <= 1024;
-         resolution_y <= 1024;
-      when "001" =>
-         resolution_x <= 2048;
-         resolution_y <= 1024;
-      when "010" =>
-         resolution_x <= 512;
-         resolution_y <= 256;
-      when "011" =>
-         resolution_x <= 960;
-         resolution_y <= 960;
-      when "100" =>
-         resolution_x <= 2048;
-         resolution_y <= 2048;
-      when "101" =>
-         resolution_x <= 1024;
-         resolution_y <= 2048;
-      when others => 
-         resolution_x <= 1024;
-         resolution_y <= 1024;
-   end case;
+         resolution_x <= debug 1;
+         resolution_y <= debug 2;
+   -- case (debug_4(2 downto 0)) is
+   --    when "000" =>
+   --       resolution_x <= 1024;
+   --       resolution_y <= 1024;
+   --    when "001" =>
+   --       resolution_x <= 2048;
+   --       resolution_y <= 1024;
+   --    when "010" =>
+   --       resolution_x <= 512;
+   --       resolution_y <= 256;
+   --    when "011" =>
+   --       resolution_x <= 960;
+   --       resolution_y <= 960;
+   --    when "100" =>
+   --       resolution_x <= 2048;
+   --       resolution_y <= 2048;
+   --    when "101" =>
+   --       resolution_x <= 1024;
+   --       resolution_y <= 2048;
+   --    when others => 
+   --       resolution_x <= 1024;
+   --       resolution_y <= 1024;
+   -- end case;
 end if;
 end process;
 ---------------------------------------------------------
---Чтение из ФИФО
-Process(clk_in, frame_in) 
-variable counter_in_FLAGB_on		: integer range 0 to 255;
-BEGIN
-   if rising_edge(clk_in) then
-	   If (frame_in = '1') then
-	   	state <= stream_in_idle;
-	   end if;
 
-		case state is
-			when stream_in_idle => 
-				enable_for_read_buffer <= '0';
-            counter_in_FLAGB_on := 0;
-            if FLAGA = '1' then
-               state <= stream_in_wait_flagb;
-            end if;
-			when stream_in_wait_flagb =>
-            if FLAGB = '1' then
-					state <= stream_in_write;
-               enable_for_read_buffer  <= '0';
-
-            else 
-               enable_for_read_buffer  <= '1';
-				end if;
-			When stream_in_write =>
-            if (pix_active and str_active) then
-               enable_for_read_buffer <= '1';
-            else
-               enable_for_read_buffer <= '0';
-
-            end if;
-            If FLAGB = '0' then
-               state <= stream_in_write_wr_delay;
-            end if;
-			when stream_in_write_wr_delay =>
-            if counter_in_FLAGB_on <= to_integer(unsigned(treshhold_FIFO)) * 8 then
-               counter_in_FLAGB_on := counter_in_FLAGB_on + 1;
-               enable_for_read_buffer <= '1';
-            else
-				   enable_for_read_buffer <= '0';
-				   state <= stream_in_idle;
-               counter_in_FLAGB_on := 0;
-            end if;
-		end case;
-         -- if (pix_active and str_active) then
-         --    enable_for_read_buffer <= '1';
-         -- else
-         --    enable_for_read_buffer <= '0';
-         -- end if;
-	end if;
-end process;
 ---------------------------------------------------------
 --Асинхронное присвоение сигналов выходным шинам
-slwr_in_arch <= enable_for_read_buffer;
-data_8_bit   <= data_from_buffer;
 ---------------------------------------------------------
 ---------------------------------------------------------
 end data_generation_arch;
