@@ -11,6 +11,7 @@ constant bit_data				: integer := 8;
 constant bit_data_out			: integer := 32;
 constant bit_counter_data		: integer := 4;
 
+
 ---------------------------------------------------------------------------------
 type VideoStandartType is record
 	PixPerLine,
@@ -32,14 +33,14 @@ end record;
 							-------------CUSTOM RESOLUTION------------
 							------------------------------------------
 constant BION_960_960p30 :	VideoStandartType:=	(	
-													PixPerLine				=>	700,
+													PixPerLine				=>	2200,
 													ActivePixPerLine		=>	512,	
 													InActivePixPerLine		=>	40,	
 													HsyncWidth				=>	10,	
 													HsyncWidthGapLeft		=>	15,	
 													HsyncWidthGapRight		=>	15,	
-													HsyncShift				=>	24,
-													LinePerFrame			=>	500,
+													HsyncShift				=>	0,
+													LinePerFrame			=>	2100,
 													ActiveLine				=>	256,
 													InActiveLine			=>	65,
 													VsyncWidth				=>	5,	

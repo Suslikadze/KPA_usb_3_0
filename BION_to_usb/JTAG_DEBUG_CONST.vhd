@@ -18,7 +18,8 @@ port (
 	reg_8bit_4				: out std_logic_vector (7 downto 0);				-- для переключения slwr
 	reg_8bit_5				: out std_logic_vector (7 downto 0);				-- для сдвига первого бита в пакете
 	reg_8bit_6				: out std_logic_vector (7 downto 0);
-	reg_8bit_7				: out std_logic_vector (7 downto 0)					-- для 
+	reg_8bit_7				: out std_logic_vector (7 downto 0);
+	reg_8bit_8				: out std_logic_vector (7 downto 0)					-- для 
 	);
 end JTAG_DEBUG_CONST;
 
@@ -40,5 +41,6 @@ const_8bit_4	:const port map( result => reg_8bit_4	);
 const_8bit_5	:const port map( result => reg_8bit_5	);
 const_8bit_6	:const port map( result => reg_8bit_6	);
 const_8bit_7	:const port map( result => reg_8bit_7	);
+const_8bit_8	:const port map( result => reg_8bit_8	);
 
 end beh;

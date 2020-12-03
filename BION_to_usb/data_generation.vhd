@@ -18,6 +18,7 @@ Port(
    debug_2           : in    STD_LOGIC_VECTOR(7 downto 0);
    debug_3           : in    STD_LOGIC_VECTOR(7 downto 0);
    debug_4           : in    STD_LOGIC_VECTOR(7 downto 0);
+   treshhold_FIFO    : in    STD_LOGIC_VECTOR(7 downto 0);
    button_left,
    button_right,
    mode_switcher     : in    STD_LOGIC;
@@ -184,7 +185,7 @@ Begin
 ---------------
    if rising_edge(clk_in) then
       if (debounced_mode_switcher = '1') then
-         if (type_of_button_control < 2) then
+         if (type_of_button_control <= 2) then
             type_of_button_control <= type_of_button_control + 1;
          else
             type_of_button_control <= (others => '0');
@@ -215,7 +216,7 @@ if rising_edge(clk_in) then
                position <= position - 1;
             end if;
          elsif (debounced_button_right = '1') then
-            if (to_integer(unsigned(position)) /= 256) then
+            if (position /= x"9") then
                position <= position + 1;
             end if;
          end if;
@@ -226,7 +227,7 @@ if rising_edge(clk_in) then
                position <= position - 1;
             end if;
          elsif (debounced_button_right = '1') then
-            if (position /= x"9") then
+            if (to_integer(unsigned(position)) /= 256) then
                position <= position + 1;
             end if;
          end if;
@@ -266,7 +267,7 @@ BEGIN
 if rising_edge(clk_in) then
   -- if to_integer(unsigned(Line_per_frame)) =to_integer(unsigned(debug_1))*4 then 
    if to_integer(unsigned(Line_per_frame)) =to_integer(unsigned(debug_1_signal))*4 then 
-        if    to_integer(unsigned(Pix_per_line)) = to_integer(unsigned(debug_3_signal)) then   data_in_sync_header  <=x"ff";
+        if    to_integer(unsigned(Pix_per_line)) = to_integer(unsigned(debug_3_signal))      then   data_in_sync_header  <=x"ff";
       elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 1) then   data_in_sync_header  <=x"00";
       elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 2) then   data_in_sync_header  <=x"00";
       elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 3) then   data_in_sync_header  <=x"80";
@@ -275,7 +276,7 @@ if rising_edge(clk_in) then
       elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 6) then   data_in_sync_header  <=x"00";
       elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 7) then   data_in_sync_header  <=x"ab";
 
-      elsif   to_integer(unsigned(Pix_per_line)) = to_integer(unsigned(debug_3_signal))    + 256 then   data_in_sync_header  <=x"ab";
+      elsif   to_integer(unsigned(Pix_per_line)) = to_integer(unsigned(debug_3_signal))     + 256 then   data_in_sync_header   <=x"ab";
       elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 1 + 256) then   data_in_sync_header  <=x"00";
       elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 2 + 256) then   data_in_sync_header  <=x"00";
       elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(debug_3_signal)) + 3 + 256) then   data_in_sync_header  <=x"ff";
@@ -358,6 +359,9 @@ if rising_edge(clk_in) then
       when "100" =>
          resolution_x <= 2048;
          resolution_y <= 2048;
+      when "101" =>
+         resolution_x <= 1024;
+         resolution_y <= 2048;
       when others => 
          resolution_x <= 1024;
          resolution_y <= 1024;
@@ -400,7 +404,7 @@ BEGIN
                state <= stream_in_write_wr_delay;
             end if;
 			when stream_in_write_wr_delay =>
-            if counter_in_FLAGB_on <= 48 then
+            if counter_in_FLAGB_on <= to_integer(unsigned(treshhold_FIFO)) * 8 then
                counter_in_FLAGB_on := counter_in_FLAGB_on + 1;
                enable_for_read_buffer <= '1';
             else

@@ -14,10 +14,10 @@ PORT(
    clk_pix                         : in    STD_LOGIC;
    reset                           : in    STD_LOGIC;
    enable_for_pix                  : in    STD_LOGIC;
+   frame_modul                     : in    STD_LOGIC_VECTOR(bit_frame -1 downto 0);
    Pix_per_line                    : out   STD_LOGIC_VECTOR(bit_pix - 1 downto 0);
- --   Active_pix_per_line             : out   STD_LOGIC_VECTOR(bit_pix - 1 downto 0);
    Line_per_frame                  : out   STD_LOGIC_VECTOR(bit_strok - 1 downto 0);
---    Active_line_per_frame           : out   STD_LOGIC_VECTOR(bit_strok - 1 downto 0);
+   frame_number                    : out   STD_LOGIC_VECTOR(bit_frame - 1 downto 0);
    clk_for_PCLK                    : out   STD_LOGIC; 
    frame_flag                      : out   STD_LOGIC;
    stroka_flag                     : out   STD_LOGIC
@@ -33,6 +33,7 @@ signal clk_for_PCLK_in                  : STD_LOGIC;
 --Счетчики  
 signal pix                              : STD_LOGIC_VECTOR(bit_pix - 1 downto 0);
 signal lines                            : STD_LOGIC_VECTOR(bit_pix - 1 downto 0);
+signal frame_number_in                  : STD_LOGIC_VECTOR(bit_frame - 1 downto 0);
 signal stroka_in, frame_in              : STD_LOGIC;
 ---------------------------------------------------------
 --Объявление компонент
@@ -83,6 +84,17 @@ Port map(
    cout         => frame_in
 );
 ---------------------------------------------------------
+counter_for_frame      : count_n_modul
+Generic map(bit_frame)
+Port map(
+---------in-----------
+   clk          => clk_pix,
+   reset        => reset,
+   en           => stroka_in,
+   modul        => frame_modul,  
+---------out----------
+   qout         => frame_number_in
+);
 ---------------------------------------------------------
 Process(clk_pix)
 begin
@@ -99,6 +111,7 @@ end process;
 clk_for_PCLK    <=      clk_for_PCLK_in;
 Pix_per_line    <=      pix;
 Line_per_frame  <=      lines;
+frame_number    <=      frame_number_in;
 frame_flag      <=      frame_in;
 stroka_flag     <=      stroka_in;
 ---------------------------------------------------------

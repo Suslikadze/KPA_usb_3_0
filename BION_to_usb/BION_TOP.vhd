@@ -42,6 +42,7 @@ architecture BION_TOP_arch of BION_TOP is
 --Synth_gen
 signal Pix_per_line                 : STD_LOGIC_VECTOR(bit_pix - 1 downto 0);
 signal Line_per_frame               : STD_LOGIC_VECTOR(bit_strok - 1 downto 0);
+signal frame_number                 : STD_LOGIC_VECTOR(bit_frame - 1 downto 0);
 signal frame_flag                   : STD_LOGIC;
 signal stroka_flag                  : STD_LOGIC;
 signal enable_for_pix               : STD_LOGIC;
@@ -65,60 +66,29 @@ signal trigg_signal_tap, clk_signal_tap     : std_logic;
 signal debug_3, debug_ser_shift          : std_logic_vector(7 downto 0);
 signal debug_1                              : std_logic_vector(7 downto 0);
 signal debug_2                              : std_logic_vector(7 downto 0);
-signal debug_4                              : std_logic_vector(7 downto 0);
+signal debug_4, debug_5                     : std_logic_vector(7 downto 0);
 
 
 
 ---------------------------------------------------------
---Объявление компонент
-
 signal clk_bit     : std_logic;
 signal clk_pix     : std_logic;
-
-
-
-
-
----------------------------------------------------------
---синхрогенератор
-component Synth_gen
-Port(
-    clk_pix                         : in    STD_LOGIC;
-    reset                           : in    STD_LOGIC;
-    enable_for_pix                  : in    STD_LOGIC;
-    Pix_per_line                    : out   STD_LOGIC_VECTOR(bit_pix - 1 downto 0);
-    Line_per_frame                  : out   STD_LOGIC_VECTOR(bit_strok - 1 downto 0);
-    clk_for_PCLK                    : out   STD_LOGIC;
-    frame_flag                      : out   STD_LOGIC;
-    stroka_flag                     : out   STD_LOGIC
-);
-end component;
 ---------------------------------------------------------
 
 ---------------------------------------------------------
-component output_data_interface
-Port(
-    clk_in              : in    STD_LOGIC;
-    reset               : in    STD_LOGIC;
-    pix                 : in    STD_LOGIC_VECTOR(bit_pix - 1 downto 0);
-    debug_8bit          : in    std_logic_vector(7 downto 0);
-    data_8_bit          : in    STD_LOGIC_VECTOR(bit_data - 1 downto 0);
-    databus             : out   std_logic_vector(31 downto 0)
-);
-end component;
 ---------------------------------------------------------
-component JTAG_DEBUG_CONST
-Port(
-    reg_8bit_0				: out std_logic_vector (7 downto 0);  				-- treshhold_FIFO debug1
-	reg_8bit_1				: out std_logic_vector (7 downto 0);  				-- debug_8bit_for_output_data_interface
-	reg_8bit_2				: out std_logic_vector (7 downto 0);  				-- Switcher_in_trigg
-	reg_8bit_3				: out std_logic_vector (7 downto 0);  				-- Switcher_in_clk
-    reg_8bit_4				: out std_logic_vector (7 downto 0);                -- для переключения slwr
-	reg_8bit_5				: out std_logic_vector (7 downto 0);				-- для сдвига первого бита в пакете
-    reg_8bit_6				: out std_logic_vector (7 downto 0);
-    reg_8bit_7              : out std_logic_vector (7 downto 0)				    
-    );
-end component;
+-- component JTAG_DEBUG_CONST
+-- Port(
+--     reg_8bit_0				: out std_logic_vector (7 downto 0);  				-- treshhold_FIFO debug1
+-- 	reg_8bit_1				: out std_logic_vector (7 downto 0);  				-- debug_8bit_for_output_data_interface
+-- 	reg_8bit_2				: out std_logic_vector (7 downto 0);  				-- Switcher_in_trigg
+-- 	reg_8bit_3				: out std_logic_vector (7 downto 0);  				-- Switcher_in_clk
+--     reg_8bit_4				: out std_logic_vector (7 downto 0);                -- для переключения slwr
+-- 	reg_8bit_5				: out std_logic_vector (7 downto 0);				-- для сдвига первого бита в пакете
+--     reg_8bit_6				: out std_logic_vector (7 downto 0);
+--     reg_8bit_7              : out std_logic_vector (7 downto 0)				    
+--     );
+-- end component;
 
 
 
@@ -136,22 +106,36 @@ Port map(
     c1	        => clk_pix
 );
 ---------------------------------------------------------
-
-clk_pix_in  <=clk_bit;
 ---------------------------------------------------------
 --Описание компонентов
 ---------------------------------------------------------
-
+two_ch_to_one_comp          : entity work.two_ch_to_one_top
+port map(
+    clk_in_0            => clk_bit,
+    clk_in_1            => clk_pix,
+    reset               => '0',
+    enable              => '1',
+    Pix_per_line        => Pix_per_line,
+    Line_per_frame      => Line_per_frame,
+    data_in_ch_1        => data_in_1,
+    data_in_ch_2        => data_in_2,
+    align_num           => debug_ser_shift,
+    --align_num           => x"06",
+    clk_pix             => clk_pix_in,
+    data_out            => data_from_mux    
+);
 ---------------------------------------------------------
-Synth_gen_top               : Synth_gen
+Synth_gen_top               : entity work.Synth_gen
 Port map(
     ---------in-----------
     clk_pix                 => clk_pix_in,
     reset                   => '0',
     enable_for_pix          => '1',
+    frame_modul             => x"01",
     ---------out----------
     Pix_per_line            => Pix_per_line,
     Line_per_frame          => Line_per_frame,
+    frame_number            => frame_number,
     clk_for_PCLK            => PCLK_in,
     frame_flag              => frame_flag,
     stroka_flag             => stroka_flag
@@ -172,8 +156,9 @@ PORT map(
     debug_2                 => debug_2,
     --debug_2                 => x"01",
     debug_3                 => debug_3,
-    --debug_3                 => x"04",
+--    debug_3                 => x"04",
     debug_4                 => debug_4,
+    treshhold_FIFO          => debug_5,
     button_left             => button_left,
     button_right            => button_right,
     mode_switcher           => mode_switcher,
@@ -187,7 +172,7 @@ PORT map(
     data_8_bit              => data_8_bit
 );
 ---------------------------------------------------------
-output_data_interface_arch  : output_data_interface
+output_data_interface_arch  : entity work.output_data_interface
 Port map(
     ---------in-----------
     clk_in                  => clk_pix_in,
@@ -200,7 +185,7 @@ Port map(
     databus                 => databus_arch
 );  
 ---------------------------------------------------------
-JTAG_DEBUG_CONST_arch       : JTAG_DEBUG_CONST
+JTAG_DEBUG_CONST_arch       : entity work.JTAG_DEBUG_CONST
 Port map(
     ---------out----------
     reg_8bit_0              => debug_1,
@@ -210,7 +195,8 @@ Port map(
     reg_8bit_4              => debug_3,
     reg_8bit_5              => debug_ser_shift,
     reg_8bit_6              => debug_2,
-    reg_8bit_7              => debug_4
+    reg_8bit_7              => debug_4,
+    reg_8bit_8              => debug_5      --treshhold FIFO
 );
 ---------------------------------------------------------
 ---------------------------------------------------------
