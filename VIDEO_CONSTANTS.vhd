@@ -27,23 +27,59 @@ type VideoStandartType is record
 	VsyncWidth,
 	VsyncShift	:integer;
 end record;
-							
-
+---------------------------------------------------------------------------------
+type Bitness_of_counters is record
+	bit_pix,
+	bit_strok,
+	bit_frame	: integer;
+end record;
+---------------------------------------------------------------------------------
 							------------------------------------------
-							-------------CUSTOM RESOLUTION------------
+							----------RESOLUTION TO CYPRESS-----------
 							------------------------------------------
 constant BION_960_960p30 :	VideoStandartType:=	(	
 													PixPerLine				=>	2200,
-													ActivePixPerLine		=>	512,	
+													ActivePixPerLine		=>	2048,	
 													InActivePixPerLine		=>	40,	
 													HsyncWidth				=>	10,	
 													HsyncWidthGapLeft		=>	15,	
 													HsyncWidthGapRight		=>	15,	
 													HsyncShift				=>	0,
 													LinePerFrame			=>	2100,
-													ActiveLine				=>	256,
+													ActiveLine				=>	2048,
 													InActiveLine			=>	65,
 													VsyncWidth				=>	5,	
 													VsyncShift				=>	1);	
-
-end package ;
+							------------------------------------------
+							------------BITNESS TO CYPRESS------------
+							------------------------------------------
+constant Bitness_camera : Bitness_of_counters:= (
+	bit_pix			=> 12,
+	bit_strok		=> 12,
+	bit_frame		=> 3
+);
+							------------------------------------------
+							----------RESOLUTION FROM CAMERA----------
+							------------------------------------------
+Constant KPA_camera_sim :	VideoStandartType:= (
+													PixPerLine				=> 1200,
+													ActivePixPerLine		=> 1024,
+													InActivePixPerLine		=> 40,
+													HsyncWidth				=> 10,
+													HsyncWidthGapLeft		=> 15,
+													HsyncWidthGapRight		=> 15,
+													HsyncShift				=> 0,
+													LinePerFrame			=> 1125,
+													ActiveLine				=> 1024,
+													InActiveLine			=> 65,
+													VsyncWidth				=> 5,
+													VsyncShift				=> 1);
+end package;
+							------------------------------------------
+							------------BITNESS FROM CAMERA-----------
+							------------------------------------------
+constant Bitness_interface : Bitness_of_counters:= (
+	bit_pix			=> 11,
+	bit_strok		=> 11,
+	bit_frame		=> 3
+);

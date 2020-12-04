@@ -9,15 +9,11 @@ use work.VIDEO_CONSTANTS.all;
 
 
 
-entity data_generation is
+entity Framing_for_interface is
 Port(
    clk_in            : in     STD_LOGIC;
    reset             : in     STD_LOGIC;
    data_in           : in     STD_LOGIC_VECTOR(bit_data - 1 downto 0);
-   -- Type_of_data_ch_1 : in     STD_LOGIC_VECTOR(7 downto 0);
-   -- Type_of_data_ch_2 : in     STD_LOGIC_VECTOR(7 downto 0);
-   -- Type_of_data_ch_3 : in     STD_LOGIC_VECTOR(7 downto 0);
-   -- Type_of_data_ch_4 : in     STD_LOGIC_VECTOR(7 downto 0);
    data_ch_1         : in     STD_LOGIC_VECTOR(bit_data - 1 downto 0);
    data_ch_2         : in     STD_LOGIC_VECTOR(bit_data - 1 downto 0);
    data_ch_3         : in     STD_LOGIC_VECTOR(bit_data - 1 downto 0);
@@ -28,33 +24,22 @@ Port(
    slwr_in_arch      : out    STD_LOGIC;
    data_8_bit        : out    STD_LOGIC_VECTOR(7 downto 0)
 );
-end data_generation;
+end Framing_for_interface;
 ---------------------------------------------------------
 ---------------------------------------------------------
-architecture data_generation_arch of data_generation is
+architecture Framing_for_interface_arch of Framing_for_interface is
 ---------------------------------------------------------
 ---------------------------------------------------------
 --ФИФО
-signal enable_for_write_buffer          : STD_LOGIC;
-signal enable_for_read_buffer           : STD_LOGIC;
+
 signal data_from_buffer                 : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
 signal data_in_sync_header             : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
 
---машинный автомат
-type State_type is(
-	stream_in_idle,
-	stream_in_wait_flagb,
-	stream_in_write,
-	stream_in_write_wr_delay
-);
-signal state						: State_type;
+
 --выделение активной части кадра
 signal str_active, pix_active          : STD_LOGIC;
 signal window                          : STD_LOGIC;
---обработка кнопок
-signal debounced_button_left,
-       debounced_button_right,
-       debounced_mode_switcher   : STD_LOGIC;
+
 ---------------------------------------------------------
 --Объявление компонент
 --ФИФО

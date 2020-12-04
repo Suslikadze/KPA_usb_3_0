@@ -3,13 +3,19 @@ library ieee;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
 use ieee.std_logic_unsigned.all;
-use work.VIDEO_CONSTANTS.all; 
 
 
 
 
 
 entity Synth_gen is
+generic(
+	Pix_Per_Line_modul,		
+	Line_Per_Frame_modul,	
+   bit_pix,
+   bit_strok,
+   bit_frame      : integer        
+	);
 PORT(
    clk_pix                         : in    STD_LOGIC;
    reset                           : in    STD_LOGIC;
@@ -18,7 +24,7 @@ PORT(
    Pix_per_line                    : out   STD_LOGIC_VECTOR(bit_pix - 1 downto 0);
    Line_per_frame                  : out   STD_LOGIC_VECTOR(bit_strok - 1 downto 0);
    frame_number                    : out   STD_LOGIC_VECTOR(bit_frame - 1 downto 0);
-   clk_for_PCLK                    : out   STD_LOGIC; 
+   clk_four_less                   : out   STD_LOGIC; 
    frame_flag                      : out   STD_LOGIC;
    stroka_flag                     : out   STD_LOGIC
 );
@@ -29,10 +35,10 @@ architecture Synth_gen_arch of Synth_gen is
 ---------------------------------------------------------
 ---------------------------------------------------------
 --Частоты
-signal clk_for_PCLK_in                  : STD_LOGIC;
+signal clk_four_less_in                 : STD_LOGIC;
 --Счетчики  
 signal pix                              : STD_LOGIC_VECTOR(bit_pix - 1 downto 0);
-signal lines                            : STD_LOGIC_VECTOR(bit_pix - 1 downto 0);
+signal lines                            : STD_LOGIC_VECTOR(bit_strok - 1 downto 0);
 signal frame_number_in                  : STD_LOGIC_VECTOR(bit_frame - 1 downto 0);
 signal stroka_in, frame_in              : STD_LOGIC;
 ---------------------------------------------------------
@@ -64,7 +70,7 @@ Port map(
     clk         => clk_pix,
     reset       => reset,
     en          => enable_for_pix,
-    modul       => std_logic_vector(to_unsigned(BION_960_960p30.PixPerLine, bit_pix)),
+    modul       => std_logic_vector(to_unsigned(Pix_Per_Line_modul, bit_pix)),
 ---------out----------
     qout        => pix,
     cout        => stroka_in
@@ -78,7 +84,7 @@ Port map(
    clk          => clk_pix,
    reset        => reset,
    en           => stroka_in,
-   modul        => std_logic_vector(to_unsigned(BION_960_960p30.LinePerFrame, bit_strok)),  
+   modul        => std_logic_vector(to_unsigned(LinePerFrame_modul, bit_strok)),  
 ---------out----------
    qout         => lines,
    cout         => frame_in
@@ -100,15 +106,15 @@ Process(clk_pix)
 begin
    if rising_edge(clk_pix) then
       if pix(1 downto 0)="01" or pix(1 downto 0)="10"    then
-         clk_for_PCLK_in <= '0';    
+         clk_four_less_in <= '0';    
       else
-         clk_for_PCLK_in <= '1';   
+         clk_four_less_in <= '1';   
       end if;
    end if;
 end process;
 ---------------------------------------------------------
 --Асинхронное присвоение сигналов выходным шинам
-clk_for_PCLK    <=      clk_for_PCLK_in;
+clk_four_less   <=      clk_four_less_in;
 Pix_per_line    <=      pix;
 Line_per_frame  <=      lines;
 frame_number    <=      frame_number_in;
