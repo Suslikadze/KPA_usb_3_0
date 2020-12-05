@@ -92,6 +92,39 @@ end if;
 end Process;
 
 ---------------------------------------------------------
+--Выделение активной части кадра
+---------------------------------------------------------
+Process(clk_in)
+BEGIN
+    if rising_edge(clk_in) then
+        if  (to_integer(unsigned(Pix_per_line_interface)) >= BION_960_960p30.HsyncShift) and 
+            (to_integer(unsigned(Pix_per_line_interface)) <  BION_960_960p30.ActivePixPerLine + BION_960_960p30.HsyncShift) then
+            pix_active <= '1';
+        else
+            pix_active <= '0';
+        end if;
+   ------------
+        if  (to_integer(unsigned(Line_per_frame_interface)) >= BION_960_960p30.VsyncShift) and 
+            (to_integer(unsigned(Line_per_frame_interface)) <  BION_960_960p30.VsyncShift + BION_960_960p30.ActiveLine then
+            str_active <= '1';
+        else
+            str_active <= '0';
+        end if;
+    end if;
+end Process;
+---------------------
+Process(clk_in)
+begin
+if rising_edge(clk_in) then
+      if (str_active and pix_active) then
+         enable_for_write_buffer <= '1';
+      else 
+         enable_for_write_buffer <= '0';
+      end if; 
+end if;
+end process;
+
+---------------------------------------------------------
 --Подключение экземпляра модуля FIFO
 ---------------------------------------------------------
 Buffer_data                 : entity work.FIFO
@@ -101,7 +134,7 @@ Port map(
    rdclk          => clk_in,
    rdreq          => enable_for_read_buffer,
    wrclk          => clk_in,
-   wrreq          => valid,
+   wrreq          => enable_for_write_buffer,
 ---------out----------
    q              => data_from_buffer
 );

@@ -103,11 +103,13 @@ PLL_input                   : entity work.PLL
 Port map(
     inclk0      => clk_in,
     c0          => clk_bit,
-    c1	        => clk_pix
+    c1	        => clk_pix_interface,
+    c2          => clk_pix_cam
 );
 ---------------------------------------------------------
 ---------------------------------------------------------
 --Описание компонентов
+---------------------------------------------------------
 ---------------------------------------------------------
 two_ch_to_one_comp          : entity work.two_ch_to_one_top
 port map(
@@ -125,25 +127,76 @@ port map(
     data_out            => data_from_mux    
 );
 ---------------------------------------------------------
-Synth_gen_top               : entity work.Synth_gen
+---------------------------------------------------------
+Sync_gen_mult_top           : entity work.Synth_gen_mult
 Port map(
-    ---------in-----------
-    clk_pix                 => clk_pix_in,
-    reset                   => '0',
-    enable_for_pix          => '1',
-    frame_modul             => x"01",
-    ---------out----------
-    Pix_per_line            => Pix_per_line,
-    Line_per_frame          => Line_per_frame,
-    frame_number            => frame_number,
-    clk_for_PCLK            => PCLK_in,
-    frame_flag              => frame_flag,
-    stroka_flag             => stroka_flag
+    clk_pix_interface           => clk_pix_interface,
+    clk_pix_cam                 => clk_pix_cam,
+    main_reset                  => '0',
+    enable_for_pix_cam          => '1',
+    enable_for_pix_interface    => '1',
+    frame_modul                 => x"01",
+    Pix_per_line_cam            => Pix_per_line_cam,
+    Pix_per_line_interface      => Pix_per_line_interface,
+    Line_per_frame_cam          => Line_per_frame_cam,
+    Line_per_frame_interface    => Line_per_frame_interface,
+    clk_for_PCLK                => PCLK_in,
+    stroka_cam_flag             => stroka_cam_flag,
+    stroka_interface_flag       => stroka_interface_flag,
+    frame_cam_flag              => frame_cam_flag,
+    frame_interface_flag        => frame_interface_flag
 );
 ---------------------------------------------------------
-
-
 ---------------------------------------------------------
+Data_gen_cam_1              : entity work.Data_gen_cam
+Port map(
+    clk_in                      => clk_pix_cam,
+    reset                       => '0',
+    enable_cam                  => '1',
+    Pix_per_line                => Pix_per_line_cam,
+    Line_per_frame              => Line_per_frame_cam,
+    Type_of_data                => debug_9,
+    data_out                    => data_cam_1,
+    pix_active                  => pix_active_cam,
+    str_active                  => str_active_cam,
+    valid_data                  => valid_data_cam
+);
+---------------------------------------------------------
+Data_gen_cam_2              : entity work.Data_gen_cam
+Port map(
+    clk_in                      => clk_pix_cam,
+    reset                       => '0',
+    enable_cam                  => '1',
+    Pix_per_line                => Pix_per_line_cam,
+    Line_per_frame              => Line_per_frame_cam,
+    Type_of_data                => debug_10,
+    data_out                    => data_cam_2
+);
+---------------------------------------------------------
+Data_gen_cam_3              : entity work.Data_gen_cam
+Port map(
+    clk_in                      => clk_pix_cam,
+    reset                       => '0',
+    enable_cam                  => '1',
+    Pix_per_line                => Pix_per_line_cam,
+    Line_per_frame              => Line_per_frame_cam,
+    Type_of_data                => debug_11,
+    data_out                    => data_cam_3
+);
+---------------------------------------------------------
+Data_gen_cam_4              : entity work.Data_gen_cam
+Port map(
+    clk_in                      => clk_pix_cam,
+    reset                       => '0',
+    enable_cam                  => '1',
+    Pix_per_line                => Pix_per_line_cam,
+    Line_per_frame              => Line_per_frame_cam,
+    Type_of_data                => debug_12,
+    data_out                    => data_cam_4
+);
+---------------------------------------------------------
+---------------------------------------------------------
+
 data_generation_top         : entity work.data_generation
 PORT map(
     ---------in-----------

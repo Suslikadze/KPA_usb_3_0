@@ -38,15 +38,15 @@ end record;
 							----------RESOLUTION TO CYPRESS-----------
 							------------------------------------------
 constant BION_960_960p30 :	VideoStandartType:=	(	
-													PixPerLine				=>	2200,
-													ActivePixPerLine		=>	2048,	
+													PixPerLine				=>	4200,
+													ActivePixPerLine		=>	4096,	
 													InActivePixPerLine		=>	40,	
 													HsyncWidth				=>	10,	
 													HsyncWidthGapLeft		=>	15,	
 													HsyncWidthGapRight		=>	15,	
 													HsyncShift				=>	0,
-													LinePerFrame			=>	2100,
-													ActiveLine				=>	2048,
+													LinePerFrame			=>	1125,
+													ActiveLine				=>	1024,
 													InActiveLine			=>	65,
 													VsyncWidth				=>	5,	
 													VsyncShift				=>	1);	

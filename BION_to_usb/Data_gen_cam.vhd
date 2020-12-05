@@ -17,6 +17,8 @@ Port(
     Line_per_frame  : in        STD_LOGIC_VECTOR(Bitness_camera.bit_strok   - 1 downto 0);
     Type_of_data    : in        STD_LOGIC_VECTOR(                             7 downto 0);
     data_out        : out       STD_LOGIC_VECTOR(bit_data                   - 1 downto 0);
+    pix_active      : out       STD_LOGIC;
+    str_active      : out       STD_LOGIC;
     valid_data      : out       STD_LOGIC
 );
 end Data_gen_cam;
@@ -26,7 +28,7 @@ Architecture Data_gen_cam_arch of Data_gen_cam is
 ---------------------------------------------------------
 ---------------------------------------------------------
 --выделение активной части кадра
-signal str_active, pix_active          : STD_LOGIC;
+signal str_active_in, pix_active_in    : STD_LOGIC;
 signal valid_in                        : STD_LOGIC;
 --Данные
 signal data_from_pattern_gen           : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
@@ -61,16 +63,16 @@ BEGIN
 If rising_edge(clk_in) then
     if (to_integer(unsigned(Pix_per_line)) >= KPA_camera_sim.HsyncShift) and 
        (to_integer(unsigned(Pix_per_line)) <  KPA_camera_sim.ActivePixPerLine + KPA_camera_sim.HsyncShift) then
-        pix_active <= '1';
+        pix_active_in <= '1';
     else
-        pix_active <= '0';
+        pix_active_in <= '0';
     end if;
 ------------
     if (to_integer(unsigned(Line_per_frame)) >= KPA_camera_sim.VsyncShift) and 
        (to_integer(unsigned(Line_per_frame)) <  KPA_camera_sim.VsyncShift + KPA_camera_sim.ActiveLine then
-        str_active <= '1';
+        str_active_in <= '1';
     else
-        str_active <= '0';
+        str_active_in <= '0';
     end if;
 end if;
 end process;
@@ -78,7 +80,7 @@ end process;
 Process(clk_in)
 BEGIN
 if rising_edge(clk_in) then
-    valid_in <= pix_active and str_active;
+    valid_in <= pix_active_in and str_active_in;
 end if;
 end process;
 ------------------------------------------------------------
@@ -93,6 +95,8 @@ if rising_edge(clk_in) then
 end if;
 end process;
 ------------------------------------------------------------
-valid_data <= valid_in;
+valid_data      <= valid_in;
+str_active      <= str_active_in;
+pix_active      <= pix_active_in;
 ------------------------------------------------------------
 end Data_gen_cam_arch;

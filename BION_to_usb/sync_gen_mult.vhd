@@ -10,7 +10,8 @@ use work.VIDEO_CONSTANTS.all;
 
 entity Synth_gen_mult is
 Port(
-    clk_pix                         : in    STD_LOGIC;
+    clk_pix_interface               : in    STD_LOGIC;
+    clk_pix_cam                     : in    STD_LOGIC;
     main_reset                      : in    STD_LOGIC;
     enable_for_pix_cam              : in    STD_LOGIC;
     enable_for_pix_interface        : in    STD_LOGIC;
