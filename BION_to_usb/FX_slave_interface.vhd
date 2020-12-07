@@ -9,7 +9,7 @@ use work.VIDEO_CONSTANTS.all;
 
 
 
-entity FX_slave_interface is
+entity Framing_interface is
 Port(
     clk_in              : in    STD_LOGIC;
     reset               : in    STD_LOGIC;
@@ -26,10 +26,10 @@ Port(
     slwr_in_arch        : out   STD_LOGIC;
     data_8_bit          : out   STD_LOGIC_VECTOR(7 downto 0)                      
 );
-end FX_slave_interface;
+end Framing_interface;
 ---------------------------------------------------------
 ---------------------------------------------------------
-architecture FX_slave_interface_arch of FX_slave_interface is
+architecture Framing_interface_arch of Framing_interface is
 ---------------------------------------------------------
 ---------------------------------------------------------
 --ФИФО
@@ -194,4 +194,4 @@ end process;
 slwr_in_arch <= enable_for_read_buffer;
 data_out     <= data_from_buffer;
 ---------------------------------------------------------
-end FX_slave_interface_arch;
+end Framing_interface_arch;

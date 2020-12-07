@@ -73,6 +73,7 @@ signal debug_4, debug_5                     : std_logic_vector(7 downto 0);
 ---------------------------------------------------------
 signal clk_bit     : std_logic;
 signal clk_pix     : std_logic;
+signal data_to_framing_interface        : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
 ---------------------------------------------------------
 
 ---------------------------------------------------------
@@ -196,6 +197,29 @@ Port map(
 );
 ---------------------------------------------------------
 ---------------------------------------------------------
+Data_processing_interface_top           : entity work.Data_processing_interface
+Port map(
+    clk_cam                            =>   clk_pix_cam,
+    clk_interface                      =>   clk_pix_interface,
+    reset                              =>   '0',
+    data_ch_1                          =>   data_cam_1,
+    data_ch_2                          =>   data_cam_2,
+    data_ch_3                          =>   data_cam_3,
+    data_ch_4                          =>   data_cam_4,
+    Pix_per_line_interface             =>   Pix_per_line_interface,
+    Line_per_frame_interface           =>   Line_per_frame_interface,
+    Line_per_frame_cam                 =>   Line_per_frame_cam,
+    pix_active_cam                     =>   pix_active_cam,
+    frame_in_interface                 =>   frame_interface_flag,
+    data_out                           =>   data_to_framing_interface
+);
+---------------------------------------------------------
+---------------------------------------------------------
+
+
+
+
+
 
 data_generation_top         : entity work.data_generation
 PORT map(
