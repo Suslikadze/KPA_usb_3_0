@@ -149,7 +149,7 @@ Process(PCLK, reset_tsb)
 variable counter, counter_in_FLAGB_on		: integer;
 BEGIN
 
-	If (reset_tsb) then
+	If (reset_tsb = '1') then
 		state <= idle;
 	end if;
 	if rising_edge(PCLK) then

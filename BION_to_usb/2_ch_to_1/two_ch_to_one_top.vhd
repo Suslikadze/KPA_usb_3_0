@@ -11,8 +11,8 @@ port(
     clk_in_1        : in    STD_LOGIC;
     reset           : in    STD_LOGIC;
     enable          : in    STD_LOGIC;
-    Pix_per_line    : IN    STD_LOGIC_VECTOR(bit_pix - 1 downto 0);
-    Line_per_frame  : IN    STD_LOGIC_VECTOR(bit_strok - 1 downto 0);
+    Pix_per_line    : IN    STD_LOGIC_VECTOR(Bitness_interface.bit_pix - 1 downto 0);
+    Line_per_frame  : IN    STD_LOGIC_VECTOR(Bitness_interface.bit_strok - 1 downto 0);
     data_in_ch_1    : in    STD_LOGIC;
     data_in_ch_2    : in    STD_LOGIC;
     align_num       : in    STD_LOGIC_VECTOR(bit_data - 1 downto 0);
@@ -50,8 +50,8 @@ port(
     clk_in              : IN    STD_LOGIC;
     enable              : IN    STD_LOGIC;
     reset               : IN    STD_LOGIC;
-    Pix_per_line        : IN    STD_LOGIC_VECTOR(bit_pix - 1 downto 0);
-    Line_per_frame      : IN    STD_LOGIC_VECTOR(bit_strok - 1 downto 0);
+    Pix_per_line        : IN    STD_LOGIC_VECTOR(Bitness_interface.bit_pix - 1 downto 0);
+    Line_per_frame      : IN    STD_LOGIC_VECTOR(Bitness_interface.bit_strok - 1 downto 0);
     data_in_ch_1        : IN    STD_LOGIC_VECTOR(bit_data - 1 downto 0) := (others => '0');
     data_in_ch_2        : IN    STD_LOGIC_VECTOR(bit_data - 1 downto 0) := (others => '0');
     data_out            : OUT   STD_LOGIC_VECTOR(bit_data - 1 downto 0)    

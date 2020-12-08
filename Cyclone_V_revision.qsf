@@ -1,13 +1,28 @@
 set_global_assignment -name FAMILY "Cyclone V"
-set_global_assignment -name TOP_LEVEL_ENTITY Cyclone_V_revision
+set_global_assignment -name TOP_LEVEL_ENTITY BION_TOP
 
 set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
-set_global_assignment -name DEVICE 5CGXFC7C7F23C8
+set_global_assignment -name DEVICE 5CEFA9F23C8
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH BION_top_without_aligner -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_SETUP_SCRIPT simulation/wave.do -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME BION_top_without_aligner -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id BION_top_without_aligner
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME BION_TOP_vhd_tst -section_id BION_top_without_aligner
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/BION_TOP_tst.vht -section_id BION_top_without_aligner
 set_global_assignment -name QIP_FILE Megafunctions/PLL.qip
+set_global_assignment -name VHDL_FILE PATHERN_GENERATOR.vhd
+set_global_assignment -name VHDL_FILE BION_to_usb/Framing_interface.vhd
+set_global_assignment -name VHDL_FILE BION_to_usb/Data_processing_interface.vhd
 set_global_assignment -name QIP_FILE Megafunctions/FIFO.qip
 set_global_assignment -name QIP_FILE Megafunctions/const.qip
 set_global_assignment -name VHDL_FILE VIDEO_CONSTANTS.vhd
@@ -25,10 +40,56 @@ set_global_assignment -name VHDL_FILE BION_to_usb/sync_gen_mult.vhd
 set_global_assignment -name VHDL_FILE BION_to_usb/output_data_interface.vhd
 set_global_assignment -name VHDL_FILE BION_to_usb/noise_gen.vhd
 set_global_assignment -name VHDL_FILE BION_to_usb/JTAG_DEBUG_CONST.vhd
-set_global_assignment -name VHDL_FILE BION_to_usb/FX_slave_interface.vhd
-set_global_assignment -name VHDL_FILE BION_to_usb/Framing_for_interface.vhd
 set_global_assignment -name VHDL_FILE BION_to_usb/Data_gen_cam.vhd
 set_global_assignment -name VHDL_FILE BION_to_usb/BION_TOP.vhd
 set_global_assignment -name VHDL_FILE BION_to_usb/button_debounce/debounce.vhd
 set_global_assignment -name VHDL_FILE BION_to_usb/button_debounce/Button_work.vhd
 set_global_assignment -name QIP_FILE RAM_2_ports.qip
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 484
+set_location_assignment PIN_M18 -to A[1]
+set_location_assignment PIN_G15 -to A[0]
+set_location_assignment PIN_V15 -to clk_in
+set_location_assignment PIN_F22 -to databus[31]
+set_location_assignment PIN_G21 -to databus[30]
+set_location_assignment PIN_G22 -to databus[29]
+set_location_assignment PIN_U21 -to databus[28]
+set_location_assignment PIN_N21 -to databus[27]
+set_location_assignment PIN_R22 -to databus[26]
+set_location_assignment PIN_J21 -to databus[25]
+set_location_assignment PIN_H21 -to databus[24]
+set_location_assignment PIN_R21 -to databus[23]
+set_location_assignment PIN_P22 -to databus[22]
+set_location_assignment PIN_J22 -to databus[21]
+set_location_assignment PIN_M21 -to databus[20]
+set_location_assignment PIN_K21 -to databus[19]
+set_location_assignment PIN_K22 -to databus[18]
+set_location_assignment PIN_T22 -to databus[17]
+set_location_assignment PIN_M20 -to databus[16]
+set_location_assignment PIN_AB21 -to databus[15]
+set_location_assignment PIN_V21 -to databus[14]
+set_location_assignment PIN_U22 -to databus[13]
+set_location_assignment PIN_Y21 -to databus[12]
+set_location_assignment PIN_Y22 -to databus[11]
+set_location_assignment PIN_AA20 -to databus[10]
+set_location_assignment PIN_V20 -to databus[9]
+set_location_assignment PIN_AA22 -to databus[8]
+set_location_assignment PIN_W22 -to databus[7]
+set_location_assignment PIN_W21 -to databus[6]
+set_location_assignment PIN_AB18 -to databus[5]
+set_location_assignment PIN_AA19 -to databus[4]
+set_location_assignment PIN_AB22 -to databus[3]
+set_location_assignment PIN_AB20 -to databus[2]
+set_location_assignment PIN_Y20 -to databus[1]
+set_location_assignment PIN_AA18 -to databus[0]
+set_location_assignment PIN_V16 -to FLAGA
+set_location_assignment PIN_L17 -to FLAGB
+set_location_assignment PIN_H14 -to FLAGC
+set_location_assignment PIN_G16 -to FLAGD
+set_location_assignment PIN_M16 -to PCLK
+set_location_assignment PIN_U17 -to pktend
+set_location_assignment PIN_T17 -to slcs
+set_location_assignment PIN_P18 -to sloe
+set_location_assignment PIN_T18 -to slrd
+set_location_assignment PIN_G17 -to slwr
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

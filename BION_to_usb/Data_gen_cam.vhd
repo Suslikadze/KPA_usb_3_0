@@ -69,7 +69,7 @@ If rising_edge(clk_in) then
     end if;
 ------------
     if (to_integer(unsigned(Line_per_frame)) >= KPA_camera_sim.VsyncShift) and 
-       (to_integer(unsigned(Line_per_frame)) <  KPA_camera_sim.VsyncShift + KPA_camera_sim.ActiveLine then
+       (to_integer(unsigned(Line_per_frame)) <  KPA_camera_sim.VsyncShift + KPA_camera_sim.ActiveLine) then
         str_active_in <= '1';
     else
         str_active_in <= '0';
@@ -87,10 +87,10 @@ end process;
 Process(clk_in)
 BEGIN
 if rising_edge(clk_in) then
-    if (valid_in) then
+    if (valid_in = '1') then
         data_out <= data_from_pattern_gen;
     else 
-        data_out <= 0;
+        data_out <= (others => '0');
     end if;
 end if;
 end process;

@@ -12,12 +12,13 @@ use work.VIDEO_CONSTANTS.all;
 entity Button_work is
 Port(
     clk_in                  : in    STD_LOGIC;
+    reset                     : in  STD_LOGIC;
     button_left,
     button_right,
     mode_switcher           : in    STD_LOGIC;
     control_signal_1_out,
     control_signal_2_out,
-    control_signal_3_out    : out   std_logic_vector(7 downto 0);
+    control_signal_3_out    : out   std_logic_vector(7 downto 0)
 );
 end Button_work;
 
@@ -36,6 +37,9 @@ signal type_of_button_control   : std_logic_vector(1 downto 0) := "00";
 signal position_1               : std_logic_vector (7 downto 0) := "00000001";
 signal position_2               : std_logic_vector (7 downto 0) := "00000001";
 signal position_3               : std_logic_vector (7 downto 0) := "00000001";
+signal   control_signal_1,
+         control_signal_2,
+         control_signal_3       : std_logic_vector (7 downto 0);
 ---------------------------------------------------------
 ---------------------------------------------------------
 ---------------------------------------------------------
@@ -97,7 +101,7 @@ if rising_edge(clk_in) then
                 position_1 <= position_1 - 1;
             end if;
         elsif (debounced_button_right = '1') then
-            if (to_integer(unsigned(position)) /= 256) then
+            if (to_integer(unsigned(position_1)) /= 256) then
                 position_1 <= position_1 + 1;
             end if;
         end if;

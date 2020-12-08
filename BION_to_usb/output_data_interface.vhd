@@ -10,7 +10,7 @@ entity output_data_interface is
 PORT(
     clk_in              : in    STD_LOGIC;
     reset               : in    STD_LOGIC;
-    pix                 : in    STD_LOGIC_VECTOR(bit_pix - 1 downto 0);
+    pix                 : in    STD_LOGIC_VECTOR(Bitness_interface.bit_pix - 1 downto 0);
     debug_8bit          : in    std_logic_vector(7 downto 0);
     data_8_bit          : in    STD_LOGIC_VECTOR(7 downto 0);
     databus             :out std_logic_vector(31 downto 0)

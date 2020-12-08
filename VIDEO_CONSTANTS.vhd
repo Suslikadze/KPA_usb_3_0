@@ -4,9 +4,7 @@ use ieee.std_logic_unsigned.all;
 
 package   VIDEO_CONSTANTS	is
 
-constant bit_pix				: integer := 12;	--разрядность счетчика пикселей		
-constant bit_strok				: integer := 12;	--разрядность счетчика строк
-constant bit_frame				: integer := 8;
+
 constant bit_data				: integer := 8;
 constant bit_data_out			: integer := 32;
 constant bit_counter_data		: integer := 4;
@@ -38,13 +36,13 @@ end record;
 							----------RESOLUTION TO CYPRESS-----------
 							------------------------------------------
 constant BION_960_960p30 :	VideoStandartType:=	(	
-													PixPerLine				=>	4200,
+													PixPerLine				=>	4800,
 													ActivePixPerLine		=>	4096,	
 													InActivePixPerLine		=>	40,	
 													HsyncWidth				=>	10,	
 													HsyncWidthGapLeft		=>	15,	
 													HsyncWidthGapRight		=>	15,	
-													HsyncShift				=>	0,
+													HsyncShift				=>	5,
 													LinePerFrame			=>	1125,
 													ActiveLine				=>	1024,
 													InActiveLine			=>	65,
@@ -68,18 +66,18 @@ Constant KPA_camera_sim :	VideoStandartType:= (
 													HsyncWidth				=> 10,
 													HsyncWidthGapLeft		=> 15,
 													HsyncWidthGapRight		=> 15,
-													HsyncShift				=> 0,
+													HsyncShift				=> 5,
 													LinePerFrame			=> 1125,
 													ActiveLine				=> 1024,
 													InActiveLine			=> 65,
 													VsyncWidth				=> 5,
 													VsyncShift				=> 1);
-end package;
 							------------------------------------------
 							------------BITNESS FROM CAMERA-----------
 							------------------------------------------
 constant Bitness_interface : Bitness_of_counters:= (
-	bit_pix			=> 11,
+	bit_pix			=> 13,
 	bit_strok		=> 11,
 	bit_frame		=> 3
 );
+end package;

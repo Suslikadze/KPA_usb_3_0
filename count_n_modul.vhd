@@ -5,12 +5,12 @@ use ieee.numeric_std.all;
 entity count_n_modul is
 generic (n: integer);
 port (
-	clk		:in std_logic;
-	reset	:in std_logic;
-	en		:in std_logic;
-   modul	: in std_logic_vector (n-1 downto 0);
-   qout	: out std_logic_vector (n-1 downto 0);
-   cout	: out std_logic
+	clk		:	in std_logic;
+	reset	:	in std_logic;
+	en		:	in std_logic;
+  	modul	: 	in std_logic_vector (n-1 downto 0);
+   	qout	: 	out std_logic_vector (n-1 downto 0);
+   	cout	: 	out std_logic
 	);	
 end;
 

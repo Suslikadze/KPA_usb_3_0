@@ -8,7 +8,7 @@ use ieee.std_logic_unsigned.all;
 
 
 
-entity Synth_gen is
+entity Sync_gen is
 generic(
 	Pix_Per_Line_modul,		
 	Line_Per_Frame_modul,	
@@ -28,10 +28,10 @@ PORT(
    frame_flag                      : out   STD_LOGIC;
    stroka_flag                     : out   STD_LOGIC
 );
-END Synth_gen;
+END Sync_gen;
 ---------------------------------------------------------
 ---------------------------------------------------------
-architecture Synth_gen_arch of Synth_gen is
+architecture Sync_gen_arch of Sync_gen is
 ---------------------------------------------------------
 ---------------------------------------------------------
 --Частоты
@@ -84,7 +84,7 @@ Port map(
    clk          => clk_pix,
    reset        => reset,
    en           => stroka_in,
-   modul        => std_logic_vector(to_unsigned(LinePerFrame_modul, bit_strok)),  
+   modul        => std_logic_vector(to_unsigned(Line_Per_Frame_modul, bit_strok)),  
 ---------out----------
    qout         => lines,
    cout         => frame_in
@@ -122,4 +122,4 @@ frame_flag      <=      frame_in;
 stroka_flag     <=      stroka_in;
 ---------------------------------------------------------
 ---------------------------------------------------------
-end Synth_gen_arch;
+end Sync_gen_arch;

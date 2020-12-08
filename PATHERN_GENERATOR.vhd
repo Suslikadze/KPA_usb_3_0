@@ -24,8 +24,8 @@ port (
 	CLK					: in std_logic; 												--	тактовый сигнал данных	
 	main_reset			: in std_logic;  												-- main_reset
 	ena_clk				: in std_logic;  												-- разрешение по частоте
-	qout_clk				: in std_logic_vector (bit_pix-1 downto 0); 			--	счетчик пикселей
-	qout_V				: in std_logic_vector (bit_strok-1 downto 0);		--	счетчик строк
+	qout_clk				: in std_logic_vector (Bitness_camera.bit_pix-1 downto 0); 			--	счетчик пикселей
+	qout_V				: in std_logic_vector (Bitness_camera.bit_strok-1 downto 0);		--	счетчик строк
 	mode_generator		: in std_logic_vector (7 downto 0); 					--	задание режима
 	data_in				: in std_logic_vector (bit_data-1 downto 0) ;	--	входной сигнал
 	data_out				: out std_logic_vector (bit_data-1 downto 0) 	--	выходной сигнал
@@ -38,7 +38,7 @@ signal horizontal_stripe	: std_logic_vector (bit_data-1 downto 0);
 signal vertical_stripe		: std_logic_vector (bit_data-1 downto 0);
 signal noise					: std_logic_vector (bit_data-1 downto 0);
 signal chess_desk				: std_logic_vector (bit_data-1 downto 0);
-signal flex_gradient			: std_logic_vector (bit_pix-1 downto 0);
+signal flex_gradient			: std_logic_vector (Bitness_camera.bit_pix-1 downto 0);
 
 
 signal pix_flag				: std_logic;
@@ -54,6 +54,8 @@ port ( data_in : in std_logic_vector (11 downto 0);
 end component;
 signal noise_gen_q		: std_logic_vector (11 downto 0);
 
+
+signal data_in_modul	: std_logic_vector(11 downto 0);
 
 begin
 ---------------------------------------------------
@@ -93,9 +95,10 @@ end process;
 ---------------------------------------------------
 -- генератор шума
 ---------------------------------------------------
+data_in_modul <= '0' & qout_clk(10 downto 0);
 noise_gen_0: noise_gen                    
 port map (
-	data_in		=>	'0' & qout_clk(10 downto 0),			
+	data_in		=>	data_in_modul,			
 	crc_en		=>	'1' ,
 	rst			=>	main_reset,		
 	clk			=>	CLK ,
@@ -111,13 +114,13 @@ end process;
 -- генератор шума
 ---------------------------------------------------
 counter_flex_gradient     : count_n_modul
-Generic map(bit_pix)
+Generic map(Bitness_camera.bit_pix)
 Port map(
 ---------in-----------
 	clk         => CLK,
 	reset       => '0',
 	en          => '1',
-	modul       => std_logic_vector(to_unsigned(BION_960_960p30.PixPerLine - sub_mode*1, bit_pix)),
+	modul       => std_logic_vector(to_unsigned(BION_960_960p30.PixPerLine , Bitness_camera.bit_pix)),
 ---------out----------
 	qout        => flex_gradient
 );

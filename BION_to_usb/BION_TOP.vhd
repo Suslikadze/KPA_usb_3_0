@@ -40,14 +40,16 @@ architecture BION_TOP_arch of BION_TOP is
 ---------------------------------------------------------
 ---------------------------------------------------------
 --Synth_gen
-signal Pix_per_line                 : STD_LOGIC_VECTOR(bit_pix - 1 downto 0);
-signal Line_per_frame               : STD_LOGIC_VECTOR(bit_strok - 1 downto 0);
-signal frame_number                 : STD_LOGIC_VECTOR(bit_frame - 1 downto 0);
-signal frame_flag                   : STD_LOGIC;
-signal stroka_flag                  : STD_LOGIC;
-signal enable_for_pix               : STD_LOGIC;
---signal reset                        : STD_LOGIC;
-signal clk_pix_in, PCLK_in          : STD_LOGIC;
+signal Pix_per_line_cam                             : STD_LOGIC_VECTOR(Bitness_camera.bit_pix       - 1 downto 0);
+signal Pix_per_line_interface                       : STD_LOGIC_VECTOR(Bitness_interface.bit_pix    - 1 downto 0);
+signal Line_per_frame_cam                           : STD_LOGIC_VECTOR(Bitness_camera.bit_strok     - 1 downto 0);
+signal Line_per_frame_interface                     : STD_LOGIC_VECTOR(Bitness_interface.bit_strok  - 1 downto 0);
+signal frame_interface_flag, frame_cam_flag         : STD_LOGIC;
+signal stroka_cam_flag, stroka_interface_flag       : STD_LOGIC;
+signal enable_for_pix_cam, enable_for_pix_interface : STD_LOGIC;
+--Частоты
+signal clk_pix_in, PCLK_in                  : STD_LOGIC;
+signal clk_pix_cam, clk_pix_interface       : STD_LOGIC;
 --Data_gen
 signal slwr_in_arch                 : STD_LOGIC;
 signal data_8_bit                   : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
@@ -57,16 +59,25 @@ signal databus_arch                 : STD_LOGIC_VECTOR(bit_data_out - 1 downto 0
 signal  debug_8bit_for_output_data_interface,
         Switcher_in_trigg,
         Switcher_in_clk             : STD_LOGIC_VECTOR(7 downto 0);
---Выбор входных данных
-signal data_from_switcher           : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
+--Данные с камер
+signal  data_cam_1, data_cam_2,
+        data_cam_3, data_cam_4      : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
+signal  data_to_output_bus          : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
+--Формирование кадра
+signal  pix_active_cam, 
+        str_active_cam              : STD_LOGIC; 
+signal  valid_data_cam              : STD_LOGIC; 
+signal  pix_active_interface        : STD_LOGIC; 
 --from mux
 signal data_from_mux                : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
 --Debug signals
 signal trigg_signal_tap, clk_signal_tap     : std_logic;
-signal debug_3, debug_ser_shift          : std_logic_vector(7 downto 0);
-signal debug_1                              : std_logic_vector(7 downto 0);
-signal debug_2                              : std_logic_vector(7 downto 0);
-signal debug_4, debug_5                     : std_logic_vector(7 downto 0);
+signal  debug_0, debug_1,
+        debug_2, debug_3,                              
+        debug_4, debug_5,                              
+        debug_6, debug_7,
+        debug_8, debug_9,
+        debug_10                     : std_logic_vector(7 downto 0);
 
 
 
@@ -75,29 +86,27 @@ signal clk_bit     : std_logic;
 signal clk_pix     : std_logic;
 signal data_to_framing_interface        : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
 ---------------------------------------------------------
-
----------------------------------------------------------
----------------------------------------------------------
--- component JTAG_DEBUG_CONST
--- Port(
---     reg_8bit_0				: out std_logic_vector (7 downto 0);  				-- treshhold_FIFO debug1
--- 	reg_8bit_1				: out std_logic_vector (7 downto 0);  				-- debug_8bit_for_output_data_interface
--- 	reg_8bit_2				: out std_logic_vector (7 downto 0);  				-- Switcher_in_trigg
--- 	reg_8bit_3				: out std_logic_vector (7 downto 0);  				-- Switcher_in_clk
---     reg_8bit_4				: out std_logic_vector (7 downto 0);                -- для переключения slwr
--- 	reg_8bit_5				: out std_logic_vector (7 downto 0);				-- для сдвига первого бита в пакете
---     reg_8bit_6				: out std_logic_vector (7 downto 0);
---     reg_8bit_7              : out std_logic_vector (7 downto 0)				    
---     );
--- end component;
-
-
-
----------------------------------------------------------
 ---------------------------------------------------------
 Begin
 ---------------------------------------------------------
 ---------------------------------------------------------
+---------------------------------------------------------
+---------------------------------------------------------
+JTAG_DEBUG_CONST_arch       : entity work.JTAG_DEBUG_CONST
+Port map(
+    ---------out----------
+    reg_8bit_0              => debug_0,         -- Aligner в 8-битном слове
+    reg_8bit_1              => debug_1,         -- Выбор типа паттерна с камеры 1
+    reg_8bit_2              => debug_2,         -- Выбор типа паттерна с камеры 2
+    reg_8bit_3              => debug_3,         -- Выбор типа паттерна с камеры 3
+    reg_8bit_4              => debug_4,         -- Выбор типа паттерна с камеры 4
+    reg_8bit_5              => debug_5,         -- treshhold_FIFO 
+    reg_8bit_6              => debug_6,         -- line_with_sync_word
+    reg_8bit_7              => debug_7,         -- pix_with_sync_word
+    reg_8bit_8              => debug_8,         -- Aligner в 32-битном слове
+    reg_8bit_9              => Switcher_in_clk,
+    reg_8bit_10             => Switcher_in_trigg      
+);
 ---------------------------------------------------------
 ---------------------------------------------------------
 PLL_input                   : entity work.PLL
@@ -118,11 +127,11 @@ port map(
     clk_in_1            => clk_pix,
     reset               => '0',
     enable              => '1',
-    Pix_per_line        => Pix_per_line,
-    Line_per_frame      => Line_per_frame,
+    Pix_per_line        => Pix_per_line_interface,
+    Line_per_frame      => Line_per_frame_interface,
     data_in_ch_1        => data_in_1,
     data_in_ch_2        => data_in_2,
-    align_num           => debug_ser_shift,
+    align_num           => debug_0,
     --align_num           => x"06",
     clk_pix             => clk_pix_in,
     data_out            => data_from_mux    
@@ -136,7 +145,7 @@ Port map(
     main_reset                  => '0',
     enable_for_pix_cam          => '1',
     enable_for_pix_interface    => '1',
-    frame_modul                 => x"01",
+    --frame_modul                 => x"01",
     Pix_per_line_cam            => Pix_per_line_cam,
     Pix_per_line_interface      => Pix_per_line_interface,
     Line_per_frame_cam          => Line_per_frame_cam,
@@ -156,7 +165,7 @@ Port map(
     enable_cam                  => '1',
     Pix_per_line                => Pix_per_line_cam,
     Line_per_frame              => Line_per_frame_cam,
-    Type_of_data                => debug_9,
+    Type_of_data                => debug_1,
     data_out                    => data_cam_1,
     pix_active                  => pix_active_cam,
     str_active                  => str_active_cam,
@@ -170,7 +179,7 @@ Port map(
     enable_cam                  => '1',
     Pix_per_line                => Pix_per_line_cam,
     Line_per_frame              => Line_per_frame_cam,
-    Type_of_data                => debug_10,
+    Type_of_data                => debug_2,
     data_out                    => data_cam_2
 );
 ---------------------------------------------------------
@@ -181,7 +190,7 @@ Port map(
     enable_cam                  => '1',
     Pix_per_line                => Pix_per_line_cam,
     Line_per_frame              => Line_per_frame_cam,
-    Type_of_data                => debug_11,
+    Type_of_data                => debug_3,
     data_out                    => data_cam_3
 );
 ---------------------------------------------------------
@@ -192,7 +201,7 @@ Port map(
     enable_cam                  => '1',
     Pix_per_line                => Pix_per_line_cam,
     Line_per_frame              => Line_per_frame_cam,
-    Type_of_data                => debug_12,
+    Type_of_data                => debug_4,
     data_out                    => data_cam_4
 );
 ---------------------------------------------------------
@@ -208,78 +217,50 @@ Port map(
     data_ch_4                          =>   data_cam_4,
     Pix_per_line_interface             =>   Pix_per_line_interface,
     Line_per_frame_interface           =>   Line_per_frame_interface,
+    Pix_per_line_cam                   =>   Pix_per_line_cam,
     Line_per_frame_cam                 =>   Line_per_frame_cam,
     pix_active_cam                     =>   pix_active_cam,
+    pix_active_interface               =>   pix_active_interface,
     frame_in_interface                 =>   frame_interface_flag,
     data_out                           =>   data_to_framing_interface
 );
 ---------------------------------------------------------
 ---------------------------------------------------------
-
-
-
-
-
-
-data_generation_top         : entity work.data_generation
-PORT map(
-    ---------in-----------
-    clk_in                  => clk_pix_in,
-    reset                   => reset,
-    --data_in                 => data_in,
-    data_in                 => data_from_mux(7 downto 0),
-    debug_1                 => debug_1,
-    --debug_1                 => x"01",
-    debug_2                 => debug_2,
-    --debug_2                 => x"01",
-    debug_3                 => debug_3,
---    debug_3                 => x"04",
-    debug_4                 => debug_4,
-    treshhold_FIFO          => debug_5,
-    button_left             => button_left,
-    button_right            => button_right,
-    mode_switcher           => mode_switcher,
-    Pix_per_line            => Pix_per_line,
-    Line_per_frame          => Line_per_frame,
-    frame_in                => frame_flag,
-    FLAGA                   => FLAGA,
-    FLAGB                   => FLAGB,
-    ---------out----------
-    slwr_in_arch            => slwr_in_arch,
-    data_8_bit              => data_8_bit
+Framing_interface_top               : entity work.Framing_interface
+Port map(
+    clk_in                      =>  clk_pix_interface,
+    reset                       =>  '0',
+    Pix_per_line                =>  Pix_per_line_interface,
+    Line_per_frame              =>  Line_per_frame_interface,
+    frame_in                    =>  frame_interface_flag,
+    FLAGA                       =>  FLAGA,
+    FLAGB                       =>  FLAGB,
+    treshhold_FIFO              =>  debug_5,
+    data_in                     =>  data_to_framing_interface,
+    line_with_sync_word         =>  debug_6,
+    pix_with_sync_word          =>  debug_7,
+    slwr_in_arch                =>  slwr_in_arch,
+    pix_active_out              =>  pix_active_interface,
+    data_out                    =>  data_to_output_bus     
 );
+---------------------------------------------------------
 ---------------------------------------------------------
 output_data_interface_arch  : entity work.output_data_interface
 Port map(
     ---------in-----------
-    clk_in                  => clk_pix_in,
-    reset                   => reset,
-    pix                     => Pix_per_line,
-    --debug_8bit              => debug_8bit_for_output_data_interface,
+    clk_in                  => clk_pix_interface,
+    reset                   => '0',
+    pix                     => Pix_per_line_interface,
+    --debug_8bit              => debug_8,
     debug_8bit              => x"03",
-    data_8_bit              => data_8_bit,
+    data_8_bit              => data_to_output_bus,
     ---------out----------
     databus                 => databus_arch
 );  
 ---------------------------------------------------------
-JTAG_DEBUG_CONST_arch       : entity work.JTAG_DEBUG_CONST
-Port map(
-    ---------out----------
-    reg_8bit_0              => debug_1,
-    reg_8bit_1              => debug_8bit_for_output_data_interface,
-    reg_8bit_2              => Switcher_in_trigg,
-    reg_8bit_3              => Switcher_in_clk,
-    reg_8bit_4              => debug_3,
-    reg_8bit_5              => debug_ser_shift,
-    reg_8bit_6              => debug_2,
-    reg_8bit_7              => debug_4,
-    reg_8bit_8              => debug_5      --treshhold FIFO
-);
----------------------------------------------------------
 ---------------------------------------------------------
 --Асинхронное присвоение выходным шинам
 slwr                <= not(slwr_in_arch); 
---and debug_slwr(0);
 slrd                <= '1'; 
 sloe                <= '1';	
 pktend              <= '1';
@@ -293,41 +274,42 @@ out3                <= clk_signal_tap;
 out4                <= trigg_signal_tap;
 PCLK                <= PCLK_in;
 ---------------------------------------------------------
+---------------------------------------------------------
 --debug
-Process(Switcher_in_clk(3 downto 0))
-begin
-   case (Switcher_in_clk(3 downto 0)) is
-      when X"0" =>     clk_signal_tap <= clk_pix_in;
-      when X"1" =>     clk_signal_tap <= Pix_per_line(0);
-      when X"2" =>     clk_signal_tap <= stroka_flag;
-      when X"3" =>     clk_signal_tap <= Pix_per_line(2);
-     -- when X"4" =>     clk_signal_tap <= clk_bit;
-      when X"5" =>     clk_signal_tap <= mode_switcher;
-      when X"6" =>     clk_signal_tap <= button_left;
-      when X"7" =>     clk_signal_tap <= button_right;
-      when X"8" =>     clk_signal_tap <= Pix_per_line(7);
-      when X"9" =>     clk_signal_tap <= Pix_per_line(8);
-      when X"a" =>     clk_signal_tap <= Pix_per_line(9);
-      when X"b" =>     clk_signal_tap <= Line_per_frame(0);
-      when X"c" =>     clk_signal_tap <= Line_per_frame(1);
-     when others =>    clk_signal_tap <= clk_pix_in;   
-   end case;
-end process;
+-- Process(Switcher_in_clk(3 downto 0))
+-- begin
+--    case (Switcher_in_clk(3 downto 0)) is
+--       when X"0" =>     clk_signal_tap <= clk_pix_in;
+--       when X"1" =>     clk_signal_tap <= Pix_per_line_interface(0);
+--       when X"2" =>     clk_signal_tap <= stroka_interface_flag;
+--       when X"3" =>     clk_signal_tap <= Pix_per_line_interface(2);
+--      -- when X"4" =>     clk_signal_tap <= clk_bit;
+--       when X"5" =>     clk_signal_tap <= mode_switcher;
+--       when X"6" =>     clk_signal_tap <= button_left;
+--       when X"7" =>     clk_signal_tap <= button_right;
+--       when X"8" =>     clk_signal_tap <= Pix_per_line_interface(7);
+--       when X"9" =>     clk_signal_tap <= Pix_per_line_interface(8);
+--       when X"a" =>     clk_signal_tap <= Pix_per_line_interface(9);
+--       when X"b" =>     clk_signal_tap <= Line_per_frame_interface(0);
+--       when X"c" =>     clk_signal_tap <= Line_per_frame_interface(1);
+--      when others =>    clk_signal_tap <= clk_pix_in;   
+--    end case;
+-- end process;
 
-Process(Switcher_in_trigg(3 downto 0))
-begin
-   case (Switcher_in_trigg(3 downto 0)) is
-    when X"0" =>     trigg_signal_tap <= stroka_flag;
-    when X"1" =>     trigg_signal_tap <= frame_flag;
-    when X"2" =>     trigg_signal_tap <= FLAGB;
-    when X"3" =>     trigg_signal_tap <= FLAGA;
-    when X"4" =>     trigg_signal_tap <= slwr; 
-    when X"5" =>     trigg_signal_tap <= mode_switcher;
-    when X"6" =>     trigg_signal_tap <= button_left;
-    when X"7" =>     trigg_signal_tap <= button_right;
-    when others =>   trigg_signal_tap <= stroka_flag;   
-end case;
-end process;
+-- Process(Switcher_in_trigg(3 downto 0))
+-- begin
+--    case (Switcher_in_trigg(3 downto 0)) is
+--     when X"0" =>     trigg_signal_tap <= stroka_flag;
+--     when X"1" =>     trigg_signal_tap <= frame_flag;
+--     when X"2" =>     trigg_signal_tap <= FLAGB;
+--     when X"3" =>     trigg_signal_tap <= FLAGA;
+--     when X"4" =>     trigg_signal_tap <= slwr; 
+--     when X"5" =>     trigg_signal_tap <= mode_switcher;
+--     when X"6" =>     trigg_signal_tap <= button_left;
+--     when X"7" =>     trigg_signal_tap <= button_right;
+--     when others =>   trigg_signal_tap <= stroka_flag;   
+-- end case;
+-- end process;
 ---------------------------------------------------------
 ---------------------------------------------------------
 end BION_TOP_arch;
