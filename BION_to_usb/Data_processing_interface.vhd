@@ -49,15 +49,21 @@ signal  data_from_memory_1,
         data_from_memory_5,
         data_from_memory_6,
         data_from_memory_7,
-        data_from_memory_8  : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
+        data_from_memory_8      : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
 
-signal data_out_signal      : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
+signal data_out_signal          : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
+signal pix_active_interface_in  : STD_LOGIC;
+
+signal pix_active_cam_in  : STD_LOGIC;
+
+
+
 ---------------------------------------------------------
 ---------------------------------------------------------
 BEGIN
 ---------------------------------------------------------
 ---------------------------------------------------------
-
+-- pix_active_interface_in <= pix_active_interface and (en_write_1 or en_write_2);
 ---------------------------------------------------------
 --Выделение памяти для храниния строк от разных камер (по два на каждую)
 ---------------------------------------------------------
@@ -165,7 +171,7 @@ Generic map(11)
 Port map(
     clk		    => clk_cam,
     reset	    => '0',
-    en		    => pix_active_cam,
+    en		    => pix_active_cam_in,
     modul	    => std_logic_vector(to_unsigned(1024, 11)),
     qout	    => address_write
 );
@@ -183,11 +189,33 @@ Port map(
 --Обработка сигналов разрешений записи и чтения для блоков памяти
 --Объединение 4-х каналов в одну выходную шину
 ---------------------------------------------------------
-Process(clk_interface)
+Process(clk_cam)
 begin
-If rising_edge(clk_interface) then
-    en_write_1  <= Line_per_frame_cam(0) and pix_active_cam;
-    en_write_2  <= not Line_per_frame_cam(0) and pix_active_cam;
+If rising_edge(clk_cam) then
+
+    if (to_integer(unsigned(Pix_per_line_cam)) >= KPA_camera_sim.HsyncShift +1) and 
+       (to_integer(unsigned(Pix_per_line_cam)) <  KPA_camera_sim.ActivePixPerLine + KPA_camera_sim.HsyncShift +1) then
+        -- pix_active_in <= '1';
+    en_write_1  <= Line_per_frame_cam(0) ;
+    en_write_2  <= not Line_per_frame_cam(0) ;
+
+    else
+        -- pix_active_in <= '0';
+    en_write_1  <= '0';
+    en_write_2  <= '0';
+
+    end if;
+
+
+    if (to_integer(unsigned(Pix_per_line_cam)) >= KPA_camera_sim.HsyncShift ) and 
+       (to_integer(unsigned(Pix_per_line_cam)) <  KPA_camera_sim.ActivePixPerLine + KPA_camera_sim.HsyncShift ) then
+        -- pix_active_in <= '1';
+            pix_active_cam_in   <='1';
+    else
+            pix_active_cam_in   <='0';
+
+    end if;
+
     -- if (pix_active_cam) then
     --     case (Line_per_frame_cam(2 downto 0)) is
     --         when "000" =>   en_read         <= "00000001";
@@ -211,56 +239,117 @@ If rising_edge(clk_interface) then
 end if;
 end process;
 
+
+
 Process(clk_interface)
 begin
 if rising_edge(clk_interface) then
-    if (pix_active_cam = '1') then
-        if (en_write_1 = '1') then
-            if      (to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine) then
+
+    -- if (pix_active_interface = '1') then
+        if (Line_per_frame_cam(0) = '0') then
+            if      (to_integer(unsigned(Pix_per_line_interface)) >= 6 and  
+                    to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine + 6) then
                 en_read         <= "00000001";
                 data_out_signal <= data_from_memory_1;
             ---------------------
-            elsif   (to_integer(unsigned(Pix_per_line_interface)) >= KPA_camera_sim.ActivePixPerLine and  
-                    to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine*2) then
+            elsif    (to_integer(unsigned(Pix_per_line_interface)) >= 6 +KPA_camera_sim.ActivePixPerLine and  
+                    to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine*2 + 6) then
             ---------------------
                 en_read         <= "00000010";
                 data_out_signal <= data_from_memory_2;
             ---------------------
-            elsif   (to_integer(unsigned(Pix_per_line_interface)) >= KPA_camera_sim.ActivePixPerLine*2 and
-                    to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine *3) then
+            elsif    (to_integer(unsigned(Pix_per_line_interface)) >= 6 +KPA_camera_sim.ActivePixPerLine*2 and  
+                    to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine*3 + 6) then
                 en_read         <= "00000100";
                 data_out_signal <= data_from_memory_3;
-            elsif   (to_integer(unsigned(Pix_per_line_interface)) >= KPA_camera_sim.ActivePixPerLine*3 and
-                    to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine*4) then
+            elsif   (to_integer(unsigned(Pix_per_line_interface)) >= 6+ KPA_camera_sim.ActivePixPerLine*3 and  
+                    to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine*4 + 6) then
                 en_read         <= "00001000";
                 data_out_signal <= data_from_memory_4;
             end if;
-        elsif (en_write_2 = '1') then
-            if      ( to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine) then
+        else
+            if       (to_integer(unsigned(Pix_per_line_interface)) >= 6  and  
+                    to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine + 6) then
                 en_read         <= "00010000";
                 data_out_signal <= data_from_memory_5;
             ---------------------
-            elsif   (to_integer(unsigned(Pix_per_line_interface)) >= KPA_camera_sim.ActivePixPerLine and  
-                    to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine*2) then
+            elsif    (to_integer(unsigned(Pix_per_line_interface)) >= 6 +KPA_camera_sim.ActivePixPerLine and  
+                    to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine*2 + 6) then
             ---------------------
                 en_read         <= "00100000";
                 data_out_signal <= data_from_memory_6;
             ---------------------
-            elsif   (to_integer(unsigned(Pix_per_line_interface)) >= KPA_camera_sim.ActivePixPerLine*2 and
-                    to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine *3) then
+            elsif   (to_integer(unsigned(Pix_per_line_interface)) >= 6 +KPA_camera_sim.ActivePixPerLine*2 and  
+                    to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine*3 + 6) then
                 en_read         <= "01000000";
                 data_out_signal <= data_from_memory_7;
-            elsif   (to_integer(unsigned(Pix_per_line_interface)) >= KPA_camera_sim.ActivePixPerLine*3 and
-                    to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine*4) then
+            elsif    (to_integer(unsigned(Pix_per_line_interface)) >= 6 +KPA_camera_sim.ActivePixPerLine*3 and  
+                    to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine*4 + 6) then
                 en_read         <= "10000000";
                 data_out_signal <= data_from_memory_8;
             end if;
         end if;
-    else
-        en_read <= (others => '0');
-    end if;
+    -- else
+    --     en_read <= (others => '0');
+    --     data_out_signal <= (others => '0;
+    -- end if;
 end if;
 end process;
+
+
+
+-- Process(clk_interface)
+-- begin
+-- if rising_edge(clk_interface) then
+
+--     if (pix_active_interface = '1') then
+--         if (Line_per_frame_cam(0) = '1') then
+--             if      (to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine + KPA_camera_sim.HsyncShift) then
+--                 en_read         <= "00000001";
+--                 data_out_signal <= data_from_memory_1;
+--             ---------------------
+--             elsif   (to_integer(unsigned(Pix_per_line_interface)) >= KPA_camera_sim.ActivePixPerLine + KPA_camera_sim.HsyncShift and  
+--                     to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine*2 + KPA_camera_sim.HsyncShift) then
+--             ---------------------
+--                 en_read         <= "00000010";
+--                 data_out_signal <= data_from_memory_2;
+--             ---------------------
+--             elsif   (to_integer(unsigned(Pix_per_line_interface)) >= KPA_camera_sim.ActivePixPerLine*2 + KPA_camera_sim.HsyncShift and
+--                     to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine *3  + KPA_camera_sim.HsyncShift) then
+--                 en_read         <= "00000100";
+--                 data_out_signal <= data_from_memory_3;
+--             elsif   (to_integer(unsigned(Pix_per_line_interface)) >= KPA_camera_sim.ActivePixPerLine*3 + KPA_camera_sim.HsyncShift and
+--                     to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine*4   + KPA_camera_sim.HsyncShift) then
+--                 en_read         <= "00001000";
+--                 data_out_signal <= data_from_memory_4;
+--             end if;
+--         else
+--             if      ( to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine + KPA_camera_sim.HsyncShift) then
+--                 en_read         <= "00010000";
+--                 data_out_signal <= data_from_memory_5;
+--             ---------------------
+--             elsif   (to_integer(unsigned(Pix_per_line_interface)) >= KPA_camera_sim.ActivePixPerLine + KPA_camera_sim.HsyncShift and  
+--                     to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine*2 + KPA_camera_sim.HsyncShift) then
+--             ---------------------
+--                 en_read         <= "00100000";
+--                 data_out_signal <= data_from_memory_6;
+--             ---------------------
+--             elsif   (to_integer(unsigned(Pix_per_line_interface)) >= KPA_camera_sim.ActivePixPerLine*2  + KPA_camera_sim.HsyncShift and
+--                     to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine *3   + KPA_camera_sim.HsyncShift) then
+--                 en_read         <= "01000000";
+--                 data_out_signal <= data_from_memory_7;
+--             elsif   (to_integer(unsigned(Pix_per_line_interface)) >= KPA_camera_sim.ActivePixPerLine*3  + KPA_camera_sim.HsyncShift and
+--                     to_integer(unsigned(Pix_per_line_interface)) < KPA_camera_sim.ActivePixPerLine*4    + KPA_camera_sim.HsyncShift) then
+--                 en_read         <= "10000000";
+--                 data_out_signal <= data_from_memory_8;
+--             end if;
+--         end if;
+--     else
+--         en_read <= (others => '0');
+--         data_out_signal <= (others => '0;
+--     end if;
+-- end if;
+-- end process;
 ---------------------------------------------------------
 --Асинхронное присвоение сигналов выходным шинам
 ---------------------------------------------------------

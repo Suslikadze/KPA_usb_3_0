@@ -87,7 +87,10 @@ end process;
 Process(clk_in)
 BEGIN
 if rising_edge(clk_in) then
-    if (valid_in = '1') then
+valid_data      <= valid_in;
+str_active      <= str_active_in;
+pix_active      <= pix_active_in;
+    if (pix_active_in and str_active_in) ='1'then
         data_out <= data_from_pattern_gen;
     else 
         data_out <= (others => '0');
@@ -95,8 +98,6 @@ if rising_edge(clk_in) then
 end if;
 end process;
 ------------------------------------------------------------
-valid_data      <= valid_in;
-str_active      <= str_active_in;
-pix_active      <= pix_active_in;
+
 ------------------------------------------------------------
 end Data_gen_cam_arch;

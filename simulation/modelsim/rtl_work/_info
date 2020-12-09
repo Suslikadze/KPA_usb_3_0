@@ -26,9 +26,9 @@ VkGG3[ST=IbLG9@<mlDJXS1
 !s100 ;o8YakWaneZmhh@O5H6580
 Z11 OV;C;10.5b;63
 31
-Z12 !s110 1607448842
+Z12 !s110 1607513737
 !i10b 1
-Z13 !s108 1607448842.000000
+Z13 !s108 1607513737.000000
 Z14 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/Aligner.vhd|
 Z15 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/Aligner.vhd|
 !i113 1
@@ -58,7 +58,7 @@ R15
 R16
 R17
 Ebion_top
-Z18 w1607449313
+Z18 w1607516652
 R3
 R4
 R5
@@ -74,9 +74,9 @@ V<4?:l?Gd_WcL]:FWT[NOf0
 !s100 C4j]MX61668V??8RWDeH=1
 R11
 31
-Z21 !s110 1607449316
+Z21 !s110 1607528238
 !i10b 1
-Z22 !s108 1607449316.000000
+Z22 !s108 1607528238.000000
 Z23 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/BION_TOP.vhd|
 Z24 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/BION_TOP.vhd|
 !i113 1
@@ -98,11 +98,11 @@ R5
 R6
 R7
 R8
-Z33 DEx4 work 8 bion_top 0 22 <4?:l?Gd_WcL]:FWT[NOf0
+DEx4 work 8 bion_top 0 22 <4?:l?Gd_WcL]:FWT[NOf0
 l90
 L39
-VlgAmao=AcRknE=d;DP41F2
-!s100 @C4AN0Q9nCkReXP=5<:Q40
+VA=YCi=a9>^ZIKOCW`KMMi2
+!s100 `HHkjmRCl8@8SQN[Ph4Fl1
 R11
 31
 R21
@@ -114,26 +114,26 @@ R24
 R16
 R17
 Ebion_top_vhd_tst
-Z34 w1607431744
+Z33 w1607431744
 R4
 R5
 R3
 R7
 R8
 R0
-Z35 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/simulation/modelsim/BION_TOP_tst.vht
-Z36 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/simulation/modelsim/BION_TOP_tst.vht
+Z34 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/simulation/modelsim/BION_TOP_tst.vht
+Z35 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/simulation/modelsim/BION_TOP_tst.vht
 l0
 L32
 VCmh@M3KSl;TX:KaIQk]e:0
 !s100 f9_dU0B@GPZK4R@oT?EgN1
 R11
 31
-Z37 !s110 1607448843
+R12
 !i10b 1
-Z38 !s108 1607448843.000000
-Z39 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/simulation/modelsim/BION_TOP_tst.vht|
-Z40 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/simulation/modelsim/BION_TOP_tst.vht|
+R13
+Z36 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/simulation/modelsim/BION_TOP_tst.vht|
+Z37 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/simulation/modelsim/BION_TOP_tst.vht|
 !i113 1
 R16
 R17
@@ -150,32 +150,32 @@ VHL75n5B7T^m[Zad`hMW:U3
 !s100 ^6<58AmI=bSb3g[WX4T2G2
 R11
 31
-R37
+R12
 !i10b 1
-R38
-R39
-R40
+R13
+R36
+R37
 !i113 1
 R16
 R17
 Econst
-Z41 w1602243136
+Z38 w1602243136
 R7
 R8
 R0
-Z42 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/const.vhd
-Z43 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/const.vhd
+Z39 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/const.vhd
+Z40 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/const.vhd
 l0
 L43
 Vjf2kiONo8<6jQ?8b;c[>61
 !s100 fh94Y?EeBlC;f?Ki2F5eS1
 R11
 31
-Z44 !s110 1607448840
+Z41 !s110 1607513734
 !i10b 1
-Z45 !s108 1607448840.000000
-Z46 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/const.vhd|
-Z47 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/const.vhd|
+Z42 !s108 1607513734.000000
+Z43 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/const.vhd|
+Z44 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/const.vhd|
 !i113 1
 R16
 R17
@@ -189,33 +189,33 @@ V9Da>QB_8IJ0UgM_NF1l[B3
 !s100 T0iT[K93B2Ll8JYSPJP2?0
 R11
 31
-R44
+R41
 !i10b 1
-R45
-R46
-R47
+R42
+R43
+R44
 !i113 1
 R16
 R17
 Ecount_n_modul
-Z48 w1607446342
+Z45 w1607446342
 R6
 R7
 R8
 R0
-Z49 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/count_n_modul.vhd
-Z50 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/count_n_modul.vhd
+Z46 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/count_n_modul.vhd
+Z47 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/count_n_modul.vhd
 l0
 L5
 Vff2NeJYzg;IfeQDPAjc9>0
 !s100 dH0^9H?EFBkR66LH<jVPM1
 R11
 31
-R44
+R41
 !i10b 1
-R45
-Z51 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/count_n_modul.vhd|
-Z52 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/count_n_modul.vhd|
+R42
+Z48 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/count_n_modul.vhd|
+Z49 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/count_n_modul.vhd|
 !i113 1
 R16
 R17
@@ -223,23 +223,23 @@ Abeh
 R6
 R7
 R8
-Z53 DEx4 work 13 count_n_modul 0 22 ff2NeJYzg;IfeQDPAjc9>0
+Z50 DEx4 work 13 count_n_modul 0 22 ff2NeJYzg;IfeQDPAjc9>0
 l19
 L17
 V1O8k1>:eO7d`o2[`il_[51
 !s100 3XKQU2g7`iknHR6db3C[m2
 R11
 31
-R44
+R41
 !i10b 1
-R45
-R51
-R52
+R42
+R48
+R49
 !i113 1
 R16
 R17
 Edata_gen_cam
-Z54 w1607431397
+Z51 w1607526875
 R3
 R4
 R5
@@ -247,25 +247,25 @@ R6
 R7
 R8
 R0
-Z55 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Data_gen_cam.vhd
-Z56 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Data_gen_cam.vhd
+Z52 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Data_gen_cam.vhd
+Z53 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Data_gen_cam.vhd
 l0
 L11
 VS:MMaH9ZHCjHhRgPa<^5g1
 !s100 GJV2==Ua8e]N>BAgJMI1D1
 R11
 31
-R12
+Z54 !s110 1607526879
 !i10b 1
-R13
-Z57 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Data_gen_cam.vhd|
-Z58 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Data_gen_cam.vhd|
+Z55 !s108 1607526879.000000
+Z56 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Data_gen_cam.vhd|
+Z57 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Data_gen_cam.vhd|
 !i113 1
 R16
 R17
 Adata_gen_cam_arch
 R2
-Z59 DEx4 work 17 pathern_generator 0 22 7@dlbdB5z46O5fQEjSVLN3
+Z58 DEx4 work 17 pathern_generator 0 22 7@dlbdB5z46O5fQEjSVLN3
 R3
 R4
 R5
@@ -275,20 +275,20 @@ R8
 R28
 l37
 L27
-V5ZiAEUW]]j^fR05;lHRa10
-!s100 z[S`;PC>PnGd0WW=5==@Z1
+VC7khd6Az570PV2oLKkZ[H3
+!s100 8ElUPK=>f7I[hV=Xd=6UH2
 R11
 31
-R12
+R54
 !i10b 1
-R13
+R55
+R56
 R57
-R58
 !i113 1
 R16
 R17
 Edata_processing_interface
-Z60 w1607448790
+Z59 w1607530720
 R3
 R4
 R5
@@ -296,26 +296,26 @@ R6
 R7
 R8
 R0
-Z61 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Data_processing_interface.vhd
-Z62 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Data_processing_interface.vhd
+Z60 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Data_processing_interface.vhd
+Z61 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Data_processing_interface.vhd
 l0
 L12
 VFb^N4Ya_Rng;[3Y?aJkn@2
 !s100 AS?[d3OchLiSR1Q_d2ak71
 R11
 31
-Z63 !s110 1607448841
+Z62 !s110 1607530723
 !i10b 1
-Z64 !s108 1607448841.000000
-Z65 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Data_processing_interface.vhd|
-Z66 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Data_processing_interface.vhd|
+Z63 !s108 1607530723.000000
+Z64 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Data_processing_interface.vhd|
+Z65 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Data_processing_interface.vhd|
 !i113 1
 R16
 R17
 Adata_processing_interface_arch
-R53
-Z67 DPx9 altera_mf 20 altera_mf_components 0 22 @6M>I48X_jBQDo@?W=TN93
-Z68 DEx4 work 11 ram_2_ports 0 22 ^KjIbhJ4XIN?1d=@BN[MB3
+R50
+Z66 DPx9 altera_mf 20 altera_mf_components 0 22 @6M>I48X_jBQDo@?W=TN93
+Z67 DEx4 work 11 ram_2_ports 0 22 ^KjIbhJ4XIN?1d=@BN[MB3
 R3
 R4
 R5
@@ -323,61 +323,61 @@ R6
 R7
 R8
 R27
-l57
+l63
 L33
-VOYoFZVm>;XiW?zajnf]Uo2
-!s100 ;]5DHQSQkDR[jTEe6R;jV0
+VAJ[]=8ARTAMzBCMeNMA443
+!s100 MM[dKi_dMzjG9mcg_:?P`2
 R11
 31
-R63
+R62
 !i10b 1
+R63
 R64
 R65
-R66
 !i113 1
 R16
 R17
 Efifo
-Z69 w1602341234
+Z68 w1602341234
 R7
 R8
 R0
-Z70 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/FIFO.vhd
-Z71 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/FIFO.vhd
+Z69 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/FIFO.vhd
+Z70 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/FIFO.vhd
 l0
 L43
 VY2lSg[X@YLbhbebCbZ[2@2
 !s100 0<JfcG_0V4HVz`R3@AY7:1
 R11
 31
-R44
+R41
 !i10b 1
-R45
-Z72 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/FIFO.vhd|
-Z73 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/FIFO.vhd|
+R42
+Z71 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/FIFO.vhd|
+Z72 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/FIFO.vhd|
 !i113 1
 R16
 R17
 Asyn
 R7
 R8
-Z74 DEx4 work 4 fifo 0 22 Y2lSg[X@YLbhbebCbZ[2@2
+Z73 DEx4 work 4 fifo 0 22 Y2lSg[X@YLbhbebCbZ[2@2
 l104
 L62
 VKAd^>>Lb:S`SSbnfHbf:i2
 !s100 `2FGSoN9f?`L_lnkYMRag3
 R11
 31
-R44
+R41
 !i10b 1
-R45
+R42
+R71
 R72
-R73
 !i113 1
 R16
 R17
 Eframing_interface
-Z75 w1607448951
+Z74 w1607448951
 R3
 R4
 R5
@@ -385,24 +385,24 @@ R6
 R7
 R8
 R0
-Z76 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Framing_interface.vhd
-Z77 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Framing_interface.vhd
+Z75 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Framing_interface.vhd
+Z76 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Framing_interface.vhd
 l0
 L12
 VSchGa82gMIIXUYI>7W<@b3
 !s100 @60niZDP3]`5IYm6^KRA:1
 R11
 31
-Z78 !s110 1607448967
+Z77 !s110 1607513735
 !i10b 1
-Z79 !s108 1607448967.000000
-Z80 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Framing_interface.vhd|
-Z81 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Framing_interface.vhd|
+Z78 !s108 1607513735.000000
+Z79 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Framing_interface.vhd|
+Z80 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Framing_interface.vhd|
 !i113 1
 R16
 R17
 Aframing_interface_arch
-R74
+R73
 R3
 R4
 R5
@@ -416,16 +416,16 @@ VOzEIXDWXmJR58JFdVbKI92
 !s100 hZ>nJa2<LHP_RJ>CiT8_P3
 R11
 31
-R78
+R77
 !i10b 1
+R78
 R79
 R80
-R81
 !i113 1
 R16
 R17
 Einput_serial_channel
-Z82 w1604589300
+Z81 w1604589300
 R2
 R4
 R5
@@ -434,8 +434,8 @@ R6
 R7
 R8
 R0
-Z83 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/input_serial_channel.vhd
-Z84 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/input_serial_channel.vhd
+Z82 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/input_serial_channel.vhd
+Z83 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/input_serial_channel.vhd
 l0
 L13
 V6P?GJa2DYV4@A;PjDW_iz1
@@ -445,8 +445,8 @@ R11
 R12
 !i10b 1
 R13
-Z85 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/input_serial_channel.vhd|
-Z86 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/input_serial_channel.vhd|
+Z84 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/input_serial_channel.vhd|
+Z85 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/input_serial_channel.vhd|
 !i113 1
 R16
 R17
@@ -468,13 +468,13 @@ R11
 R12
 !i10b 1
 R13
+R84
 R85
-R86
 !i113 1
 R16
 R17
 Ejtag_debug_const
-Z87 w1607416952
+Z86 w1607416952
 R4
 R5
 R3
@@ -482,19 +482,19 @@ R6
 R7
 R8
 R0
-Z88 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/JTAG_DEBUG_CONST.vhd
-Z89 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/JTAG_DEBUG_CONST.vhd
+Z87 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/JTAG_DEBUG_CONST.vhd
+Z88 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/JTAG_DEBUG_CONST.vhd
 l0
 L9
 VcohJA_D4>^J`1me<PYe<S3
 !s100 d5VC[VQlCo=MIGI[z1eOM0
 R11
 31
-R12
+Z89 !s110 1607513736
 !i10b 1
-R64
-Z90 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/JTAG_DEBUG_CONST.vhd|
-Z91 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/JTAG_DEBUG_CONST.vhd|
+Z90 !s108 1607513736.000000
+Z91 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/JTAG_DEBUG_CONST.vhd|
+Z92 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/JTAG_DEBUG_CONST.vhd|
 !i113 1
 R16
 R17
@@ -512,16 +512,16 @@ V?0gWMGY^7Ia8fl;J6KQc73
 !s100 j9gcl3i;]N@d>UOCKAQ8S2
 R11
 31
-R12
+R89
 !i10b 1
-R64
 R90
 R91
+R92
 !i113 1
 R16
 R17
 Emux_2_ch
-Z92 w1607428384
+Z93 w1607428384
 R2
 R4
 R5
@@ -530,8 +530,8 @@ R6
 R7
 R8
 R0
-Z93 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/mux_2_ch.vhd
-Z94 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/mux_2_ch.vhd
+Z94 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/mux_2_ch.vhd
+Z95 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/mux_2_ch.vhd
 l0
 L8
 V=aGl[eZ8H2R1QFJ`HUF:_0
@@ -540,9 +540,9 @@ R11
 31
 R12
 !i10b 1
-R13
-Z95 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/mux_2_ch.vhd|
-Z96 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/mux_2_ch.vhd|
+R90
+Z96 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/mux_2_ch.vhd|
+Z97 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/mux_2_ch.vhd|
 !i113 1
 R16
 R17
@@ -563,9 +563,9 @@ R11
 31
 R12
 !i10b 1
-R13
-R95
+R90
 R96
+R97
 !i113 1
 R16
 R17
@@ -586,32 +586,32 @@ VG>kEFkK^PTdzA5bnSDXmO2
 !s100 SDheQ=3ed^QcNLNn?KeH90
 R11
 31
-R63
+R77
 !i10b 1
-R64
+R78
 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/my_component_pkg.vhd|
 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/my_component_pkg.vhd|
 !i113 1
 R16
 R17
 Enoise_gen
-Z97 w1602597698
+Z98 w1602597698
 R7
 R8
 R0
-Z98 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/noise_gen.vhd
-Z99 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/noise_gen.vhd
+Z99 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/noise_gen.vhd
+Z100 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/noise_gen.vhd
 l0
 L19
 V6Z]XGNDKgTKd9VYkYgIRN1
 !s100 ifXOTWh`YiSUCBgi_GdZI0
 R11
 31
-R63
+R77
 !i10b 1
-R45
-Z100 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/noise_gen.vhd|
-Z101 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/noise_gen.vhd|
+R78
+Z101 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/noise_gen.vhd|
+Z102 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/noise_gen.vhd|
 !i113 1
 R16
 R17
@@ -625,16 +625,16 @@ VooaHQIm4IHmj>7BL`X;?l1
 !s100 l;>@c4h9czTQQ59U5FSH[0
 R11
 31
-R63
+R77
 !i10b 1
-R45
-R100
+R78
 R101
+R102
 !i113 1
 R16
 R17
 Eoutput_data_interface
-Z102 w1607427525
+Z103 w1607427525
 R3
 R4
 R5
@@ -642,19 +642,19 @@ R6
 R7
 R8
 R0
-Z103 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/output_data_interface.vhd
-Z104 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/output_data_interface.vhd
+Z104 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/output_data_interface.vhd
+Z105 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/output_data_interface.vhd
 l0
 L9
 VMMY2gCE0EzHO_>nBDMSRL1
 !s100 9gl2zGcGJ_RSe^Yf2EKLG1
 R11
 31
-R63
+Z106 !s110 1607530167
 !i10b 1
-R64
-Z105 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/output_data_interface.vhd|
-Z106 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/output_data_interface.vhd|
+Z107 !s108 1607530167.000000
+Z108 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/output_data_interface.vhd|
+Z109 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/output_data_interface.vhd|
 !i113 1
 R16
 R17
@@ -672,16 +672,16 @@ VViLah10]cCK>ZIz42dT2?3
 !s100 [4VldcnFIV7_[=c^bI]Li2
 R11
 31
-R63
-!i10b 1
-R64
-R105
 R106
+!i10b 1
+R107
+R108
+R109
 !i113 1
 R16
 R17
 Epathern_generator
-Z107 w1607431332
+Z110 w1607431332
 R2
 R4
 R5
@@ -690,19 +690,19 @@ R6
 R7
 R8
 R0
-Z108 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/PATHERN_GENERATOR.vhd
-Z109 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/PATHERN_GENERATOR.vhd
+Z111 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/PATHERN_GENERATOR.vhd
+Z112 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/PATHERN_GENERATOR.vhd
 l0
 L22
 V7@dlbdB5z46O5fQEjSVLN3
 !s100 i`5MfD4AgClKgJT5<TO830
 R11
 31
-R12
+R89
 !i10b 1
-R13
-Z110 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/PATHERN_GENERATOR.vhd|
-Z111 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/PATHERN_GENERATOR.vhd|
+R90
+Z113 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/PATHERN_GENERATOR.vhd|
+Z114 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/PATHERN_GENERATOR.vhd|
 !i113 1
 R16
 R17
@@ -714,39 +714,39 @@ R3
 R6
 R7
 R8
-R59
+R58
 l60
 L35
 V_4oKoLHnDVo7EbAkNfm>>2
 !s100 SYF`ad=coRn]eV]D4D<H<2
 R11
 31
-R12
+R89
 !i10b 1
-R13
-R110
-R111
+R90
+R113
+R114
 !i113 1
 R16
 R17
 Epll
-Z112 w1607439708
+Z115 w1607439708
 R7
 R8
 R0
-Z113 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/PLL.vhd
-Z114 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/PLL.vhd
+Z116 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/PLL.vhd
+Z117 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/PLL.vhd
 l0
 L43
 VhQF8oieg;WC4zA;IXc>o^2
 !s100 ;UZF^FfH?BMfS??O:oMTb1
 R11
 31
-R44
+R41
 !i10b 1
-R45
-Z115 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/PLL.vhd|
-Z116 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/PLL.vhd|
+Z118 !s108 1607513733.000000
+Z119 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/PLL.vhd|
+Z120 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/Megafunctions/PLL.vhd|
 !i113 1
 R16
 R17
@@ -760,16 +760,16 @@ VV<;?J71DoD;=ke[:`GLI30
 !s100 Io[ZDlQddkSQY6NKPZXld1
 R11
 31
-R44
+R41
 !i10b 1
-R45
-R115
-R116
+R118
+R119
+R120
 !i113 1
 R16
 R17
 vPLL_altpll5
-!s110 1607448839
+!s110 1607513733
 !i10b 1
 !s100 lf^EZY7bOT3ZA0LUOhk<Z3
 I`LK]T1M8^H6z8AM7WjP1l0
@@ -783,7 +783,7 @@ OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1607448839.000000
+R118
 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/db/pll_altpll5.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/db|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/db/pll_altpll5.v|
 !i113 1
@@ -792,67 +792,67 @@ o-vlog01compat -work work
 tCvgOpt 0
 n@p@l@l_altpll5
 Eram_2_ports
-Z117 w1607171310
-R67
+Z121 w1607171310
+R66
 R7
 R8
 R0
-Z118 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/RAM_2_ports.vhd
-Z119 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/RAM_2_ports.vhd
+Z122 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/RAM_2_ports.vhd
+Z123 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/RAM_2_ports.vhd
 l0
 L43
 V^KjIbhJ4XIN?1d=@BN[MB3
 !s100 S_gQGKG_9P58U^_L^g9G71
 R11
 31
-R63
+R77
 !i10b 1
-R64
-Z120 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/RAM_2_ports.vhd|
-Z121 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/RAM_2_ports.vhd|
+R78
+Z124 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/RAM_2_ports.vhd|
+Z125 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/RAM_2_ports.vhd|
 !i113 1
 R16
 R17
 Asyn
-R67
+R66
 R7
 R8
-R68
+R67
 l62
 L58
 VmXBK155hUN`oAR=d1fWYW0
 !s100 Uo^>>[ck1WI6`:]B1kOm`3
 R11
 31
-R63
+R77
 !i10b 1
-R64
-R120
-R121
+R78
+R124
+R125
 !i113 1
 R16
 R17
 Esync_gen
-Z122 w1607424315
+Z126 w1607424315
 R4
 R5
 R6
 R7
 R8
 R0
-Z123 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Synth_gen.vhd
-Z124 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Synth_gen.vhd
+Z127 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Synth_gen.vhd
+Z128 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Synth_gen.vhd
 l0
 L11
 V=C]e2CG:iogE5_1eHRIR[2
 !s100 2KY`0:NPm0So33c^AQn2=1
 R11
 31
-R44
+R41
 !i10b 1
-R45
-Z125 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Synth_gen.vhd|
-Z126 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Synth_gen.vhd|
+R42
+Z129 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Synth_gen.vhd|
+Z130 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/Synth_gen.vhd|
 !i113 1
 R16
 R17
@@ -862,23 +862,23 @@ R5
 R6
 R7
 R8
-Z127 DEx4 work 8 sync_gen 0 22 =C]e2CG:iogE5_1eHRIR[2
+Z131 DEx4 work 8 sync_gen 0 22 =C]e2CG:iogE5_1eHRIR[2
 l60
 L34
 V;<2G6<WF<=U]VgLPKZbh23
 !s100 eN_Q25g9Bm3b[Z9^QUjo73
 R11
 31
-R44
+R77
 !i10b 1
-R45
-R125
-R126
+R42
+R129
+R130
 !i113 1
 R16
 R17
 Esynth_gen_mult
-Z128 w1607427567
+Z132 w1607427567
 R3
 R4
 R5
@@ -886,24 +886,24 @@ R6
 R7
 R8
 R0
-Z129 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/sync_gen_mult.vhd
-Z130 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/sync_gen_mult.vhd
+Z133 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/sync_gen_mult.vhd
+Z134 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/sync_gen_mult.vhd
 l0
 L11
 VZo5<Ad1U;B6K;FW6?7i]M2
 !s100 OlcNIM3m[cdSXadRCzOT>3
 R11
 31
-R63
+R89
 !i10b 1
-R64
-Z131 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/sync_gen_mult.vhd|
-Z132 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/sync_gen_mult.vhd|
+R78
+Z135 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/sync_gen_mult.vhd|
+Z136 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/sync_gen_mult.vhd|
 !i113 1
 R16
 R17
 Asynth_gen_mult_arch
-R127
+R131
 R3
 R4
 R5
@@ -917,16 +917,16 @@ VOhe9f0P=iBZ?OYa?=cc870
 !s100 MIYFAf809aB]ZO2Z5>[>N0
 R11
 31
-R63
+R89
 !i10b 1
-R64
-R131
-R132
+R78
+R135
+R136
 !i113 1
 R16
 R17
 Etrs_gen
-Z133 w1604409474
+Z137 w1604409474
 R2
 R4
 R5
@@ -935,19 +935,19 @@ R6
 R7
 R8
 R0
-Z134 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/TRS_gen.vhd
-Z135 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/TRS_gen.vhd
+Z138 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/TRS_gen.vhd
+Z139 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/TRS_gen.vhd
 l0
 L10
 VJ6EI`Ho^>KK6Db>`6WnTl2
 !s100 OVDARR:T51d=QQ8N9hkGV1
 R11
 31
-R12
+R89
 !i10b 1
-R13
-Z136 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/TRS_gen.vhd|
-Z137 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/TRS_gen.vhd|
+R90
+Z140 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/TRS_gen.vhd|
+Z141 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/TRS_gen.vhd|
 !i113 1
 R16
 R17
@@ -966,16 +966,16 @@ Vo<Bd8KFz^9nEI0668O^aV3
 !s100 ASS:5<W8:7LDk<2_BU[mI0
 R11
 31
-R12
+R89
 !i10b 1
-R13
-R136
-R137
+R90
+R140
+R141
 !i113 1
 R16
 R17
 Etwo_ch_to_one_top
-Z138 w1607428327
+Z142 w1607428327
 R2
 R4
 R5
@@ -984,19 +984,19 @@ R6
 R7
 R8
 R0
-Z139 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/two_ch_to_one_top.vhd
-Z140 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/two_ch_to_one_top.vhd
+Z143 8D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/two_ch_to_one_top.vhd
+Z144 FD:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/two_ch_to_one_top.vhd
 l0
 L8
 VFdV0^`8G>RcOAAkfMMmXC0
 !s100 @Fj_cS5]D<_m]cUe@<b5o1
 R11
 31
-R12
+R89
 !i10b 1
-R13
-Z141 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/two_ch_to_one_top.vhd|
-Z142 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/two_ch_to_one_top.vhd|
+R90
+Z145 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/two_ch_to_one_top.vhd|
+Z146 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb/2_ch_to_1/two_ch_to_one_top.vhd|
 !i113 1
 R16
 R17
@@ -1015,11 +1015,11 @@ VNn[:>^If104hiIUUHP]k@1
 !s100 ;jX2n5;:eLW:6FDIRBP2E3
 R11
 31
-R12
+R89
 !i10b 1
-R13
-R141
-R142
+R90
+R145
+R146
 !i113 1
 R16
 R17
@@ -1038,9 +1038,9 @@ VEk3X47DEA0>]n8mYFFcR?0
 !s100 <c6L4gWFO4nj01`]AeESV2
 R11
 31
-R44
+R41
 !i10b 1
-R45
+R42
 !s90 -reportprogress|300|-93|-work|work|D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/VIDEO_CONSTANTS.vhd|
 !s107 D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/VIDEO_CONSTANTS.vhd|
 !i113 1

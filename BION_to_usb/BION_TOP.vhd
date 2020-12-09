@@ -276,40 +276,41 @@ PCLK                <= PCLK_in;
 ---------------------------------------------------------
 ---------------------------------------------------------
 --debug
--- Process(Switcher_in_clk(3 downto 0))
--- begin
---    case (Switcher_in_clk(3 downto 0)) is
---       when X"0" =>     clk_signal_tap <= clk_pix_in;
---       when X"1" =>     clk_signal_tap <= Pix_per_line_interface(0);
---       when X"2" =>     clk_signal_tap <= stroka_interface_flag;
---       when X"3" =>     clk_signal_tap <= Pix_per_line_interface(2);
---      -- when X"4" =>     clk_signal_tap <= clk_bit;
---       when X"5" =>     clk_signal_tap <= mode_switcher;
---       when X"6" =>     clk_signal_tap <= button_left;
---       when X"7" =>     clk_signal_tap <= button_right;
---       when X"8" =>     clk_signal_tap <= Pix_per_line_interface(7);
---       when X"9" =>     clk_signal_tap <= Pix_per_line_interface(8);
---       when X"a" =>     clk_signal_tap <= Pix_per_line_interface(9);
---       when X"b" =>     clk_signal_tap <= Line_per_frame_interface(0);
---       when X"c" =>     clk_signal_tap <= Line_per_frame_interface(1);
---      when others =>    clk_signal_tap <= clk_pix_in;   
---    end case;
--- end process;
+Process(Switcher_in_clk(3 downto 0))
+begin
+   case (Switcher_in_clk(3 downto 0)) is
+      when X"0" =>     clk_signal_tap <= clk_pix_cam;
+      when X"1" =>     clk_signal_tap <= Pix_per_line_interface(0);
+      when X"2" =>     clk_signal_tap <= stroka_interface_flag;
+      when X"3" =>     clk_signal_tap <= Pix_per_line_interface(2);
+      when X"4" =>     clk_signal_tap <= clk_pix_interface;
+      when X"5" =>     clk_signal_tap <= mode_switcher;
+      when X"6" =>     clk_signal_tap <= button_left;
+      when X"7" =>     clk_signal_tap <= button_right;
+      when X"8" =>     clk_signal_tap <= Pix_per_line_interface(7);
+      when X"9" =>     clk_signal_tap <= Pix_per_line_interface(8);
+      when X"a" =>     clk_signal_tap <= Pix_per_line_interface(9);
+      when X"b" =>     clk_signal_tap <= Line_per_frame_interface(0);
+      when X"c" =>     clk_signal_tap <= Line_per_frame_interface(1);
+     when others =>    clk_signal_tap <= clk_pix_in;   
+   end case;
+end process;
 
--- Process(Switcher_in_trigg(3 downto 0))
--- begin
---    case (Switcher_in_trigg(3 downto 0)) is
---     when X"0" =>     trigg_signal_tap <= stroka_flag;
---     when X"1" =>     trigg_signal_tap <= frame_flag;
---     when X"2" =>     trigg_signal_tap <= FLAGB;
---     when X"3" =>     trigg_signal_tap <= FLAGA;
---     when X"4" =>     trigg_signal_tap <= slwr; 
---     when X"5" =>     trigg_signal_tap <= mode_switcher;
---     when X"6" =>     trigg_signal_tap <= button_left;
---     when X"7" =>     trigg_signal_tap <= button_right;
---     when others =>   trigg_signal_tap <= stroka_flag;   
--- end case;
--- end process;
+Process(Switcher_in_trigg(3 downto 0))
+begin
+   case (Switcher_in_trigg(3 downto 0)) is
+    when X"0" =>     trigg_signal_tap <= stroka_cam_flag;
+    when X"1" =>     trigg_signal_tap <= stroka_interface_flag;
+    when X"2" =>     trigg_signal_tap <= FLAGB;
+    when X"3" =>     trigg_signal_tap <= FLAGA;
+    when X"4" =>     trigg_signal_tap <= slwr_in_arch; 
+    when X"5" =>     trigg_signal_tap <= frame_cam_flag;
+    when X"6" =>     trigg_signal_tap <= frame_interface_flag;
+    when X"7" =>     trigg_signal_tap <= button_right;
+    when X"8" =>     trigg_signal_tap <= PCLK_in;
+    when others =>   trigg_signal_tap <= stroka_cam_flag;   
+end case;
+end process;
 ---------------------------------------------------------
 ---------------------------------------------------------
 end BION_TOP_arch;
