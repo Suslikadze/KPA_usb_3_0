@@ -21,7 +21,11 @@ port (
 	reg_8bit_7				: out std_logic_vector (7 downto 0);
 	reg_8bit_8				: out std_logic_vector (7 downto 0);
 	reg_8bit_9				: out std_logic_vector (7 downto 0);
-	reg_8bit_10				: out std_logic_vector (7 downto 0)
+	reg_8bit_10				: out std_logic_vector (7 downto 0);
+	reg_8bit_11				: out std_logic_vector (7 downto 0);
+	reg_8bit_12				: out std_logic_vector (7 downto 0);
+	reg_8bit_13				: out std_logic_vector (7 downto 0);
+	reg_8bit_14				: out std_logic_vector (7 downto 0)
 	);
 end JTAG_DEBUG_CONST;
 
@@ -46,5 +50,9 @@ const_8bit_7	:const port map( result => reg_8bit_7	);
 const_8bit_8	:const port map( result => reg_8bit_8	);
 const_8bit_9	:const port map( result => reg_8bit_9	);
 const_8bit_10	:const port map( result => reg_8bit_10	);
+const_8bit_11	:const port map( result => reg_8bit_11	);
+const_8bit_12	:const port map( result => reg_8bit_12	);
+const_8bit_13	:const port map( result => reg_8bit_13	);
+const_8bit_14	:const port map( result => reg_8bit_14	);
 
 end beh;

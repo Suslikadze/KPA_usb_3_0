@@ -36,13 +36,13 @@ end record;
 							----------RESOLUTION TO CYPRESS-----------
 							------------------------------------------
 constant BION_960_960p30 :	VideoStandartType:=	(	
-													PixPerLine				=>	4800,
-													ActivePixPerLine		=>	4096,	
+													PixPerLine				=>	2640,
+													ActivePixPerLine		=>	2048,	
 													InActivePixPerLine		=>	40,	
 													HsyncWidth				=>	10,	
 													HsyncWidthGapLeft		=>	15,	
 													HsyncWidthGapRight		=>	15,	
-													HsyncShift				=>	5,
+													HsyncShift				=>	8,
 													LinePerFrame			=>	1125,
 													ActiveLine				=>	1024,
 													InActiveLine			=>	65,
@@ -60,13 +60,13 @@ constant Bitness_camera : Bitness_of_counters:= (
 							----------RESOLUTION FROM CAMERA----------
 							------------------------------------------
 Constant KPA_camera_sim :	VideoStandartType:= (
-													PixPerLine				=> 1200,
-													ActivePixPerLine		=> 1024,
+													PixPerLine				=> 2640,
+													ActivePixPerLine		=> 2048,
 													InActivePixPerLine		=> 40,
 													HsyncWidth				=> 10,
 													HsyncWidthGapLeft		=> 15,
 													HsyncWidthGapRight		=> 15,
-													HsyncShift				=> 5,
+													HsyncShift				=> 8,
 													LinePerFrame			=> 1125,
 													ActiveLine				=> 1024,
 													InActiveLine			=> 65,

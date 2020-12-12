@@ -16,6 +16,8 @@ PORT(
     reset       :in     std_logic;
     data_in_1   :in     std_logic;
     data_in_2   :in     std_logic;
+    data_in_3   :in     std_logic;
+    data_in_4   :in     std_logic;
     button_left,
     button_right,
     mode_switcher     : in    STD_LOGIC;
@@ -47,6 +49,7 @@ signal Line_per_frame_interface                     : STD_LOGIC_VECTOR(Bitness_i
 signal frame_interface_flag, frame_cam_flag         : STD_LOGIC;
 signal stroka_cam_flag, stroka_interface_flag       : STD_LOGIC;
 signal enable_for_pix_cam, enable_for_pix_interface : STD_LOGIC;
+signal reset_sync_counters                          : STD_LOGIC;
 --Частоты
 signal clk_pix_in, PCLK_in                  : STD_LOGIC;
 signal clk_pix_cam, clk_pix_interface       : STD_LOGIC;
@@ -62,7 +65,12 @@ signal  debug_8bit_for_output_data_interface,
 --Данные с камер
 signal  data_cam_1, data_cam_2,
         data_cam_3, data_cam_4      : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
+signal  data_ch_1_par, 
+        data_ch_2_par,
+        data_ch_3_par,
+        data_ch_4_par               : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
 signal  data_to_output_bus          : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
+signal  one_camera_ch               : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
 --Формирование кадра
 signal  pix_active_cam, 
         str_active_cam              : STD_LOGIC; 
@@ -77,7 +85,9 @@ signal  debug_0, debug_1,
         debug_4, debug_5,                              
         debug_6, debug_7,
         debug_8, debug_9,
-        debug_10                     : std_logic_vector(7 downto 0);
+        debug_10, debug_11,
+        debug_12, debug_13,
+        debug_14                     : std_logic_vector(7 downto 0);
 
 
 
@@ -105,7 +115,11 @@ Port map(
     reg_8bit_7              => debug_7,         -- pix_with_sync_word
     reg_8bit_8              => debug_8,         -- Aligner в 32-битном слове
     reg_8bit_9              => Switcher_in_clk,
-    reg_8bit_10             => Switcher_in_trigg      
+    reg_8bit_10             => Switcher_in_trigg,
+    reg_8bit_11             => debug_11,
+    reg_8bit_12             => debug_12,
+    reg_8bit_13             => debug_13,
+    reg_8bit_14             => debug_14
 );
 ---------------------------------------------------------
 ---------------------------------------------------------
@@ -121,20 +135,28 @@ Port map(
 --Описание компонентов
 ---------------------------------------------------------
 ---------------------------------------------------------
-two_ch_to_one_comp          : entity work.two_ch_to_one_top
-port map(
-    clk_in_0            => clk_bit,
-    clk_in_1            => clk_pix,
-    reset               => '0',
-    enable              => '1',
-    Pix_per_line        => Pix_per_line_interface,
-    Line_per_frame      => Line_per_frame_interface,
-    data_in_ch_1        => data_in_1,
-    data_in_ch_2        => data_in_2,
-    align_num           => debug_0,
-    --align_num           => x"06",
-    clk_pix             => clk_pix_in,
-    data_out            => data_from_mux    
+four_input_cameras_module      : entity work.four_input_cameras_top
+Port map(
+    clk_in                      =>  clk_bit,
+    clk_cam                     =>  clk_pix_cam,
+    reset                       =>  '0',
+    enable                      =>  '1',
+    data_ch_1_ser               =>  data_in_1,
+    data_ch_2_ser               =>  data_in_2,
+    data_ch_3_ser               =>  data_in_3,
+    data_ch_4_ser               =>  data_in_4,
+    align_num_ch_1              =>  debug_11,
+    align_num_ch_2              =>  debug_12,
+    align_num_ch_3              =>  debug_13,
+    align_num_ch_4              =>  debug_14,
+    Camera_channel_switch       =>  debug_0,
+    Pix_per_line_cam            =>  Pix_per_line_cam,
+    Line_per_frame_cam          =>  Line_per_frame_cam,
+    reset_sync_counters         =>  reset_sync_counters,
+    data_ch_1_par               =>  data_ch_1_par,
+    data_ch_2_par               =>  data_ch_2_par,
+    data_ch_3_par               =>  data_ch_3_par,
+    data_ch_4_par               =>  data_ch_4_par
 );
 ---------------------------------------------------------
 ---------------------------------------------------------
@@ -142,7 +164,7 @@ Sync_gen_mult_top           : entity work.Synth_gen_mult
 Port map(
     clk_pix_interface           => clk_pix_interface,
     clk_pix_cam                 => clk_pix_cam,
-    main_reset                  => '0',
+    main_reset                  => reset_sync_counters,
     enable_for_pix_cam          => '1',
     enable_for_pix_interface    => '1',
     --frame_modul                 => x"01",
@@ -163,6 +185,7 @@ Port map(
     clk_in                      => clk_pix_cam,
     reset                       => '0',
     enable_cam                  => '1',
+    data_in                     => data_ch_1_par,
     Pix_per_line                => Pix_per_line_cam,
     Line_per_frame              => Line_per_frame_cam,
     Type_of_data                => debug_1,
@@ -177,6 +200,7 @@ Port map(
     clk_in                      => clk_pix_cam,
     reset                       => '0',
     enable_cam                  => '1',
+    data_in                     => data_ch_2_par,
     Pix_per_line                => Pix_per_line_cam,
     Line_per_frame              => Line_per_frame_cam,
     Type_of_data                => debug_2,
@@ -188,6 +212,7 @@ Port map(
     clk_in                      => clk_pix_cam,
     reset                       => '0',
     enable_cam                  => '1',
+    data_in                     => data_ch_3_par,
     Pix_per_line                => Pix_per_line_cam,
     Line_per_frame              => Line_per_frame_cam,
     Type_of_data                => debug_3,
@@ -199,6 +224,7 @@ Port map(
     clk_in                      => clk_pix_cam,
     reset                       => '0',
     enable_cam                  => '1',
+    data_in                     => data_ch_4_par,
     Pix_per_line                => Pix_per_line_cam,
     Line_per_frame              => Line_per_frame_cam,
     Type_of_data                => debug_4,
@@ -206,24 +232,42 @@ Port map(
 );
 ---------------------------------------------------------
 ---------------------------------------------------------
-Data_processing_interface_top           : entity work.Data_processing_interface
-Port map(
-    clk_cam                            =>   clk_pix_cam,
-    clk_interface                      =>   clk_pix_interface,
-    reset                              =>   '0',
-    data_ch_1                          =>   data_cam_1,
-    data_ch_2                          =>   data_cam_2,
-    data_ch_3                          =>   data_cam_3,
-    data_ch_4                          =>   data_cam_4,
-    Pix_per_line_interface             =>   Pix_per_line_interface,
-    Line_per_frame_interface           =>   Line_per_frame_interface,
-    Pix_per_line_cam                   =>   Pix_per_line_cam,
-    Line_per_frame_cam                 =>   Line_per_frame_cam,
-    pix_active_cam                     =>   pix_active_cam,
-    pix_active_interface               =>   pix_active_interface,
-    frame_in_interface                 =>   frame_interface_flag,
-    data_out                           =>   data_to_framing_interface
-);
+-- Data_processing_interface_top           : entity work.Data_processing_interface
+-- Port map(
+--     clk_cam                            =>   clk_pix_cam,
+--     clk_interface                      =>   clk_pix_interface,
+--     reset                              =>   '0',
+--     data_ch_1                          =>   data_cam_1,
+--     data_ch_2                          =>   data_cam_2,
+--     data_ch_3                          =>   data_cam_3,
+--     data_ch_4                          =>   data_cam_4,
+--     Pix_per_line_interface             =>   Pix_per_line_interface,
+--     Line_per_frame_interface           =>   Line_per_frame_interface,
+--     Pix_per_line_cam                   =>   Pix_per_line_cam,
+--     Line_per_frame_cam                 =>   Line_per_frame_cam,
+--     pix_active_cam                     =>   pix_active_cam,
+--     pix_active_interface               =>   pix_active_interface,
+--     frame_in_interface                 =>   frame_interface_flag,
+--     data_out                           =>   data_to_framing_interface
+-- );
+---------------------------------------------------------
+---------------------------------------------------------
+
+---------------------------------------------------------
+--Выбор камеры, которую выводим на интерфейс
+---------------------------------------------------------
+Process(clk_pix_cam)
+BEGIN
+If rising_edge(clk_pix_cam) then
+    case (debug_0) is
+        when X"00" => one_camera_ch <= data_cam_1;
+        when X"01" => one_camera_ch <= data_cam_2;
+        when X"02" => one_camera_ch <= data_cam_3;
+        when X"04" => one_camera_ch <= data_cam_4;
+        when others => one_camera_ch <= data_cam_1;
+    end case;
+end if;
+end process; 
 ---------------------------------------------------------
 ---------------------------------------------------------
 Framing_interface_top               : entity work.Framing_interface
@@ -236,7 +280,7 @@ Port map(
     FLAGA                       =>  FLAGA,
     FLAGB                       =>  FLAGB,
     treshhold_FIFO              =>  debug_5,
-    data_in                     =>  data_to_framing_interface,
+    data_in                     =>  one_camera_ch,
     line_with_sync_word         =>  debug_6,
     pix_with_sync_word          =>  debug_7,
     slwr_in_arch                =>  slwr_in_arch,
@@ -292,7 +336,7 @@ begin
       when X"a" =>     clk_signal_tap <= Pix_per_line_interface(9);
       when X"b" =>     clk_signal_tap <= Line_per_frame_interface(0);
       when X"c" =>     clk_signal_tap <= Line_per_frame_interface(1);
-     when others =>    clk_signal_tap <= clk_pix_in;   
+     when others =>    clk_signal_tap <= clk_bit;   
    end case;
 end process;
 
@@ -308,6 +352,7 @@ begin
     when X"6" =>     trigg_signal_tap <= frame_interface_flag;
     when X"7" =>     trigg_signal_tap <= button_right;
     when X"8" =>     trigg_signal_tap <= PCLK_in;
+    when X"9" =>     trigg_signal_tap <= reset_sync_counters;
     when others =>   trigg_signal_tap <= stroka_cam_flag;   
 end case;
 end process;

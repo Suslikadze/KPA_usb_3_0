@@ -13,6 +13,7 @@ Port(
     clk_in          : in        STD_LOGIC;
     reset           : in        STD_LOGIC;
     enable_cam      : in        STD_LOGIC;
+    data_in         : in        STD_LOGIC_VECTOR(bit_data                   - 1 downto 0);
     Pix_per_line    : in        STD_LOGIC_VECTOR(Bitness_camera.bit_pix     - 1 downto 0);
     Line_per_frame  : in        STD_LOGIC_VECTOR(Bitness_camera.bit_strok   - 1 downto 0);
     Type_of_data    : in        STD_LOGIC_VECTOR(                             7 downto 0);
@@ -50,7 +51,7 @@ Port map(
     qout_clk        => Pix_per_line,
     qout_V          => Line_per_frame,
     mode_generator  => Type_of_data,
-    data_in         => Pix_per_line(7 downto 0),
+    data_in         => data_in,
     ---------out----------
     data_out        => data_from_pattern_gen
 );

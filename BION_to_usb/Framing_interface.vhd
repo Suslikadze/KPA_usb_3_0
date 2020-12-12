@@ -68,7 +68,7 @@ Process(clk_in)
 BEGIN
 if rising_edge(clk_in) then
   -- if to_integer(unsigned(Line_per_frame)) =to_integer(unsigned(debug_1))*4 then 
-   if to_integer(unsigned(Line_per_frame)) =to_integer(unsigned(line_with_sync_word))*4 then 
+   if to_integer(unsigned(Line_per_frame)) =to_integer(unsigned(line_with_sync_word)) then 
         if    to_integer(unsigned(Pix_per_line)) = to_integer(unsigned(pix_with_sync_word))             then   data_to_buffer  <=x"ff";
       elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(pix_with_sync_word)) + 1)        then   data_to_buffer  <=x"00";
       elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(pix_with_sync_word)) + 2)        then   data_to_buffer  <=x"00";
@@ -78,14 +78,14 @@ if rising_edge(clk_in) then
       elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(pix_with_sync_word)) + 6)        then   data_to_buffer  <=x"00";
       elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(pix_with_sync_word)) + 7)        then   data_to_buffer  <=x"ab";
 
-      elsif   to_integer(unsigned(Pix_per_line)) = to_integer(unsigned(pix_with_sync_word))     + 256   then   data_to_buffer   <=x"ab";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(pix_with_sync_word)) + 1 + 256)  then   data_to_buffer  <=x"00";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(pix_with_sync_word)) + 2 + 256)  then   data_to_buffer  <=x"00";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(pix_with_sync_word)) + 3 + 256)  then   data_to_buffer  <=x"ff";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(pix_with_sync_word)) + 4 + 256)  then   data_to_buffer  <=x"80";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(pix_with_sync_word)) + 5 + 256)  then   data_to_buffer  <=x"00";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(pix_with_sync_word)) + 6 + 256)  then   data_to_buffer  <=x"00";
-      elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(pix_with_sync_word)) + 7 + 256)  then   data_to_buffer  <=x"ff";
+      -- if   to_integer(unsigned(Pix_per_line)) = to_integer(unsigned(pix_with_sync_word))     + 256   then   data_to_buffer   <=x"ab";
+      -- elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(pix_with_sync_word)) + 1 + 256)  then   data_to_buffer  <=x"00";
+      -- elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(pix_with_sync_word)) + 2 + 256)  then   data_to_buffer  <=x"00";
+      -- elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(pix_with_sync_word)) + 3 + 256)  then   data_to_buffer  <=x"ff";
+      -- elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(pix_with_sync_word)) + 4 + 256)  then   data_to_buffer  <=x"80";
+      -- elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(pix_with_sync_word)) + 5 + 256)  then   data_to_buffer  <=x"00";
+      -- elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(pix_with_sync_word)) + 6 + 256)  then   data_to_buffer  <=x"00";
+      -- elsif   to_integer(unsigned(Pix_per_line)) =(to_integer(unsigned(pix_with_sync_word)) + 7 + 256)  then   data_to_buffer  <=x"ff";
       else                                                      data_to_buffer  <= data_in;
       end if;
    else

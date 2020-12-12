@@ -10,8 +10,8 @@ port(
     clk_in              : IN    STD_LOGIC;
     enable              : IN    STD_LOGIC;
     reset               : IN    STD_LOGIC;
-    Pix_per_line        : IN    STD_LOGIC_VECTOR(Bitness_interface.bit_pix - 1 downto 0);
-    Line_per_frame      : IN    STD_LOGIC_VECTOR(Bitness_interface.bit_strok - 1 downto 0);
+    Pix_per_line        : IN    STD_LOGIC_VECTOR(Bitness_camera.bit_pix - 1 downto 0);
+    Line_per_frame      : IN    STD_LOGIC_VECTOR(Bitness_camera.bit_strok - 1 downto 0);
     data_in_ch_1        : IN    STD_LOGIC_VECTOR(bit_data - 1 downto 0);
     data_in_ch_2        : IN    STD_LOGIC_VECTOR(bit_data - 1 downto 0);
     data_out            : OUT   STD_LOGIC_VECTOR(bit_data - 1 downto 0)

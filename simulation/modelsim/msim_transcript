@@ -8152,3 +8152,293 @@ vcom -93 -work work D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/BION_to_usb
 # -- Loading entity count_n_modul
 # End time: 19:18:43 on Dec 09,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+restart
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Data_gen_cam_1/Pattern_generator_cam File: D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/PATHERN_GENERATOR.vhd
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Data_gen_cam_2/Pattern_generator_cam File: D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/PATHERN_GENERATOR.vhd
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Data_gen_cam_3/Pattern_generator_cam File: D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/PATHERN_GENERATOR.vhd
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Data_gen_cam_4/Pattern_generator_cam File: D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/PATHERN_GENERATOR.vhd
+# Loading work.data_processing_interface(data_processing_interface_arch)
+# ** Warning: Design size of 18025 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Warning: (vsim-8683) Uninitialized out port /bion_top_vhd_tst/i1/two_ch_to_one_comp/Aligner_comp/reset_each_line has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bion_top_vhd_tst/i1/Sync_gen_mult_top/frame_cam_flag has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bion_top_vhd_tst/i1/reset_FX has no driver.
+# This port will contribute value (U) to the signal network.
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+restart
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Data_gen_cam_1/Pattern_generator_cam File: D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/PATHERN_GENERATOR.vhd
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Data_gen_cam_2/Pattern_generator_cam File: D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/PATHERN_GENERATOR.vhd
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Data_gen_cam_3/Pattern_generator_cam File: D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/PATHERN_GENERATOR.vhd
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Data_gen_cam_4/Pattern_generator_cam File: D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_4_cameras/PATHERN_GENERATOR.vhd
+# ** Warning: (vsim-8683) Uninitialized out port /bion_top_vhd_tst/i1/two_ch_to_one_comp/Aligner_comp/reset_each_line has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bion_top_vhd_tst/i1/Sync_gen_mult_top/frame_cam_flag has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bion_top_vhd_tst/i1/reset_FX has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /bion_top_vhd_tst/i1/Framing_interface_top/Buffer_data/dcfifo_component/DCFIFO_MW/LOWLATENCY_FIFO/LOWLATENCY
+# ** Note: Cyclone IV E PLL locked to incoming clock
+#    Time: 55 ns  Iteration: 3  Instance: /bion_top_vhd_tst/i1/PLL_input/altpll_component/CYCLONEIII_ALTPLL/M5
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Sync_gen_mult_top/Sync_gen_interface
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Sync_gen_mult_top/Sync_gen_interface
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 65 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 65 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 65 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 65 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 65 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Framing_interface_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 65 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Framing_interface_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 65 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Framing_interface_top
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/output_data_interface_arch
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 70 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 70 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 70 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 70 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 70 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_2/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 70 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_2/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 70 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_2/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 70 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 70 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_2/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Sync_gen_mult_top/Sync_gen_cam
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Sync_gen_mult_top/Sync_gen_cam
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_gen_cam_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_gen_cam_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_gen_cam_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_gen_cam_2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_gen_cam_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_gen_cam_3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_gen_cam_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_gen_cam_4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_2/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_2/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_2/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_2/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 110 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 110 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 110 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 110 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 110 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 110 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 110 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 110 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 110 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 110 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_2/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 110 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 110 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_2/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 110 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 110 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_2/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 110 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 110 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_2/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 120 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 120 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 120 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 120 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 120 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_2/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 120 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_2/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 120 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_2/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 120 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_2/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 130 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 130 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 130 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 130 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 130 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 130 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 130 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_1/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 130 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_1/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 130 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 130 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_1_2/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 130 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 130 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_2_2/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 130 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 130 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_3_2/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 130 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_2/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 130 ns  Iteration: 8  Instance: /bion_top_vhd_tst/i1/Data_processing_interface_top/RAM_4_2/altsyncram_component
+# End time: 19:36:17 on Dec 09,2020, Elapsed time: 5:00:39
+# Errors: 51, Warnings: 3524
