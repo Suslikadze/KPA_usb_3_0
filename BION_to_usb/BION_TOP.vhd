@@ -135,31 +135,6 @@ Port map(
 --Описание компонентов
 ---------------------------------------------------------
 ---------------------------------------------------------
-four_input_cameras_module      : entity work.four_input_cameras_top
-Port map(
-    clk_in                      =>  clk_bit,
-    clk_cam                     =>  clk_pix_cam,
-    reset                       =>  '0',
-    enable                      =>  '1',
-    data_ch_1_ser               =>  data_in_1,
-    data_ch_2_ser               =>  data_in_2,
-    data_ch_3_ser               =>  data_in_3,
-    data_ch_4_ser               =>  data_in_4,
-    align_num_ch_1              =>  debug_11,
-    align_num_ch_2              =>  debug_12,
-    align_num_ch_3              =>  debug_13,
-    align_num_ch_4              =>  debug_14,
-    Camera_channel_switch       =>  debug_0,
-    Pix_per_line_cam            =>  Pix_per_line_cam,
-    Line_per_frame_cam          =>  Line_per_frame_cam,
-    reset_sync_counters         =>  reset_sync_counters,
-    data_ch_1_par               =>  data_ch_1_par,
-    data_ch_2_par               =>  data_ch_2_par,
-    data_ch_3_par               =>  data_ch_3_par,
-    data_ch_4_par               =>  data_ch_4_par
-);
----------------------------------------------------------
----------------------------------------------------------
 Sync_gen_mult_top           : entity work.Synth_gen_mult
 Port map(
     clk_pix_interface           => clk_pix_interface,
@@ -178,6 +153,9 @@ Port map(
     frame_cam_flag              => frame_cam_flag,
     frame_interface_flag        => frame_interface_flag
 );
+---------------------------------------------------------
+---------------------------------------------------------
+
 ---------------------------------------------------------
 ---------------------------------------------------------
 Data_gen_cam_1              : entity work.Data_gen_cam
@@ -232,6 +210,23 @@ Port map(
 );
 ---------------------------------------------------------
 ---------------------------------------------------------
+Menu_top_module             : entity work.Menu_top
+Port map(
+    clk_in                  => clk_interface,
+    reset                   => '0',
+    enable                  => '1',
+    Pix_per_line            => Pix_per_line_interface,
+    Line_per_frame          => Line_per_frame_interface,
+    stroka_interface_flag   => stroka_interface_flag,
+    frame_interface_flag    => frame_interface_flag,
+    Pix_of_start_menu       => std_logic_vector(to_unsigned(400, Bitness_interface.bit_pix)),
+    Line_of_start_menu      => std_logic_vector(to_unsigned(400, Bitness_interface.bit_strok)),
+    menu_window_valid       => menu_window_valid,
+    out_data                => data_from_menu_module 
+);
+
+
+---------------------------------------------------------
 -- Data_processing_interface_top           : entity work.Data_processing_interface
 -- Port map(
 --     clk_cam                            =>   clk_pix_cam,
@@ -263,7 +258,7 @@ If rising_edge(clk_pix_cam) then
         when X"00" => one_camera_ch <= data_cam_1;
         when X"01" => one_camera_ch <= data_cam_2;
         when X"02" => one_camera_ch <= data_cam_3;
-        when X"04" => one_camera_ch <= data_cam_4;
+        when X"03" => one_camera_ch <= data_cam_4;
         when others => one_camera_ch <= data_cam_1;
     end case;
 end if;
@@ -280,9 +275,10 @@ Port map(
     FLAGA                       =>  FLAGA,
     FLAGB                       =>  FLAGB,
     treshhold_FIFO              =>  debug_5,
-    data_in                     =>  one_camera_ch,
+    data_in                     =>  data_cam_1,
     line_with_sync_word         =>  debug_6,
-    pix_with_sync_word          =>  debug_7,
+    -- pix_with_sync_word          =>  debug_7,
+    pix_with_sync_word          =>  x"10",
     slwr_in_arch                =>  slwr_in_arch,
     pix_active_out              =>  pix_active_interface,
     data_out                    =>  data_to_output_bus     
