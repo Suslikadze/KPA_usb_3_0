@@ -16,7 +16,7 @@ port(
     Line_per_frame          : IN    STD_LOGIC_VECTOR(Bitness_camera.bit_strok - 1 downto 0);
     data_in_ch_1            : in    STD_LOGIC;
     data_in_ch_2            : in    STD_LOGIC;
-    align_num               : in    STD_LOGIC_VECTOR(bit_data - 1 downto 0);
+    --align_num               : in    STD_LOGIC_VECTOR(bit_data - 1 downto 0);
     reset_sync_counters     : out   STD_LOGIC;
     data_out                : out   STD_LOGIC_VECTOR(bit_data - 1 downto 0)    
 );
@@ -29,6 +29,7 @@ architecture two_ch_to_one_top_arch of two_ch_to_one_top is
 signal data_par_1, data_par_2               : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
 signal data_par_1_delay, data_par_2_delay   : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
 signal data_out_in                          : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
+signal align_num                            : STD_LOGIC_VECTOR(bit_data - 1 downto 0);
 signal align_flag_in                        : STD_LOGIC;
 signal reset_each_line_in                   : STD_LOGIC;
 signal clk_pix_in, clk_for_mux              : STD_LOGIC;
@@ -101,8 +102,8 @@ Port map(
     enable                  =>  '1',
     ch_1_par                =>  data_par_1,
     ---------out----------
-    reset_sync_counters     => reset_sync_counters
-    --Align_word              =>  align_num,
+    reset_sync_counters     => reset_sync_counters,
+    Align_word              =>  align_num
 );
 ---------------------------------------------------------
 -- mux_2_ch_comp           : mux_2_ch

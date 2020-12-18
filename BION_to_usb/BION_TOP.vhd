@@ -263,7 +263,7 @@ If rising_edge(clk_pix_cam) then
         when X"00" => one_camera_ch <= data_cam_1;
         when X"01" => one_camera_ch <= data_cam_2;
         when X"02" => one_camera_ch <= data_cam_3;
-        when X"04" => one_camera_ch <= data_cam_4;
+        when X"03" => one_camera_ch <= data_cam_4;
         when others => one_camera_ch <= data_cam_1;
     end case;
 end if;
@@ -282,7 +282,8 @@ Port map(
     treshhold_FIFO              =>  debug_5,
     data_in                     =>  one_camera_ch,
     line_with_sync_word         =>  debug_6,
-    pix_with_sync_word          =>  debug_7,
+    -- pix_with_sync_word          =>  debug_7,
+    pix_with_sync_word          =>  x"10",
     slwr_in_arch                =>  slwr_in_arch,
     pix_active_out              =>  pix_active_interface,
     data_out                    =>  data_to_output_bus     

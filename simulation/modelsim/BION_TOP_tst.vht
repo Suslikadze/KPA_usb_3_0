@@ -43,6 +43,8 @@ SIGNAL FLAGC : STD_LOGIC;
 SIGNAL FLAGD : STD_LOGIC;
 signal data_in_1     :std_logic;
 signal data_in_2     :std_logic;
+signal data_in_3   	 :std_logic;
+signal data_in_4   	 :std_logic;
 signal button_left,
 button_right,
 mode_switcher	: std_logic;
@@ -84,6 +86,8 @@ PORT (
 	FLAGD : IN STD_LOGIC;
 	data_in_1   :in     std_logic;
     data_in_2   :in     std_logic;
+	data_in_3   :in     std_logic;
+    data_in_4   :in     std_logic;
 	button_left,
 button_right,
 mode_switcher 		: in STD_LOGIC;
@@ -119,6 +123,8 @@ PORT MAP (
 	FLAGD => FLAGD,
 	data_in_1 => data_in_1,
 	data_in_2 => data_in_2,
+	data_in_3 => data_in_3,
+	data_in_4 => data_in_4,
 	button_left => button_left,
 	button_right => button_right,
 	mode_switcher => mode_switcher, 

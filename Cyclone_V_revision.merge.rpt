@@ -1,5 +1,5 @@
 Partition Merge report for Cyclone_V_revision
-Sat Dec 12 17:18:37 2020
+Mon Dec 14 12:43:43 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Partition Merge Summary                                                       ;
 +---------------------------------+---------------------------------------------+
-; Partition Merge Status          ; Successful - Sat Dec 12 17:18:37 2020       ;
+; Partition Merge Status          ; Successful - Mon Dec 14 12:43:43 2020       ;
 ; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                   ; Cyclone_V_revision                          ;
 ; Top-level Entity Name           ; BION_TOP                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 3956                                        ;
+; Total registers                 ; 4120                                        ;
 ; Total pins                      ; 58                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 1,736,704                                   ;
+; Total block memory bits         ; 1,753,088                                   ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -472,6 +472,10 @@ https://fpgasoftware.intel.com/eula.
 ; auto_signaltap_0|vcc                                                                                                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                                                                                                       ; N/A                                                                                                                                                            ;
 ; auto_signaltap_0|vcc                                                                                                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                                                                                                       ; N/A                                                                                                                                                            ;
 ; auto_signaltap_0|vcc                                                                                                              ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                                                                                                       ; N/A                                                                                                                                                            ;
+; four_input_cameras_top:four_input_cameras_module|two_ch_to_one_top:ser_to_par_cam_1|Aligner:Aligner_comp|Sync_word_catched        ; post-fitting  ; connected ; Top                            ; post-synthesis    ; four_input_cameras_top:four_input_cameras_module|two_ch_to_one_top:ser_to_par_cam_1|Aligner:Aligner_comp|Sync_word_catched                                                ; N/A                                                                                                                                                            ;
+; four_input_cameras_top:four_input_cameras_module|two_ch_to_one_top:ser_to_par_cam_1|Aligner:Aligner_comp|Sync_word_catched        ; post-fitting  ; connected ; Top                            ; post-synthesis    ; four_input_cameras_top:four_input_cameras_module|two_ch_to_one_top:ser_to_par_cam_1|Aligner:Aligner_comp|Sync_word_catched                                                ; N/A                                                                                                                                                            ;
+; four_input_cameras_top:four_input_cameras_module|two_ch_to_one_top:ser_to_par_cam_1|Aligner:Aligner_comp|increment_Align_word     ; post-fitting  ; connected ; Top                            ; post-synthesis    ; four_input_cameras_top:four_input_cameras_module|two_ch_to_one_top:ser_to_par_cam_1|Aligner:Aligner_comp|increment_Align_word                                             ; N/A                                                                                                                                                            ;
+; four_input_cameras_top:four_input_cameras_module|two_ch_to_one_top:ser_to_par_cam_1|Aligner:Aligner_comp|increment_Align_word     ; post-fitting  ; connected ; Top                            ; post-synthesis    ; four_input_cameras_top:four_input_cameras_module|two_ch_to_one_top:ser_to_par_cam_1|Aligner:Aligner_comp|increment_Align_word                                             ; N/A                                                                                                                                                            ;
 +-----------------------------------------------------------------------------------------------------------------------------------+---------------+-----------+--------------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -480,61 +484,61 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------+------------------+--------------------------------+--------------------------------+
 ; Statistic                                   ; Top    ; sld_hub:auto_hub ; sld_signaltap:auto_signaltap_0 ; hard_block:auto_generated_inst ;
 +---------------------------------------------+--------+------------------+--------------------------------+--------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 743    ; 260              ; 1262                           ; 0                              ;
+; Estimate of Logic utilization (ALMs needed) ; 789    ; 262              ; 1291                           ; 0                              ;
 ;                                             ;        ;                  ;                                ;                                ;
-; Combinational ALUT usage for logic          ; 978    ; 243              ; 470                            ; 0                              ;
+; Combinational ALUT usage for logic          ; 941    ; 244              ; 472                            ; 0                              ;
 ;     -- 7 input functions                    ; 1      ; 3                ; 0                              ; 0                              ;
-;     -- 6 input functions                    ; 331    ; 100              ; 78                             ; 0                              ;
-;     -- 5 input functions                    ; 160    ; 74               ; 234                            ; 0                              ;
-;     -- 4 input functions                    ; 136    ; 15               ; 25                             ; 0                              ;
-;     -- <=3 input functions                  ; 350    ; 51               ; 133                            ; 0                              ;
+;     -- 6 input functions                    ; 361    ; 101              ; 78                             ; 0                              ;
+;     -- 5 input functions                    ; 139    ; 75               ; 238                            ; 0                              ;
+;     -- 4 input functions                    ; 141    ; 14               ; 23                             ; 0                              ;
+;     -- <=3 input functions                  ; 299    ; 51               ; 133                            ; 0                              ;
 ; Memory ALUT usage                           ; 0      ; 0                ; 0                              ; 0                              ;
 ;     -- 64-address deep                      ; 0      ; 0                ; 0                              ; 0                              ;
 ;     -- 32-address deep                      ; 0      ; 0                ; 0                              ; 0                              ;
 ;                                             ;        ;                  ;                                ;                                ;
-; Dedicated logic registers                   ; 1040   ; 362              ; 2554                           ; 0                              ;
+; Dedicated logic registers                   ; 1180   ; 362              ; 2578                           ; 0                              ;
 ;                                             ;        ;                  ;                                ;                                ;
 ;                                             ;        ;                  ;                                ;                                ;
 ; I/O pins                                    ; 57     ; 0                ; 0                              ; 1                              ;
 ; I/O registers                               ; 0      ; 0                ; 0                              ; 0                              ;
-; Total block memory bits                     ; 262144 ; 0                ; 1474560                        ; 0                              ;
+; Total block memory bits                     ; 262144 ; 0                ; 1490944                        ; 0                              ;
 ; Total block memory implementation bits      ; 0      ; 0                ; 0                              ; 0                              ;
 ; JTAG                                        ; 0      ; 0                ; 0                              ; 1                              ;
 ;                                             ;        ;                  ;                                ;                                ;
 ; Connections                                 ;        ;                  ;                                ;                                ;
-;     -- Input Connections                    ; 2022   ; 619              ; 3720                           ; 1                              ;
-;     -- Registered Input Connections         ; 1149   ; 372              ; 2946                           ; 0                              ;
-;     -- Output Connections                   ; 2301   ; 1288             ; 34                             ; 2739                           ;
-;     -- Registered Output Connections        ; 336    ; 1288             ; 0                              ; 0                              ;
+;     -- Input Connections                    ; 2162   ; 619              ; 3754                           ; 1                              ;
+;     -- Registered Input Connections         ; 1289   ; 372              ; 2974                           ; 0                              ;
+;     -- Output Connections                   ; 2323   ; 1290             ; 34                             ; 2889                           ;
+;     -- Registered Output Connections        ; 340    ; 1290             ; 0                              ; 0                              ;
 ;                                             ;        ;                  ;                                ;                                ;
 ; Internal Connections                        ;        ;                  ;                                ;                                ;
-;     -- Total Connections                    ; 10678  ; 4358             ; 15301                          ; 2755                           ;
-;     -- Registered Connections               ; 5736   ; 3370             ; 12492                          ; 0                              ;
+;     -- Total Connections                    ; 10983  ; 4367             ; 15443                          ; 2905                           ;
+;     -- Registered Connections               ; 6112   ; 3378             ; 12616                          ; 0                              ;
 ;                                             ;        ;                  ;                                ;                                ;
 ; External Connections                        ;        ;                  ;                                ;                                ;
-;     -- Top                                  ; 0      ; 1020             ; 2151                           ; 1152                           ;
-;     -- sld_hub:auto_hub                     ; 1020   ; 20               ; 409                            ; 458                            ;
-;     -- sld_signaltap:auto_signaltap_0       ; 2151   ; 409              ; 64                             ; 1130                           ;
-;     -- hard_block:auto_generated_inst       ; 1152   ; 458              ; 1130                           ; 0                              ;
+;     -- Top                                  ; 0      ; 1020             ; 2173                           ; 1292                           ;
+;     -- sld_hub:auto_hub                     ; 1020   ; 20               ; 411                            ; 458                            ;
+;     -- sld_signaltap:auto_signaltap_0       ; 2173   ; 411              ; 64                             ; 1140                           ;
+;     -- hard_block:auto_generated_inst       ; 1292   ; 458              ; 1140                           ; 0                              ;
 ;                                             ;        ;                  ;                                ;                                ;
 ; Partition Interface                         ;        ;                  ;                                ;                                ;
-;     -- Input Ports                          ; 286    ; 540              ; 609                            ; 5                              ;
-;     -- Output Ports                         ; 309    ; 557              ; 375                            ; 12                             ;
+;     -- Input Ports                          ; 286    ; 540              ; 615                            ; 5                              ;
+;     -- Output Ports                         ; 309    ; 557              ; 379                            ; 12                             ;
 ;     -- Bidir Ports                          ; 0      ; 0                ; 0                              ; 0                              ;
 ;                                             ;        ;                  ;                                ;                                ;
 ; Registered Ports                            ;        ;                  ;                                ;                                ;
-;     -- Registered Input Ports               ; 0      ; 3                ; 366                            ; 0                              ;
-;     -- Registered Output Ports              ; 0      ; 419              ; 361                            ; 0                              ;
+;     -- Registered Input Ports               ; 0      ; 3                ; 370                            ; 0                              ;
+;     -- Registered Output Ports              ; 0      ; 419              ; 365                            ; 0                              ;
 ;                                             ;        ;                  ;                                ;                                ;
 ; Port Connectivity                           ;        ;                  ;                                ;                                ;
 ;     -- Input Ports driven by GND            ; 0      ; 105              ; 47                             ; 0                              ;
 ;     -- Output Ports driven by GND           ; 0      ; 58               ; 2                              ; 0                              ;
 ;     -- Input Ports driven by VCC            ; 0      ; 0                ; 17                             ; 0                              ;
 ;     -- Output Ports driven by VCC           ; 0      ; 0                ; 1                              ; 0                              ;
-;     -- Input Ports with no Source           ; 0      ; 370              ; 183                            ; 0                              ;
+;     -- Input Ports with no Source           ; 0      ; 370              ; 185                            ; 0                              ;
 ;     -- Output Ports with no Source          ; 0      ; 0                ; 0                              ; 0                              ;
-;     -- Input Ports with no Fanout           ; 0      ; 375              ; 197                            ; 0                              ;
-;     -- Output Ports with no Fanout          ; 0      ; 329              ; 363                            ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0      ; 375              ; 199                            ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0      ; 329              ; 367                            ; 0                              ;
 +---------------------------------------------+--------+------------------+--------------------------------+--------------------------------+
 Note: Resource usage numbers presented for Partitions containing post-synthesis logic are estimates.  For Partitions containing post-fit logic, resource usage numbers are accurate based on previous placement information.  Actual Fitter results may vary depending on current Fitter Preservation Level assignments.
 
@@ -1866,20 +1870,20 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 2265                     ;
+; Estimate of Logic utilization (ALMs needed) ; 2340                     ;
 ;                                             ;                          ;
-; Combinational ALUT usage for logic          ; 1691                     ;
+; Combinational ALUT usage for logic          ; 1657                     ;
 ;     -- 7 input functions                    ; 4                        ;
-;     -- 6 input functions                    ; 509                      ;
-;     -- 5 input functions                    ; 468                      ;
-;     -- 4 input functions                    ; 176                      ;
-;     -- <=3 input functions                  ; 534                      ;
+;     -- 6 input functions                    ; 540                      ;
+;     -- 5 input functions                    ; 452                      ;
+;     -- 4 input functions                    ; 178                      ;
+;     -- <=3 input functions                  ; 483                      ;
 ;                                             ;                          ;
-; Dedicated logic registers                   ; 3956                     ;
+; Dedicated logic registers                   ; 4120                     ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 58                       ;
 ; Total MLAB memory bits                      ; 0                        ;
-; Total block memory bits                     ; 1736704                  ;
+; Total block memory bits                     ; 1753088                  ;
 ;                                             ;                          ;
 ; Total DSP Blocks                            ; 0                        ;
 ;                                             ;                          ;
@@ -1887,9 +1891,9 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 ;     -- PLLs                                 ; 3                        ;
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
-; Maximum fan-out                             ; 2010                     ;
-; Total fan-out                               ; 26374                    ;
-; Average fan-out                             ; 4.41                     ;
+; Maximum fan-out                             ; 2020                     ;
+; Total fan-out                               ; 26805                    ;
+; Average fan-out                             ; 4.38                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -1899,7 +1903,7 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 ; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF  ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
 ; Framing_interface:Framing_interface_top|FIFO:Buffer_data|dcfifo:dcfifo_component|dcfifo_p3p1:auto_generated|altsyncram_gia1:fifo_ram|ALTSYNCRAM                                                       ; AUTO ; Simple Dual Port ; 32768        ; 8            ; 32768        ; 8            ; 262144  ; None ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_5l84:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8192         ; 180          ; 8192         ; 180          ; 1474560 ; None ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_8l84:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8192         ; 182          ; 8192         ; 182          ; 1490944 ; None ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
 
 
@@ -1909,13 +1913,13 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 Info: *******************************************************************
 Info: Running Quartus Prime Partition Merge
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Sat Dec 12 17:18:35 2020
+    Info: Processing started: Mon Dec 14 12:43:40 2020
 Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off KPA_usb_3_0 -c Cyclone_V_revision --merge=on
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (35007): Using synthesis netlist for partition "Top"
 Info (35007): Using synthesis netlist for partition "sld_hub:auto_hub"
 Info (35007): Using synthesis netlist for partition "sld_signaltap:auto_signaltap_0"
-Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 362 of its 394 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 32 missing sources or connections.
+Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 366 of its 398 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 32 missing sources or connections.
 Info (35002): Resolved and merged 3 partition(s)
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 14 node(s), including 0 DDIO, 3 PLL, 0 transceiver and 0 LCELL
@@ -1930,16 +1934,16 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "FLAGC" File: D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_for_reliz/USB_3_0_KPA_4_cameras/BION_to_usb/BION_TOP.vhd Line: 14
     Warning (15610): No output dependent on input pin "FLAGD" File: D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_for_reliz/USB_3_0_KPA_4_cameras/BION_to_usb/BION_TOP.vhd Line: 15
     Warning (15610): No output dependent on input pin "reset" File: D:/Dima/Desktop/NIIT_tasks/USB_3_0_KPA_for_reliz/USB_3_0_KPA_4_cameras/BION_to_usb/BION_TOP.vhd Line: 16
-Info (21057): Implemented 5078 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5189 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 46 output pins
-    Info (21061): Implemented 4800 logic cells
-    Info (21064): Implemented 212 RAM segments
+    Info (21061): Implemented 4909 logic cells
+    Info (21064): Implemented 214 RAM segments
     Info (21065): Implemented 3 PLLs
 Info: Quartus Prime Partition Merge was successful. 0 errors, 10 warnings
     Info: Peak virtual memory: 4794 megabytes
-    Info: Processing ended: Sat Dec 12 17:18:37 2020
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Mon Dec 14 12:43:44 2020
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:02
 
 

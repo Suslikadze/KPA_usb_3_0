@@ -57,7 +57,7 @@ Port map(
     Line_per_frame          => Line_per_frame_cam,
     data_in_ch_1            => data_ch_1_ser,
     data_in_ch_2            => data_ch_1_ser,
-    align_num               => align_num_ch_1,
+    --align_num               => align_num_ch_1,
     reset_sync_counters     => reset_sync_counters,
     data_out                => data_ch_1_par
 );
@@ -73,7 +73,7 @@ Port map(
     Line_per_frame      => Line_per_frame_cam,
     data_in_ch_1        => data_ch_2_ser,
     data_in_ch_2        => data_ch_2_ser,
-    align_num           => align_num_ch_2,
+    --align_num           => align_num_ch_2,
     data_out            => data_ch_2_par
 );
 ---------------------------------------------------------
@@ -88,7 +88,7 @@ Port map(
     Line_per_frame      => Line_per_frame_cam,
     data_in_ch_1        => data_ch_3_ser,
     data_in_ch_2        => data_ch_3_ser,
-    align_num           => align_num_ch_3,
+    --align_num           => align_num_ch_3,
     data_out            => data_ch_3_par
 );
 ---------------------------------------------------------
@@ -103,7 +103,7 @@ Port map(
     Line_per_frame      => Line_per_frame_cam,
     data_in_ch_1        => data_ch_4_ser,
     data_in_ch_2        => data_ch_4_ser,
-    align_num           => align_num_ch_4,
+    --align_num           => align_num_ch_4,
     data_out            => data_ch_4_par
 );
 
